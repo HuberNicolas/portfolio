@@ -37,7 +37,7 @@ export const content = {
       ctaProjects: 'Explore projects',
       ctaGithub: 'GitHub',
       ctaCv: 'Download CV',
-      photoAlt: 'Nicolas Huber smiling at a desk in a library',
+      photoAlt: 'Nicolas Huber at a whiteboard with a system sketch',
     },
     stats: [
       { value: '333', label: 'ECTS credits earned', accent: 'green' },
@@ -197,7 +197,7 @@ export const content = {
       ctaProjects: 'Projekte ansehen',
       ctaGithub: 'GitHub',
       ctaCv: 'CV herunterladen',
-      photoAlt: 'Nicolas Huber lächelnd an einem Tisch in einer Bibliothek',
+      photoAlt: 'Nicolas Huber an einem Whiteboard mit einer Systemskizze',
     },
     stats: [
       { value: '333', label: 'erreichte ECTS-Credits', accent: 'green' },
