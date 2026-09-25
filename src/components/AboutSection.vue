@@ -1,7 +1,7 @@
 <script setup>
 import { useLang } from '../composables/useLang.js'
 const { t } = useLang()
-const hiking = `${import.meta.env.BASE_URL}img/hiking.jpg`
+const img = (name) => `${import.meta.env.BASE_URL}img/${name}`
 </script>
 
 <template>
@@ -31,7 +31,10 @@ const hiking = `${import.meta.env.BASE_URL}img/hiking.jpg`
 
       <aside class="about__side">
         <figure class="photo reveal">
-          <img :src="hiking" :alt="t.about.photoAlt" width="1400" height="875" loading="lazy" />
+          <div class="photo__grid">
+            <img :src="img('hiking.jpg')" :alt="t.about.photoAlt.hiking" width="600" height="750" loading="lazy" />
+            <img :src="img('surfing.jpg')" :alt="t.about.photoAlt.surfing" width="600" height="750" loading="lazy" />
+          </div>
           <figcaption>{{ t.about.photoCaption }}</figcaption>
         </figure>
         <div class="panel reveal">
@@ -120,11 +123,16 @@ const hiking = `${import.meta.env.BASE_URL}img/hiking.jpg`
   background: var(--panel);
   padding: 8px;
 }
+.photo__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
 .photo img {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: var(--radius-sm);
 }
