@@ -4,6 +4,7 @@ import { useLang } from '../composables/useLang.js'
 import { meta } from '../data/content.js'
 
 const { t, lang } = useLang()
+const portrait = `${import.meta.env.BASE_URL}img/portrait.jpg`
 
 /* --- typewriter for the rotating role words --- */
 const typed = ref('')
@@ -47,50 +48,57 @@ onBeforeUnmount(() => clearTimeout(timer))
 <template>
   <section id="top" class="hero">
     <div class="container hero__inner">
-      <p class="hero__badge reveal">
-        <span class="dot"></span>{{ t.hero.badge }}
-      </p>
+      <div class="hero__text">
+        <p class="hero__badge reveal">
+          <span class="dot"></span>{{ t.hero.badge }}
+        </p>
 
-      <p class="hero__hello reveal">{{ t.hero.hello }}</p>
+        <p class="hero__hello reveal">{{ t.hero.hello }}</p>
 
-      <h1 class="hero__name reveal">{{ t.hero.name }}</h1>
+        <h1 class="hero__name reveal">{{ t.hero.name }}</h1>
 
-      <p class="hero__role reveal">
-        <span class="hero__prompt">&gt;</span>
-        <span class="hero__typed">{{ typed }}</span><span class="caret"></span>
-      </p>
+        <p class="hero__role reveal">
+          <span class="hero__prompt">&gt;</span>
+          <span class="hero__typed">{{ typed }}</span><span class="caret"></span>
+        </p>
 
-      <!-- transmutation formula: data → systems → impact -->
-      <div class="formula reveal">
-        <span class="formula__item formula__item--a">{{ t.hero.formula[0] }}</span>
-        <span class="formula__arrow">→</span>
-        <span class="formula__item formula__item--b">{{ t.hero.formula[1] }}</span>
-        <span class="formula__arrow">→</span>
-        <span class="formula__item formula__item--c">{{ t.hero.formula[2] }}</span>
+        <!-- transmutation formula: data → systems → impact -->
+        <div class="formula reveal">
+          <span class="formula__item formula__item--a">{{ t.hero.formula[0] }}</span>
+          <span class="formula__arrow">→</span>
+          <span class="formula__item formula__item--b">{{ t.hero.formula[1] }}</span>
+          <span class="formula__arrow">→</span>
+          <span class="formula__item formula__item--c">{{ t.hero.formula[2] }}</span>
+        </div>
+
+        <p class="hero__lead reveal">{{ t.hero.lead }}</p>
+
+        <div class="hero__cta reveal">
+          <a class="btn btn--primary" href="#projects">
+            {{ t.hero.ctaProjects }}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a class="btn" :href="meta.github" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.22-3.37-1.22-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.1 2.91.84.09-.66.35-1.1.63-1.36-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.35 4.8-4.58 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z" />
+            </svg>
+            {{ t.hero.ctaGithub }}
+          </a>
+          <a class="btn" :href="meta.cv[lang]" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            {{ t.hero.ctaCv }}
+          </a>
+        </div>
       </div>
 
-      <p class="hero__lead reveal">{{ t.hero.lead }}</p>
-
-      <div class="hero__cta reveal">
-        <a class="btn btn--primary" href="#projects">
-          {{ t.hero.ctaProjects }}
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </a>
-        <a class="btn" :href="meta.github" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.22-3.37-1.22-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.1 2.91.84.09-.66.35-1.1.63-1.36-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.35 4.8-4.58 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z" />
-          </svg>
-          {{ t.hero.ctaGithub }}
-        </a>
-        <a class="btn" :href="meta.cv[lang]" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-          {{ t.hero.ctaCv }}
-        </a>
-      </div>
+      <figure class="hero__photo reveal">
+        <img :src="portrait" :alt="t.hero.photoAlt" width="800" height="1000" />
+        <figcaption>~/nicolas.jpg</figcaption>
+      </figure>
     </div>
 
     <div class="hero__scroll" aria-hidden="true">
@@ -110,7 +118,45 @@ onBeforeUnmount(() => clearTimeout(timer))
 .hero__inner {
   padding-top: 40px;
   padding-bottom: 60px;
-  max-width: 900px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(240px, 26vw, 320px);
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+}
+
+/* Portrait: framed like the panels, with a soft green/blue glow behind it. */
+.hero__photo {
+  position: relative;
+  margin: 0;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  transition-delay: 0.2s;
+}
+.hero__photo::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(140deg, rgba(92, 240, 176, 0.35), transparent 45%, rgba(110, 181, 255, 0.3));
+  filter: blur(28px);
+  opacity: 0.55;
+}
+.hero__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+.hero__photo figcaption {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-faint);
+  padding: 8px 4px 0;
 }
 
 .hero__badge {
@@ -259,6 +305,17 @@ onBeforeUnmount(() => clearTimeout(timer))
   0% { opacity: 0; transform: translate(-50%, 0); }
   40% { opacity: 1; }
   80%, 100% { opacity: 0; transform: translate(-50%, 12px); }
+}
+@media (max-width: 860px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+  .hero__photo {
+    order: -1;
+    width: 170px;
+    padding: 6px;
+  }
+  .hero__photo figcaption { display: none; }
 }
 @media (max-width: 640px) {
   .hero__scroll { display: none; }

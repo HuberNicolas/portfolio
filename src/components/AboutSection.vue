@@ -1,6 +1,7 @@
 <script setup>
 import { useLang } from '../composables/useLang.js'
 const { t } = useLang()
+const hiking = `${import.meta.env.BASE_URL}img/hiking.jpg`
 </script>
 
 <template>
@@ -29,6 +30,10 @@ const { t } = useLang()
       </div>
 
       <aside class="about__side">
+        <figure class="photo reveal">
+          <img :src="hiking" :alt="t.about.photoAlt" width="1400" height="875" loading="lazy" />
+          <figcaption>{{ t.about.photoCaption }}</figcaption>
+        </figure>
         <div class="panel reveal">
           <h4 class="panel__title">{{ t.about.stackTitle }}</h4>
           <div class="panel__chips">
@@ -107,6 +112,27 @@ const { t } = useLang()
   border-radius: var(--radius);
   background: var(--panel);
   padding: 24px;
+}
+.photo {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+  padding: 8px;
+}
+.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+.photo figcaption {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--text-dim);
+  padding: 10px 8px 4px;
 }
 .panel__title {
   font-family: var(--font-mono);

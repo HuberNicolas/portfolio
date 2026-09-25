@@ -37,6 +37,7 @@ export const content = {
       ctaProjects: 'Explore projects',
       ctaGithub: 'GitHub',
       ctaCv: 'Download CV',
+      photoAlt: 'Nicolas Huber smiling at a desk in a library',
     },
     stats: [
       { value: '333', label: 'ECTS credits earned', accent: 'green' },
@@ -166,6 +167,8 @@ export const content = {
         'Python', 'SQL', 'dbt', 'scikit-learn', 'Vue.js', 'D3.js', 'FastAPI',
         'Docker', 'Kubernetes', 'OpenShift', 'GitLab', 'PHP / Symfony', 'LaTeX',
       ],
+      photoAlt: 'Nicolas on a summit above Lake Lucerne',
+      photoCaption: 'Off the clock — usually somewhere up a mountain.',
       langTitle: 'Languages',
       langs: ['German — native', 'English — fluent', 'French — A2/B1'],
     },
@@ -194,6 +197,7 @@ export const content = {
       ctaProjects: 'Projekte ansehen',
       ctaGithub: 'GitHub',
       ctaCv: 'CV herunterladen',
+      photoAlt: 'Nicolas Huber lächelnd an einem Tisch in einer Bibliothek',
     },
     stats: [
       { value: '333', label: 'erreichte ECTS-Credits', accent: 'green' },
@@ -323,6 +327,8 @@ export const content = {
         'Python', 'SQL', 'dbt', 'scikit-learn', 'Vue.js', 'D3.js', 'FastAPI',
         'Docker', 'Kubernetes', 'OpenShift', 'GitLab', 'PHP / Symfony', 'LaTeX',
       ],
+      photoAlt: 'Nicolas auf einem Gipfel über dem Vierwaldstättersee',
+      photoCaption: 'Offline — meistens irgendwo auf einem Berg.',
       langTitle: 'Sprachen',
       langs: ['Deutsch — Muttersprache', 'Englisch — fließend', 'Französisch — A2/B1'],
     },
