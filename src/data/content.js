@@ -33,7 +33,7 @@ export const content = {
       // Rendered as a "transmutation formula" under the name.
       formula: ['raw data', 'elegant systems', 'meaningful impact'],
       lead:
-        'I turn messy, raw data into clean pipelines, sharp models and elegant systems. MSc in Informatics from UZH, now doing Data Engineering & Analytics at Migros — curious, reliable, solution-oriented.',
+        'I turn messy, raw data into clean pipelines, sharp models and elegant systems. MSc in Informatics from UZH, now an IT trainee at Migros working on data engineering and ML — curious, reliable, solution-oriented.',
       ctaProjects: 'Explore projects',
       ctaGithub: 'GitHub',
       ctaCv: 'Download CV',
@@ -41,19 +41,23 @@ export const content = {
     },
     stats: [
       { value: '333', label: 'ECTS credits earned', accent: 'green' },
-      { value: '4+ yrs', label: 'professional dev experience', accent: 'blue' },
+      { value: '240×', label: 'fewer ML models to train', accent: 'blue' },
       { value: 'MSc', label: 'Informatics · UZH', accent: 'violet' },
       { value: 'IEEE', label: 'peer-reviewed publication', accent: 'amber' },
     ],
     work: {
       title: 'Where I work',
       kicker: '// current role',
-      role: 'IT Trainee — Data Engineering & Analytics',
+      role: 'IT Trainee — Data Engineering & ML',
       company: 'Migros-Genossenschafts-Bund',
       period: 'Jun 2025 — present · Zürich',
       body:
-        'Rotating across data and platform teams: building dbt pipelines and ML feature engineering for price & promotion optimisation, running data analyses on stockpiling effects, and operating systems on Kubernetes, OpenShift & GitLab.',
-      tags: ['dbt', 'Python', 'SQL', 'Machine Learning', 'Kubernetes', 'OpenShift'],
+        'Rotating through data teams across the Migros group. Right now I’m in the Product Development team at Digitec Galaxus, migrating ML models.',
+      highlights: [
+        'Migros Bank, Product & Marketing Analytics (Jan — Jun 2026): technical contact for modernising the data infrastructure of a team of ~10 analysts. Built a dbt + Dagster pipeline on a new OpenShift platform, deployed a campaign tool, prepared an ML model for an A/B test and ran internal workshops on dbt, data products and Git.',
+        'MGB, Data & Analytics (Jun — Dec 2025): added an aggregation layer to the training of a promotion optimisation tool — 2.4 M models down to 10,000 (240×), one training run from 3 hours down to 15 minutes (12×). Built as a dbt pipeline on Google Cloud.',
+      ],
+      tags: ['dbt', 'Dagster', 'Python', 'SQL', 'Google Cloud', 'OpenShift', 'Machine Learning'],
     },
     projects: {
       title: 'Selected projects',
@@ -80,21 +84,39 @@ export const content = {
         },
         {
           accent: 'violet',
-          name: 'Interactive Visual Data Analysis',
-          role: 'Research Assistant · IVDA @ UZH',
+          name: 'OkCupid Explorer',
+          role: 'Interactive Visual Data Analysis · UZH',
           desc:
-            'Human-centered AI tooling for visual analytics — combining machine learning, LLMs and interactive visualisation to explore complex data.',
-          tags: ['Vue', 'D3', 'Qdrant', 'Docker'],
-          link: 'https://github.com/HuberNicolas',
+            'Answer a dating questionnaire and see where you land among 842 real OkCupid profiles — cosine similarity, PCA and k-means, all running in the browser.',
+          tags: ['Vue', 'TypeScript', 'ECharts', 'scikit-learn'],
+          link: 'https://github.com/HuberNicolas/okcupid-explorer',
         },
         {
           accent: 'amber',
-          name: 'Design Patterns Cheatsheet',
-          role: 'Open source',
+          name: 'Towers vs. Monsters: Remastered',
+          role: 'Game · play in the browser',
           desc:
-            'Clean, minimal Python implementations of the classic software design patterns — a reference I actually reach for.',
-          tags: ['Python', 'Architecture'],
-          link: 'https://github.com/HuberNicolas/design-patterns-cheatsheet',
+            'A tower defense game where every tower shoots in one straight line. Remake of our 2021 software engineering lab project, now running entirely in the browser — on desktop and phone.',
+          tags: ['React', 'TypeScript', 'Canvas', 'Vitest'],
+          link: 'https://hubernicolas.github.io/tower-defense-remastered/',
+        },
+        {
+          accent: 'green',
+          name: 'Gaia Classifier',
+          role: 'Data Science · UTS Sydney',
+          desc:
+            'Predicts the spectral class of Gaia DR3 stars with a grid search over ten scikit-learn and XGBoost classifiers — 99.7 % cross-validation accuracy.',
+          tags: ['Python', 'scikit-learn', 'XGBoost', 'pandas'],
+          link: 'https://github.com/HuberNicolas/gaia-classifier',
+        },
+        {
+          accent: 'blue',
+          name: 'Heart Disease Risk Factors',
+          role: 'Data Science · first steps',
+          desc:
+            'Compares heart disease risk factors across the four hospitals of the UCI dataset. Our first data science project from 2021, rewritten as a tested Python package.',
+          tags: ['Python', 'pandas', 'scikit-learn', 'UMAP'],
+          link: 'https://github.com/HuberNicolas/heart-disease-risk-factors-uzh',
         },
       ],
     },
@@ -196,7 +218,7 @@ export const content = {
       roles: ['aspiring code alchemist', 'Data Engineer', 'ML-Tüftler', 'Systems Builder'],
       formula: ['rohe Daten', 'elegante Systeme', 'echter Impact'],
       lead:
-        'Ich verwandle rohe, unordentliche Daten in saubere Pipelines, scharfe Modelle und elegante Systeme. MSc Informatik der UZH, aktuell Data Engineering & Analytics bei der Migros — neugierig, verlässlich, lösungsorientiert.',
+        'Ich verwandle rohe, unordentliche Daten in saubere Pipelines, scharfe Modelle und elegante Systeme. MSc Informatik der UZH, aktuell IT-Trainee bei der Migros mit Fokus auf Data Engineering und ML — neugierig, verlässlich, lösungsorientiert.',
       ctaProjects: 'Projekte ansehen',
       ctaGithub: 'GitHub',
       ctaCv: 'CV herunterladen',
@@ -204,19 +226,23 @@ export const content = {
     },
     stats: [
       { value: '333', label: 'erreichte ECTS-Credits', accent: 'green' },
-      { value: '4+ J.', label: 'professionelle Entwicklungserfahrung', accent: 'blue' },
+      { value: '240×', label: 'weniger zu trainierende ML-Modelle', accent: 'blue' },
       { value: 'MSc', label: 'Informatik · UZH', accent: 'violet' },
       { value: 'IEEE', label: 'peer-reviewed Publikation', accent: 'amber' },
     ],
     work: {
       title: 'Wo ich arbeite',
       kicker: '// aktuelle Rolle',
-      role: 'IT-Trainee — Data Engineering & Analytics',
+      role: 'IT-Trainee — Data Engineering & ML',
       company: 'Migros-Genossenschafts-Bund',
       period: 'Juni 2025 — heute · Zürich',
       body:
-        'Rotation durch Daten- und Plattform-Teams: dbt-Pipelines und ML-Feature-Engineering für die Preis- & Aktionsoptimierung, Datenanalysen zu Bevorratungseffekten sowie System Engineering auf Kubernetes, OpenShift & GitLab.',
-      tags: ['dbt', 'Python', 'SQL', 'Machine Learning', 'Kubernetes', 'OpenShift'],
+        'Rotation durch Datenteams der Migros-Gruppe. Aktuell bin ich im Product-Development-Team bei Digitec Galaxus und migriere ML-Modelle.',
+      highlights: [
+        'Migros Bank, Product & Marketing Analytics (Jan. — Juni 2026): technische Ansprechperson für die Modernisierung der Dateninfrastruktur eines Teams von ~10 Analysten. Datenpipeline mit dbt und Dagster auf einer neuen OpenShift-Plattform, Deployment eines Kampagnentools, Vorbereitung eines ML-Modells für einen A/B-Test und interne Workshops zu dbt, Datenprodukten und Git.',
+        'MGB, Data & Analytics (Juni — Dez. 2025): Aggregations-Layer für das Modelltraining eines Promotionsoptimierungstools — von 2,4 Mio. auf 10.000 Modelle (Faktor 240), ein Trainingslauf von 3 Stunden auf 15 Minuten (Faktor 12). Umgesetzt als dbt-Pipeline auf Google Cloud.',
+      ],
+      tags: ['dbt', 'Dagster', 'Python', 'SQL', 'Google Cloud', 'OpenShift', 'Machine Learning'],
     },
     projects: {
       title: 'Ausgewählte Projekte',
@@ -243,21 +269,39 @@ export const content = {
         },
         {
           accent: 'violet',
-          name: 'Interactive Visual Data Analysis',
-          role: 'HiWi · IVDA @ UZH',
+          name: 'OkCupid Explorer',
+          role: 'Interactive Visual Data Analysis · UZH',
           desc:
-            'Human-centered-AI-Werkzeuge für Visual Analytics — Machine Learning, LLMs und interaktive Visualisierung zur Exploration komplexer Daten.',
-          tags: ['Vue', 'D3', 'Qdrant', 'Docker'],
-          link: 'https://github.com/HuberNicolas',
+            'Fragebogen ausfüllen und sehen, wo man unter 842 echten OkCupid-Profilen landet — Kosinus-Ähnlichkeit, PCA und k-Means, alles direkt im Browser.',
+          tags: ['Vue', 'TypeScript', 'ECharts', 'scikit-learn'],
+          link: 'https://github.com/HuberNicolas/okcupid-explorer',
         },
         {
           accent: 'amber',
-          name: 'Design Patterns Cheatsheet',
-          role: 'Open Source',
+          name: 'Towers vs. Monsters: Remastered',
+          role: 'Spiel · im Browser spielbar',
           desc:
-            'Saubere, minimale Python-Implementierungen der klassischen Software-Design-Patterns — eine Referenz, die ich wirklich nutze.',
-          tags: ['Python', 'Architektur'],
-          link: 'https://github.com/HuberNicolas/design-patterns-cheatsheet',
+            'Ein Tower-Defense-Spiel, in dem jeder Turm in genau einer Linie schiesst. Remake unseres Software-Engineering-Projekts von 2021, läuft jetzt komplett im Browser — auf Desktop und Handy.',
+          tags: ['React', 'TypeScript', 'Canvas', 'Vitest'],
+          link: 'https://hubernicolas.github.io/tower-defense-remastered/',
+        },
+        {
+          accent: 'green',
+          name: 'Gaia Classifier',
+          role: 'Data Science · UTS Sydney',
+          desc:
+            'Bestimmt die Spektralklasse von Gaia-DR3-Sternen mit einer Grid Search über zehn scikit-learn- und XGBoost-Klassifikatoren — 99,7 % Accuracy in der Kreuzvalidierung.',
+          tags: ['Python', 'scikit-learn', 'XGBoost', 'pandas'],
+          link: 'https://github.com/HuberNicolas/gaia-classifier',
+        },
+        {
+          accent: 'blue',
+          name: 'Heart Disease Risk Factors',
+          role: 'Data Science · erste Schritte',
+          desc:
+            'Vergleicht Risikofaktoren für Herzkrankheiten an den vier Spitälern des UCI-Datensatzes. Unser erstes Data-Science-Projekt von 2021, neu geschrieben als getestetes Python-Paket.',
+          tags: ['Python', 'pandas', 'scikit-learn', 'UMAP'],
+          link: 'https://github.com/HuberNicolas/heart-disease-risk-factors-uzh',
         },
       ],
     },

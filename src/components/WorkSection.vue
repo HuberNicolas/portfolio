@@ -19,6 +19,9 @@ const { t } = useLang()
           <span class="work__period">{{ t.work.period }}</span>
         </div>
         <p class="work__body">{{ t.work.body }}</p>
+        <ul v-if="t.work.highlights" class="work__highlights">
+          <li v-for="h in t.work.highlights" :key="h">{{ h }}</li>
+        </ul>
         <div class="work__tags">
           <span v-for="tag in t.work.tags" :key="tag" class="chip">{{ tag }}</span>
         </div>
@@ -75,6 +78,18 @@ const { t } = useLang()
   margin: 20px 0 22px;
   max-width: 760px;
   position: relative;
+}
+.work__highlights {
+  color: var(--text-dim);
+  margin: -8px 0 24px;
+  padding-left: 1.2em;
+  max-width: 760px;
+  position: relative;
+  display: grid;
+  gap: 10px;
+}
+.work__highlights li::marker {
+  color: var(--green);
 }
 .work__tags {
   display: flex;

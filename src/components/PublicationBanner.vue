@@ -1,7 +1,7 @@
 <script setup>
 import { useLang } from '../composables/useLang.js'
 const { t } = useLang()
-const paperUrl = 'https://ieeexplore.ieee.org/document/10224977'
+const paperUrl = 'https://ieeexplore.ieee.org/document/10224824'
 </script>
 
 <template>
