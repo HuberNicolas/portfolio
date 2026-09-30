@@ -32,6 +32,7 @@ const img = (name) => `${import.meta.env.BASE_URL}img/${name}`
       <aside class="about__side">
         <figure class="photo reveal">
           <div class="photo__grid">
+            <img class="photo__wide" :src="img('running.jpg')" :alt="t.about.photoAlt.running" width="1200" height="750" loading="lazy" />
             <img :src="img('hiking.jpg')" :alt="t.about.photoAlt.hiking" width="600" height="750" loading="lazy" />
             <img :src="img('surfing.jpg')" :alt="t.about.photoAlt.surfing" width="600" height="750" loading="lazy" />
           </div>
@@ -135,6 +136,10 @@ const img = (name) => `${import.meta.env.BASE_URL}img/${name}`
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: var(--radius-sm);
+}
+.photo img.photo__wide {
+  grid-column: 1 / -1;
+  aspect-ratio: 8 / 5;
 }
 .photo figcaption {
   font-family: var(--font-mono);

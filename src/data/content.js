@@ -205,8 +205,9 @@ export const content = {
       photoAlt: {
         hiking: 'Nicolas on a summit above Lake Lucerne',
         surfing: 'Nicolas in a rash guard at a surf camp',
+        running: 'Nicolas running a trail race above a forest',
       },
-      photoCaption: 'Off the clock — usually up a mountain or out on the waves.',
+      photoCaption: 'Off the clock — lifting, running, up a mountain or out on the waves.',
       langTitle: 'Languages',
       langs: ['German — native', 'English — fluent', 'French — A2/B1'],
     },
@@ -403,8 +404,9 @@ export const content = {
       photoAlt: {
         hiking: 'Nicolas auf einem Gipfel über dem Vierwaldstättersee',
         surfing: 'Nicolas im Lycra-Shirt in einem Surfcamp',
+        running: 'Nicolas bei einem Trail-Lauf über einem Wald',
       },
-      photoCaption: 'Offline — meistens auf einem Berg oder auf den Wellen.',
+      photoCaption: 'Offline — im Gym, beim Laufen, auf einem Berg oder auf den Wellen.',
       langTitle: 'Sprachen',
       langs: ['Deutsch — Muttersprache', 'Englisch — fliessend', 'Französisch — A2/B1'],
     },
