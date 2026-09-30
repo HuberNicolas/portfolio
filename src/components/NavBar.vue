@@ -1,9 +1,11 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useLang } from '../composables/useLang.js'
+import { useTheme } from '../composables/useTheme.js'
 import { meta } from '../data/content.js'
 
 const { t, lang, toggle } = useLang()
+const { theme, toggle: toggleTheme } = useTheme()
 const scrolled = ref(false)
 const open = ref(false)
 
@@ -45,6 +47,15 @@ function go(id) {
           <span class="lang__sep">/</span>
           <span class="lang__alt">{{ t.nav.langLabel }}</span>
         </button>
+        <button class="theme" @click="toggleTheme" :aria-label="t.nav.themeLabel" :title="t.nav.themeLabel">
+          <svg v-if="theme === 'dark'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke-linecap="round" />
+          </svg>
+          <svg v-else viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" stroke-linejoin="round" />
+          </svg>
+        </button>
         <a class="nav__gh" :href="meta.github" target="_blank" rel="noopener" aria-label="GitHub">
           <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor">
             <path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.22-3.37-1.22-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.1 2.91.84.09-.66.35-1.1.63-1.36-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.35 4.8-4.58 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z" />
@@ -72,7 +83,7 @@ function go(id) {
   border-bottom: 1px solid transparent;
 }
 .nav--scrolled {
-  background: rgba(8, 8, 12, 0.72);
+  background: var(--nav-bg);
   backdrop-filter: blur(14px);
   border-bottom-color: var(--line);
 }
@@ -161,6 +172,27 @@ function go(id) {
   margin: 0 3px;
   color: var(--text-faint);
 }
+.theme {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: border-color var(--dur), color var(--dur);
+}
+.theme:hover {
+  border-color: color-mix(in srgb, var(--green) 50%, transparent);
+  color: var(--text);
+}
+.theme svg {
+  width: 16px;
+  height: 16px;
+}
 .nav__gh {
   color: var(--text-dim);
   display: grid;
@@ -210,7 +242,7 @@ function go(id) {
     flex-direction: column;
     gap: 4px;
     padding: 18px 24px 26px;
-    background: rgba(10, 10, 16, 0.96);
+    background: var(--menu-bg);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--line);
     transform: translateY(-12px);

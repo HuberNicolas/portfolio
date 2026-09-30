@@ -35,8 +35,50 @@
   --maxw: 1120px;
   --nav-h: 68px;
 
+  /* Surfaces that differ per theme */
+  --nav-bg: rgba(8, 8, 12, 0.72);
+  --menu-bg: rgba(10, 10, 16, 0.96);
+  --shadow: rgba(0, 0, 0, 0.4);
+  --title-from: #fff;
+  --title-to: #b8b8cf;
+  --glow-green: rgba(92, 240, 176, 0.09);
+  --glow-blue: rgba(110, 181, 255, 0.08);
+
   --font-sans: 'Space Grotesk', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  color-scheme: dark;
+}
+
+/* Light theme — set on <html> by the inline script in index.html and the toggle in the nav. */
+:root[data-theme='light'] {
+  --bg: #f6f6f9;
+  --bg-1: #ffffff;
+  --bg-2: #ececf2;
+  --panel: rgba(20, 20, 40, 0.03);
+
+  --text: #15151f;
+  --text-dim: #52526a;
+  --text-faint: #9a9aad;
+
+  --green: #0a8f60;
+  --blue: #2a6ad0;
+  --violet: #7c45d0;
+  --amber: #a86a00;
+  --red: #c93c3c;
+
+  --line: rgba(20, 20, 40, 0.1);
+  --line-strong: rgba(20, 20, 40, 0.2);
+
+  --nav-bg: rgba(246, 246, 249, 0.8);
+  --menu-bg: rgba(246, 246, 249, 0.97);
+  --shadow: rgba(20, 20, 40, 0.12);
+  --title-from: #15151f;
+  --title-to: #4a4a62;
+  --glow-green: rgba(10, 143, 96, 0.08);
+  --glow-blue: rgba(42, 106, 208, 0.07);
+
+  color-scheme: light;
 }
 
 *,
@@ -81,8 +123,8 @@ body::after {
   position: fixed;
   inset: 0;
   z-index: -3;
-  background: radial-gradient(650px circle at 12% -5%, rgba(92, 240, 176, 0.09), transparent 55%),
-    radial-gradient(700px circle at 92% 8%, rgba(110, 181, 255, 0.08), transparent 55%);
+  background: radial-gradient(650px circle at 12% -5%, var(--glow-green), transparent 55%),
+    radial-gradient(700px circle at 92% 8%, var(--glow-blue), transparent 55%);
 }
 
 a {
@@ -96,8 +138,8 @@ img {
 }
 
 ::selection {
-  background: rgba(92, 240, 176, 0.25);
-  color: #fff;
+  background: color-mix(in srgb, var(--green) 25%, transparent);
+  color: var(--text);
 }
 
 /* ---- Layout helpers ---- */
@@ -185,7 +227,7 @@ img {
 .btn--primary {
   background: linear-gradient(120deg, rgba(92, 240, 176, 0.16), rgba(110, 181, 255, 0.12));
   border-color: rgba(92, 240, 176, 0.4);
-  color: #fff;
+  color: var(--text);
 }
 
 .btn svg {

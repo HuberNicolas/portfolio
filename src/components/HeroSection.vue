@@ -199,7 +199,7 @@ onBeforeUnmount(() => clearTimeout(timer))
   line-height: 0.98;
   letter-spacing: -0.035em;
   margin: 0;
-  background: linear-gradient(180deg, #fff 30%, #b8b8cf 100%);
+  background: linear-gradient(180deg, var(--title-from) 30%, var(--title-to) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

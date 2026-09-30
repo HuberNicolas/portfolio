@@ -24,6 +24,7 @@ export const content = {
       journey: 'Journey',
       about: 'About',
       langLabel: 'DE',
+      themeLabel: 'Toggle light / dark mode',
     },
     hero: {
       badge: 'Data-driven developer · Zürich',
@@ -63,6 +64,16 @@ export const content = {
       title: 'Selected projects',
       kicker: '// things I’ve built',
       viewAll: 'See all on GitHub',
+      repoLabel: 'Code',
+      moreTitle: 'Also on my GitHub',
+      more: [
+        { name: 'SDG Classifier', desc: 'Multi-label classification of research abstracts by SDG with DistilBERT', tag: 'NLP', link: 'https://github.com/HuberNicolas/sdg-classifier' },
+        { name: 'Shortcut Overlay', desc: 'Desktop HUD that shows the shortcuts of the focused app, for Linux, macOS and Windows', tag: 'Rust', link: 'https://github.com/HuberNicolas/shortcut-overlay' },
+        { name: 'Infrastructure', desc: 'Hosting for my projects: one Hetzner server, Coolify and images built in GitHub Actions', tag: 'DevOps', link: 'https://github.com/HuberNicolas/infrastructure' },
+        { name: 'Network Science', desc: 'Centralities, community detection, null models and epidemics on networks · UZH 2023', tag: 'NetworkX', link: 'https://github.com/HuberNicolas/network-science-uzh' },
+        { name: 'Numerical Methods', desc: 'Classic numerical methods written from scratch, from root finding to integration · UZH 2020', tag: 'MATLAB', link: 'https://github.com/HuberNicolas/numerical-methods-uzh' },
+        { name: 'Abstract Scraper', desc: 'Adds abstracts to a CSV of DOIs via the OpenAlex API, with parallel requests', tag: 'Python', link: 'https://github.com/HuberNicolas/abstract-scraper' },
+      ],
       items: [
         {
           accent: 'green',
@@ -85,11 +96,12 @@ export const content = {
         {
           accent: 'violet',
           name: 'OkCupid Explorer',
-          role: 'Interactive Visual Data Analysis · UZH',
+          role: 'Visual Data Analysis · UZH · live demo',
           desc:
             'Answer a dating questionnaire and see where you land among 842 real OkCupid profiles — cosine similarity, PCA and k-means, all running in the browser.',
           tags: ['Vue', 'TypeScript', 'ECharts', 'scikit-learn'],
-          link: 'https://github.com/HuberNicolas/okcupid-explorer',
+          link: 'https://hubernicolas.github.io/okcupid-explorer/',
+          repo: 'https://github.com/HuberNicolas/okcupid-explorer',
         },
         {
           accent: 'amber',
@@ -99,6 +111,7 @@ export const content = {
             'A tower defense game where every tower shoots in one straight line. Remake of our 2021 software engineering lab project, now running entirely in the browser — on desktop and phone.',
           tags: ['React', 'TypeScript', 'Canvas', 'Vitest'],
           link: 'https://hubernicolas.github.io/tower-defense-remastered/',
+          repo: 'https://github.com/HuberNicolas/tower-defense-remastered',
         },
         {
           accent: 'green',
@@ -173,21 +186,21 @@ export const content = {
       title: 'About',
       kicker: '// the human behind the commits',
       body:
-        'My dream role? Data-driven developer — combining a passion for data with the craft of building things that matter. I like working with people who have a clear vision and push projects forward. In three words: curious, reliable, solution-oriented.',
+        'What drives me is the whole path from raw data to something people actually use — a pipeline, a model, an interactive visualisation. I like to understand the data before I build on it, and I work best with people who have a clear vision and push projects forward.',
       groups: [
         {
-          title: 'Driven by',
-          items: ['Data architecture & pipelines', 'Modern data-driven systems', 'MLOps & Data Engineering'],
+          title: 'Focus',
+          items: ['Data pipelines & modelling with dbt and Dagster', 'Getting ML models into production', 'Data platforms on OpenShift & Google Cloud'],
         },
         {
-          title: 'Interests',
-          items: ['Machine Learning & Data Science', 'Data visualisation', 'IoT & Cybersecurity'],
+          title: 'Also into',
+          items: ['Data visualisation & visual analytics', 'Games and playful interfaces', 'IoT & cybersecurity'],
         },
       ],
       stackTitle: 'Stack & tools',
       stack: [
-        'Python', 'SQL', 'dbt', 'scikit-learn', 'Vue.js', 'D3.js', 'FastAPI',
-        'Docker', 'Kubernetes', 'OpenShift', 'GitLab', 'PHP / Symfony', 'LaTeX',
+        'Python', 'SQL', 'dbt', 'Dagster', 'scikit-learn', 'TypeScript', 'Vue.js', 'React', 'D3.js',
+        'FastAPI', 'Docker', 'Kubernetes', 'OpenShift', 'Google Cloud', 'GitLab', 'PHP / Symfony', 'LaTeX',
       ],
       photoAlt: {
         hiking: 'Nicolas on a summit above Lake Lucerne',
@@ -210,6 +223,7 @@ export const content = {
       journey: 'Werdegang',
       about: 'Über mich',
       langLabel: 'EN',
+      themeLabel: 'Hell- / Dunkelmodus umschalten',
     },
     hero: {
       badge: 'Data-driven Developer · Zürich',
@@ -248,6 +262,16 @@ export const content = {
       title: 'Ausgewählte Projekte',
       kicker: '// was ich gebaut habe',
       viewAll: 'Alle auf GitHub ansehen',
+      repoLabel: 'Code',
+      moreTitle: 'Ausserdem auf GitHub',
+      more: [
+        { name: 'SDG Classifier', desc: 'Multi-Label-Klassifikation von Forschungsabstracts nach SDG mit DistilBERT', tag: 'NLP', link: 'https://github.com/HuberNicolas/sdg-classifier' },
+        { name: 'Shortcut Overlay', desc: 'Desktop-HUD mit den Tastenkürzeln des aktiven Programms, für Linux, macOS und Windows', tag: 'Rust', link: 'https://github.com/HuberNicolas/shortcut-overlay' },
+        { name: 'Infrastructure', desc: 'Hosting meiner Projekte: ein Hetzner-Server, Coolify und Images aus GitHub Actions', tag: 'DevOps', link: 'https://github.com/HuberNicolas/infrastructure' },
+        { name: 'Network Science', desc: 'Zentralitäten, Community Detection, Nullmodelle und Epidemien auf Netzwerken · UZH 2023', tag: 'NetworkX', link: 'https://github.com/HuberNicolas/network-science-uzh' },
+        { name: 'Numerical Methods', desc: 'Klassische numerische Verfahren von Grund auf, von Nullstellensuche bis Integration · UZH 2020', tag: 'MATLAB', link: 'https://github.com/HuberNicolas/numerical-methods-uzh' },
+        { name: 'Abstract Scraper', desc: 'Ergänzt eine CSV mit DOIs um Abstracts über die OpenAlex-API, mit parallelen Requests', tag: 'Python', link: 'https://github.com/HuberNicolas/abstract-scraper' },
+      ],
       items: [
         {
           accent: 'green',
@@ -270,11 +294,12 @@ export const content = {
         {
           accent: 'violet',
           name: 'OkCupid Explorer',
-          role: 'Interactive Visual Data Analysis · UZH',
+          role: 'Visual Data Analysis · UZH · Live-Demo',
           desc:
             'Fragebogen ausfüllen und sehen, wo man unter 842 echten OkCupid-Profilen landet — Kosinus-Ähnlichkeit, PCA und k-Means, alles direkt im Browser.',
           tags: ['Vue', 'TypeScript', 'ECharts', 'scikit-learn'],
-          link: 'https://github.com/HuberNicolas/okcupid-explorer',
+          link: 'https://hubernicolas.github.io/okcupid-explorer/',
+          repo: 'https://github.com/HuberNicolas/okcupid-explorer',
         },
         {
           accent: 'amber',
@@ -284,6 +309,7 @@ export const content = {
             'Ein Tower-Defense-Spiel, in dem jeder Turm in genau einer Linie schiesst. Remake unseres Software-Engineering-Projekts von 2021, läuft jetzt komplett im Browser — auf Desktop und Handy.',
           tags: ['React', 'TypeScript', 'Canvas', 'Vitest'],
           link: 'https://hubernicolas.github.io/tower-defense-remastered/',
+          repo: 'https://github.com/HuberNicolas/tower-defense-remastered',
         },
         {
           accent: 'green',
@@ -358,21 +384,21 @@ export const content = {
       title: 'Über mich',
       kicker: '// der Mensch hinter den Commits',
       body:
-        'Meine Traumrolle? Data-driven Developer — die Leidenschaft für Daten mit dem Handwerk verbinden, Dinge zu bauen, die zählen. Ich arbeite gern mit Menschen, die eine klare Vision haben und Projekte voranbringen. In drei Worten: neugierig, verlässlich, lösungsorientiert.',
+        'Mich reizt der ganze Weg von rohen Daten bis zu etwas, das Menschen wirklich nutzen — eine Pipeline, ein Modell, eine interaktive Visualisierung. Ich will die Daten verstehen, bevor ich darauf aufbaue, und arbeite am liebsten mit Menschen, die eine klare Vision haben und Projekte vorantreiben.',
       groups: [
         {
-          title: 'Was mich antreibt',
-          items: ['Datenarchitektur & Pipelines', 'Moderne datengetriebene Systeme', 'MLOps & Data Engineering'],
+          title: 'Fokus',
+          items: ['Datenpipelines & Modellierung mit dbt und Dagster', 'ML-Modelle in Produktion bringen', 'Datenplattformen auf OpenShift & Google Cloud'],
         },
         {
-          title: 'Interessen',
-          items: ['Machine Learning & Data Science', 'Datenvisualisierung', 'IoT & Cybersecurity'],
+          title: 'Ausserdem',
+          items: ['Datenvisualisierung & Visual Analytics', 'Games und verspielte Interfaces', 'IoT & Cybersecurity'],
         },
       ],
       stackTitle: 'Stack & Tools',
       stack: [
-        'Python', 'SQL', 'dbt', 'scikit-learn', 'Vue.js', 'D3.js', 'FastAPI',
-        'Docker', 'Kubernetes', 'OpenShift', 'GitLab', 'PHP / Symfony', 'LaTeX',
+        'Python', 'SQL', 'dbt', 'Dagster', 'scikit-learn', 'TypeScript', 'Vue.js', 'React', 'D3.js',
+        'FastAPI', 'Docker', 'Kubernetes', 'OpenShift', 'Google Cloud', 'GitLab', 'PHP / Symfony', 'LaTeX',
       ],
       photoAlt: {
         hiking: 'Nicolas auf einem Gipfel über dem Vierwaldstättersee',

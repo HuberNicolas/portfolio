@@ -11,14 +11,11 @@ const { t } = useLang()
       <h2 class="section-title reveal">{{ t.projects.title }}</h2>
 
       <div class="grid">
-        <a
+        <article
           v-for="(p, i) in t.projects.items"
           :key="p.name"
           class="card reveal"
           :data-accent="p.accent"
-          :href="p.link"
-          target="_blank"
-          rel="noopener"
           :style="{ transitionDelay: 0.05 * i + 's' }"
         >
           <div class="card__glow" aria-hidden="true"></div>
@@ -28,12 +25,35 @@ const { t } = useLang()
               <path d="M7 17 17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
-          <h3 class="card__name">{{ p.name }}</h3>
+          <h3 class="card__name">
+            <a class="card__link" :href="p.link" target="_blank" rel="noopener">{{ p.name }}</a>
+          </h3>
           <p class="card__desc">{{ p.desc }}</p>
-          <div class="card__tags">
-            <span v-for="tag in p.tags" :key="tag" class="chip">{{ tag }}</span>
+          <div class="card__foot">
+            <div class="card__tags">
+              <span v-for="tag in p.tags" :key="tag" class="chip">{{ tag }}</span>
+            </div>
+            <a v-if="p.repo" class="card__repo" :href="p.repo" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m9 8-5 4 5 4M15 8l5 4-5 4" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              {{ t.projects.repoLabel }}
+            </a>
           </div>
-        </a>
+        </article>
+      </div>
+
+      <div class="more reveal">
+        <h3 class="more__title">{{ t.projects.moreTitle }}</h3>
+        <ul class="more__list">
+          <li v-for="m in t.projects.more" :key="m.name">
+            <a class="more__item" :href="m.link" target="_blank" rel="noopener">
+              <span class="more__name">{{ m.name }}</span>
+              <span class="more__desc">{{ m.desc }}</span>
+              <span class="more__tag">{{ m.tag }}</span>
+            </a>
+          </li>
+        </ul>
       </div>
 
       <div class="projects__more reveal">
@@ -79,7 +99,7 @@ const { t } = useLang()
 .card:hover {
   transform: translateY(-5px);
   border-color: color-mix(in srgb, var(--accent) 45%, transparent);
-  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 16px 44px var(--shadow);
 }
 .card:hover::before {
   transform: scaleX(1);
@@ -132,10 +152,112 @@ const { t } = useLang()
   margin: 0 0 20px;
   flex: 1;
 }
+.card__link {
+  color: inherit;
+}
+/* Stretch the title link over the whole card; the repo link sits above it. */
+.card__link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.card__link:focus-visible {
+  outline: none;
+}
+.card:has(.card__link:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.card__foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+}
 .card__tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+.card__repo {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--text-dim);
+  padding: 4px 11px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  transition: color var(--dur), border-color var(--dur);
+}
+.card__repo:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.card__repo svg {
+  width: 14px;
+  height: 14px;
+}
+
+.more {
+  margin-top: clamp(40px, 6vw, 64px);
+}
+.more__title {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-dim);
+  margin: 0 0 12px;
+}
+.more__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+.more__item {
+  display: grid;
+  grid-template-columns: 180px 1fr auto;
+  align-items: baseline;
+  gap: 16px;
+  padding: 13px 4px;
+  border-bottom: 1px solid var(--line);
+  transition: background var(--dur) var(--ease);
+}
+.more__item:hover {
+  background: var(--panel);
+}
+.more__name {
+  font-weight: 600;
+  font-size: 15px;
+  transition: color var(--dur);
+}
+.more__item:hover .more__name {
+  color: var(--green);
+}
+.more__desc {
+  color: var(--text-dim);
+  font-size: 14px;
+}
+.more__tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-faint);
+}
+@media (max-width: 720px) {
+  .more__item {
+    grid-template-columns: 1fr auto;
+    gap: 2px 12px;
+  }
+  .more__desc {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
 }
 
 .projects__more {
