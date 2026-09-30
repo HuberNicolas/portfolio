@@ -40,8 +40,8 @@ export const content = {
       photoAlt: 'Nicolas Huber at a whiteboard with a system sketch',
     },
     stats: [
-      { value: '333', label: 'ECTS credits earned', accent: 'green' },
-      { value: '240×', label: 'fewer ML models to train', accent: 'blue' },
+      { value: '3', label: 'data teams at Migros', accent: 'green' },
+      { value: 'SYD', label: 'exchange semester in Sydney', accent: 'blue' },
       { value: 'MSc', label: 'Informatics · UZH', accent: 'violet' },
       { value: 'IEEE', label: 'peer-reviewed publication', accent: 'amber' },
     ],
@@ -78,8 +78,8 @@ export const content = {
           name: 'MTD Strategy Selection Agent',
           role: "Bachelor's Thesis · IEEE",
           desc:
-            'A Moving Target Defense agent that picks the optimal defense mechanism against malware on resource-constrained IoT devices, driven by platform metrics.',
-          tags: ['Python', 'IoT Security', 'RL'],
+            'A Moving Target Defense agent that watches system metrics on resource-constrained IoT devices and deploys the most fitting defense against malware, based on a policy of metric thresholds.',
+          tags: ['Python', 'IoT Security', 'Anomaly Detection'],
           link: 'https://github.com/HuberNicolas/MTDStrategySelectionAgent',
         },
         {
@@ -105,16 +105,16 @@ export const content = {
           name: 'Gaia Classifier',
           role: 'Data Science · UTS Sydney',
           desc:
-            'Predicts the spectral class of Gaia DR3 stars with a grid search over ten scikit-learn and XGBoost classifiers — 99.7 % cross-validation accuracy.',
+            'Predicts the spectral class of Gaia DR3 stars for a class Kaggle competition: feature sets chosen by decision-tree importance, then a cross-validated grid search over ten scikit-learn and XGBoost classifiers.',
           tags: ['Python', 'scikit-learn', 'XGBoost', 'pandas'],
           link: 'https://github.com/HuberNicolas/gaia-classifier',
         },
         {
           accent: 'blue',
           name: 'Heart Disease Risk Factors',
-          role: 'Data Science · first steps',
+          role: 'Data Science · first project, revisited',
           desc:
-            'Compares heart disease risk factors across the four hospitals of the UCI dataset. Our first data science project from 2021, rewritten as a tested Python package.',
+            'Our first data science project (2021), revisited in 2026: the rewrite showed that our high accuracies came from target leakage. Without the leaking attributes, the models barely beat the baseline — an honest look at four hospitals of the UCI dataset.',
           tags: ['Python', 'pandas', 'scikit-learn', 'UMAP'],
           link: 'https://github.com/HuberNicolas/heart-disease-risk-factors-uzh',
         },
@@ -216,7 +216,7 @@ export const content = {
       hello: 'Hi, ich bin Nicolas —',
       name: 'Nicolas Huber',
       roles: ['aspiring code alchemist', 'Data Engineer', 'ML-Tüftler', 'Systems Builder'],
-      formula: ['rohe Daten', 'elegante Systeme', 'echter Impact'],
+      formula: ['rohe Daten', 'elegante Systeme', 'echte Wirkung'],
       lead:
         'Ich verwandle rohe, unordentliche Daten in saubere Pipelines, scharfe Modelle und elegante Systeme. MSc Informatik der UZH, aktuell IT-Trainee bei der Migros mit Fokus auf Data Engineering und ML — neugierig, verlässlich, lösungsorientiert.',
       ctaProjects: 'Projekte ansehen',
@@ -225,8 +225,8 @@ export const content = {
       photoAlt: 'Nicolas Huber an einem Whiteboard mit einer Systemskizze',
     },
     stats: [
-      { value: '333', label: 'erreichte ECTS-Credits', accent: 'green' },
-      { value: '240×', label: 'weniger zu trainierende ML-Modelle', accent: 'blue' },
+      { value: '3', label: 'Datenteams bei der Migros', accent: 'green' },
+      { value: 'SYD', label: 'Austauschsemester in Sydney', accent: 'blue' },
       { value: 'MSc', label: 'Informatik · UZH', accent: 'violet' },
       { value: 'IEEE', label: 'peer-reviewed Publikation', accent: 'amber' },
     ],
@@ -240,7 +240,7 @@ export const content = {
         'Rotation durch Datenteams der Migros-Gruppe. Aktuell bin ich im Product-Development-Team bei Digitec Galaxus und migriere ML-Modelle.',
       highlights: [
         'Migros Bank, Product & Marketing Analytics (Jan. — Juni 2026): technische Ansprechperson für die Modernisierung der Dateninfrastruktur eines Teams von ~10 Analysten. Datenpipeline mit dbt und Dagster auf einer neuen OpenShift-Plattform, Deployment eines Kampagnentools, Vorbereitung eines ML-Modells für einen A/B-Test und interne Workshops zu dbt, Datenprodukten und Git.',
-        'MGB, Data & Analytics (Juni — Dez. 2025): Aggregations-Layer für das Modelltraining eines Promotionsoptimierungstools — von 2,4 Mio. auf 10.000 Modelle (Faktor 240), ein Trainingslauf von 3 Stunden auf 15 Minuten (Faktor 12). Umgesetzt als dbt-Pipeline auf Google Cloud.',
+        'MGB, Data & Analytics (Juni — Dez. 2025): Aggregations-Layer für das Modelltraining eines Promotionsoptimierungstools — von 2,4 Mio. auf 10’000 Modelle (Faktor 240), ein Trainingslauf von 3 Stunden auf 15 Minuten (Faktor 12). Umgesetzt als dbt-Pipeline auf Google Cloud.',
       ],
       tags: ['dbt', 'Dagster', 'Python', 'SQL', 'Google Cloud', 'OpenShift', 'Machine Learning'],
     },
@@ -263,8 +263,8 @@ export const content = {
           name: 'MTD Strategy Selection Agent',
           role: 'Bachelorarbeit · IEEE',
           desc:
-            'Ein Moving-Target-Defense-Agent, der auf ressourcenbeschränkten IoT-Geräten anhand von Plattform-Metriken den optimalen Abwehrmechanismus gegen Malware wählt.',
-          tags: ['Python', 'IoT Security', 'RL'],
+            'Ein Moving-Target-Defense-Agent, der auf ressourcenbeschränkten IoT-Geräten Systemmetriken überwacht und anhand von Schwellenwert-Regeln den passendsten Abwehrmechanismus gegen Malware einsetzt.',
+          tags: ['Python', 'IoT Security', 'Anomaly Detection'],
           link: 'https://github.com/HuberNicolas/MTDStrategySelectionAgent',
         },
         {
@@ -290,16 +290,16 @@ export const content = {
           name: 'Gaia Classifier',
           role: 'Data Science · UTS Sydney',
           desc:
-            'Bestimmt die Spektralklasse von Gaia-DR3-Sternen mit einer Grid Search über zehn scikit-learn- und XGBoost-Klassifikatoren — 99,7 % Accuracy in der Kreuzvalidierung.',
+            'Bestimmt die Spektralklasse von Gaia-DR3-Sternen für eine Kaggle-Competition im Kurs: Feature-Sets per Decision-Tree-Importance, danach eine kreuzvalidierte Grid Search über zehn scikit-learn- und XGBoost-Klassifikatoren.',
           tags: ['Python', 'scikit-learn', 'XGBoost', 'pandas'],
           link: 'https://github.com/HuberNicolas/gaia-classifier',
         },
         {
           accent: 'blue',
           name: 'Heart Disease Risk Factors',
-          role: 'Data Science · erste Schritte',
+          role: 'Data Science · erstes Projekt, neu aufgerollt',
           desc:
-            'Vergleicht Risikofaktoren für Herzkrankheiten an den vier Spitälern des UCI-Datensatzes. Unser erstes Data-Science-Projekt von 2021, neu geschrieben als getestetes Python-Paket.',
+            'Unser erstes Data-Science-Projekt (2021), 2026 neu aufgerollt: Beim Rewrite zeigte sich, dass die hohen Accuracies von damals auf Target Leakage beruhten. Ohne die verräterischen Attribute schlagen die Modelle die Baseline kaum — ein ehrlicher Blick auf vier Spitäler des UCI-Datensatzes.',
           tags: ['Python', 'pandas', 'scikit-learn', 'UMAP'],
           link: 'https://github.com/HuberNicolas/heart-disease-risk-factors-uzh',
         },
@@ -380,7 +380,7 @@ export const content = {
       },
       photoCaption: 'Offline — meistens auf einem Berg oder auf den Wellen.',
       langTitle: 'Sprachen',
-      langs: ['Deutsch — Muttersprache', 'Englisch — fließend', 'Französisch — A2/B1'],
+      langs: ['Deutsch — Muttersprache', 'Englisch — fliessend', 'Französisch — A2/B1'],
     },
     footer: {
       tagline: 'Aus rohen Daten werden elegante Systeme.',
