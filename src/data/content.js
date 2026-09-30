@@ -41,7 +41,7 @@ export const content = {
     },
     stats: [
       { value: '3', label: 'data teams at Migros', accent: 'green' },
-      { value: 'SYD', label: 'exchange semester in Sydney', accent: 'blue' },
+      { value: '4', label: 'surf camps — not just surfing the web', accent: 'blue' },
       { value: 'MSc', label: 'Informatics · UZH', accent: 'violet' },
       { value: 'IEEE', label: 'peer-reviewed publication', accent: 'amber' },
     ],
@@ -226,7 +226,7 @@ export const content = {
     },
     stats: [
       { value: '3', label: 'Datenteams bei der Migros', accent: 'green' },
-      { value: 'SYD', label: 'Austauschsemester in Sydney', accent: 'blue' },
+      { value: '4', label: 'Surfcamps — ich surfe nicht nur im Web', accent: 'blue' },
       { value: 'MSc', label: 'Informatik · UZH', accent: 'violet' },
       { value: 'IEEE', label: 'peer-reviewed Publikation', accent: 'amber' },
     ],
