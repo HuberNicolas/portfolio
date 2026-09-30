@@ -9,6 +9,3 @@ dist-ssr
 .vscode/*
 !.vscode/extensions.json
 .idea
-
-# Private notes (not pushed)
-memories/
