@@ -28,8 +28,9 @@ All copy lives in **one place**: [`src/data/content.js`](src/data/content.js).
 It holds an `en` and a `de` object with identical shapes, plus a shared `meta`
 block (name, links, CV paths). Change text there — no need to touch components.
 
-- Add your CV PDFs to `public/cv/` (`nicolas-huber-cv-en.pdf`,
-  `nicolas-huber-cv-de.pdf`) — paths are configured in `meta.cv`.
+- The CV PDFs in `public/cv/` (`nicolas-huber-cv-en.pdf`,
+  `nicolas-huber-cv-de.pdf`) are built in the private repo `minimalistic-cv`
+  (artifact `cv-web`, without phone number); paths are configured in `meta.cv`.
 - The language is remembered via `localStorage` and reflected in a `?lang=`
   URL parameter, so links can deep-link into a language.
 
