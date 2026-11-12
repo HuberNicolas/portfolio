@@ -4,7 +4,7 @@ import { useLang } from '../composables/useLang.js'
 import { networkMap, posterMeta } from '../data/content.js'
 
 const { t } = useLang()
-const order = ['1', '2', '3', '4']
+const order = ['D', 'V', 'R', 'T']
 const colourOf = Object.fromEntries(networkMap.lines.map((l) => [l.id, l.colour]))
 
 // Each stop gets the project it carries: its name and where a click on it goes.
@@ -90,7 +90,7 @@ onBeforeUnmount(() => observer?.disconnect())
         <g class="legend" transform="translate(28 14)" aria-hidden="true">
           <g v-for="(id, i) in order" :key="id" :transform="`translate(${[0, 160, 350, 500][i]} 0)`">
             <circle cx="13" cy="13" r="13" :class="`fill--${colourOf[id]}`" />
-            <text x="13" y="18" text-anchor="middle" class="legend__num" :class="{ 'legend__num--dark': id === '4' }">
+            <text x="13" y="18" text-anchor="middle" class="legend__num" :class="{ 'legend__num--dark': id === 'T' }">
               {{ id }}
             </text>
             <text x="38" y="19" class="legend__name">{{ t.box.lines[id] }}</text>

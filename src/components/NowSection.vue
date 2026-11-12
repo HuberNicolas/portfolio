@@ -75,7 +75,7 @@ const { t } = useLang()
   max-width: 62ch;
 }
 
-/* A small newspaper-sized advertisement, the only place a number gets to shout a little. */
+/* A small printed advertisement, the only place a number gets to shout a little. */
 .ad {
   margin-top: clamp(32px, 4vw, 48px);
   max-width: 320px;

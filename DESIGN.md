@@ -1,296 +1,331 @@
 ---
 name: Nicolas Huber Portfolio
-description: Aspiring code alchemist. A dark, terminal-flavoured personal page where raw data becomes elegant systems.
+description: Aspiring code alchemist. Every project is advertised as a 1910 wonder remedy, pasted onto a wall inside a quiet, modern page.
 colors:
-  void: "#08080c"
-  void-raised: "#0d0d14"
-  void-deep: "#12121d"
-  panel-veil: "rgba(255, 255, 255, 0.025)"
-  moonlight: "#eaeaf2"
-  ash: "#9a9aad"
-  smoke: "#7a7a90"
-  hairline: "rgba(255, 255, 255, 0.08)"
-  hairline-strong: "rgba(255, 255, 255, 0.16)"
-  elixir-green: "#5cf0b0"
-  quicksilver-blue: "#6eb5ff"
-  aether-violet: "#c99bff"
-  gold-leaf-amber: "#ffc06e"
-  cinnabar-red: "#ff7a7a"
-  paper: "#f6f6f9"
-  paper-raised: "#ffffff"
-  paper-deep: "#ececf2"
-  ink: "#15151f"
-  ink-dim: "#52526a"
-  elixir-green-light: "#077a52"
-  quicksilver-blue-light: "#2a6ad0"
-  aether-violet-light: "#7c45d0"
-  gold-leaf-amber-light: "#946000"
+  matinee-ground: "#eef3f6"
+  navy-ink: "#142039"
+  ink-dim: "#3d4a63"
+  ink-faint: "#5a6680"
+  gold-text: "#85600f"
+  rule: "rgba(20, 32, 57, 0.14)"
+  rule-strong: "rgba(20, 32, 57, 0.32)"
+  evening-ground: "#0d1426"
+  evening-ivory: "#f1ead8"
+  evening-dim: "#c2bba8"
+  evening-faint: "#9b947f"
+  evening-gold: "#e2b553"
+  evening-rule: "rgba(241, 234, 216, 0.14)"
+  evening-rule-strong: "rgba(241, 234, 216, 0.32)"
+  cobalt: "#1f3c88"
+  vermilion: "#b43a26"
+  viridian: "#2f6e5a"
+  sky: "#bfdcec"
+  paper: "#f4efe2"
+  ivory: "#f6f0e1"
+  gold: "#c9962e"
+  gold-light: "#e8c06a"
 typography:
   display:
-    fontFamily: "'Space Grotesk', system-ui, -apple-system, sans-serif"
-    fontSize: "clamp(46px, 9vw, 104px)"
-    fontWeight: 700
-    lineHeight: 0.98
-    letterSpacing: "-0.035em"
+    fontFamily: "'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif"
+    fontSize: "clamp(52px, 6.2vw, 92px)"
+    fontWeight: 800
+    lineHeight: 0.92
+    letterSpacing: "-0.02em"
+    fontVariation: "'opsz' 14"
   headline:
-    fontFamily: "'Space Grotesk', system-ui, -apple-system, sans-serif"
-    fontSize: "clamp(28px, 4.4vw, 46px)"
+    fontFamily: "'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif"
+    fontSize: "clamp(28px, 3.4vw, 44px)"
     fontWeight: 700
     lineHeight: 1.08
-    letterSpacing: "-0.02em"
-  title:
-    fontFamily: "'Space Grotesk', system-ui, -apple-system, sans-serif"
-    fontSize: "21px"
-    fontWeight: 600
     letterSpacing: "-0.01em"
+    fontVariation: "'opsz' 14"
+  title:
+    fontFamily: "'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif"
+    fontSize: "clamp(30px, 2.6vw, 40px)"
+    fontWeight: 700
+    lineHeight: 1.02
+    letterSpacing: "-0.01em"
+    fontVariation: "'opsz' 14"
+  title-small:
+    fontFamily: "'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif"
+    fontSize: "clamp(22px, 2vw, 26px)"
+    fontWeight: 700
+    lineHeight: 1.2
+    fontVariation: "'opsz' 14"
+  claim:
+    fontFamily: "'Big Shoulders Display', 'Arial Narrow', sans-serif"
+    fontSize: "clamp(21px, 1.7vw, 26px)"
+    fontWeight: 700
+    lineHeight: 1.1
+    letterSpacing: "0.02em"
+  action:
+    fontFamily: "'Big Shoulders Display', 'Arial Narrow', sans-serif"
+    fontSize: "18px"
+    fontWeight: 700
+    letterSpacing: "0.08em"
+  label:
+    fontFamily: "'Big Shoulders Display', 'Arial Narrow', sans-serif"
+    fontSize: "16px"
+    fontWeight: 600
+    letterSpacing: "0.12em"
+  body-lead:
+    fontFamily: "'Schibsted Grotesk', system-ui, -apple-system, sans-serif"
+    fontSize: "clamp(20px, 2vw, 24px)"
+    fontWeight: 400
+    lineHeight: 1.45
   body:
-    fontFamily: "'Space Grotesk', system-ui, -apple-system, sans-serif"
+    fontFamily: "'Schibsted Grotesk', system-ui, -apple-system, sans-serif"
+    fontSize: "18px"
+    fontWeight: 400
+    lineHeight: 1.6
+  body-small:
+    fontFamily: "'Schibsted Grotesk', system-ui, -apple-system, sans-serif"
     fontSize: "16px"
     fontWeight: 400
-    lineHeight: 1.65
-  body-small:
-    fontFamily: "'Space Grotesk', system-ui, -apple-system, sans-serif"
-    fontSize: "14.5px"
-    fontWeight: 400
-    lineHeight: 1.65
-  prompt:
-    fontFamily: "'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace"
-    fontSize: "clamp(18px, 3.4vw, 30px)"
-    fontWeight: 400
-  numeral:
-    fontFamily: "'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace"
-    fontSize: "clamp(28px, 4vw, 40px)"
-    fontWeight: 600
-    letterSpacing: "-0.02em"
-  label:
-    fontFamily: "'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace"
-    fontSize: "13px"
-    fontWeight: 500
-    letterSpacing: "0.04em"
-  label-small:
-    fontFamily: "'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace"
-    fontSize: "12.5px"
-    fontWeight: 400
+    lineHeight: 1.5
 rounded:
-  xs: "8px"
-  sm: "10px"
-  md: "14px"
+  plate: "2px"
+  notice: "6px"
+  enamel: "12px"
   pill: "999px"
 spacing:
-  hairline-gap: "8px"
-  stack: "14px"
-  grid-gap: "20px"
-  gutter: "24px"
-  card: "26px"
-  section: "clamp(64px, 10vw, 120px)"
-  container: "1120px"
-  nav-height: "68px"
+  mount: "14px"
+  poster-pad: "clamp(18px, 2.2vw, 28px)"
+  gutter: "clamp(16px, 4vw, 40px)"
+  wall-gap: "clamp(28px, 3vw, 44px) clamp(20px, 2.4vw, 36px)"
+  section: "clamp(80px, 11vw, 144px)"
+  container: "1240px"
 components:
-  button:
-    backgroundColor: "{colors.panel-veil}"
-    textColor: "{colors.moonlight}"
+  section-title:
+    backgroundColor: "{colors.cobalt}"
+    textColor: "{colors.ivory}"
+    typography: "{typography.headline}"
+    rounded: "{rounded.enamel}"
+    padding: "0.28em 0.8em 0.34em"
+  poster-cobalt:
+    backgroundColor: "{colors.cobalt}"
+    textColor: "{colors.ivory}"
+    padding: "{spacing.mount}"
+  poster-vermilion:
+    backgroundColor: "{colors.vermilion}"
+    textColor: "{colors.ivory}"
+    padding: "{spacing.mount}"
+  poster-viridian:
+    backgroundColor: "{colors.viridian}"
+    textColor: "{colors.ivory}"
+    padding: "{spacing.mount}"
+  poster-navy:
+    backgroundColor: "{colors.navy-ink}"
+    textColor: "{colors.ivory}"
+    padding: "{spacing.mount}"
+  poster-paper:
+    backgroundColor: "{colors.paper}"
+    textColor: "{colors.navy-ink}"
+    padding: "{spacing.mount}"
+  poster-sky:
+    backgroundColor: "{colors.sky}"
+    textColor: "{colors.navy-ink}"
+    padding: "{spacing.mount}"
+  action-link:
+    textColor: "{colors.vermilion}"
+    typography: "{typography.action}"
+    padding: "4px 0"
+  ribbon:
+    backgroundColor: "{colors.navy-ink}"
+    textColor: "{colors.ivory}"
     typography: "{typography.label}"
-    rounded: "{rounded.sm}"
-    padding: "12px 20px"
-  button-primary:
-    backgroundColor: "{colors.panel-veil}"
-    textColor: "{colors.moonlight}"
+    padding: "10px 26px"
+  ribbon-evening:
+    backgroundColor: "{colors.gold}"
+    textColor: "{colors.navy-ink}"
+  nav-button:
+    textColor: "{colors.navy-ink}"
     typography: "{typography.label}"
-    rounded: "{rounded.sm}"
-    padding: "12px 20px"
-  chip:
-    backgroundColor: "{colors.panel-veil}"
-    textColor: "{colors.ash}"
-    typography: "{typography.label-small}"
     rounded: "{rounded.pill}"
-    padding: "4px 11px"
-  card:
-    backgroundColor: "{colors.panel-veil}"
-    textColor: "{colors.moonlight}"
-    rounded: "{rounded.md}"
-    padding: "{spacing.card}"
-  panel:
-    backgroundColor: "{colors.panel-veil}"
-    textColor: "{colors.ash}"
-    rounded: "{rounded.md}"
-    padding: "24px"
-  formula-step:
-    backgroundColor: "{colors.panel-veil}"
-    textColor: "{colors.ash}"
-    rounded: "{rounded.xs}"
-    padding: "6px 14px"
-  nav-toggle:
-    backgroundColor: "{colors.panel-veil}"
-    textColor: "{colors.ash}"
+    height: "36px"
+    padding: "0 12px"
+  stop-tag:
     typography: "{typography.label}"
     rounded: "{rounded.pill}"
-    padding: "5px 12px"
-  nav-bar:
-    textColor: "{colors.ash}"
-    height: "{spacing.nav-height}"
+    padding: "4px 12px 4px 4px"
+  map-card:
+    backgroundColor: "{colors.navy-ink}"
+    textColor: "{colors.ivory}"
+    rounded: "{rounded.notice}"
+    padding: "14px 16px 12px"
+    width: "270px"
 ---
 
 # Design System: Nicolas Huber Portfolio
 
 ## Overview
 
-**Creative North Star: "The Alchemist's Terminal"**
+**Creative North Star: "The Wonder-Remedy Wall"**
 
-The page is a dark workspace where the transmutation happens. Everything a terminal would say — the kicker above each section, the `>` prompt with its typed role and blinking caret, periods, tags, numbers — is set in JetBrains Mono. Everything a person would say — the name, headings, prose — is set in Space Grotesk. That split is the whole personality: a precise, technical instrument with a warm human voice running through it. Personal photos and the occasional wink ("4 surf camps") keep it from feeling like a dashboard.
+The aspiring code alchemist advertises his remedies. Each project is a 1910 elixir poster: a real image in an Art Nouveau window, a true claim in confident poster voice, a round stamp and two plain actions. The posters are pasted onto a wall beside a sticky house masthead, and the rest of the page keeps the same printed vocabulary: section titles are enamel stop signs, the journey and the navigation are tram route strips, and the project map is a network plan of four invented lines laid over a simplified Zürich zone-110 tram network.
 
-The mood is calm, technical and warm. Surfaces are near-black with a faint grid and two soft glows that stay fixed at the top of the viewport, like a screen in a dim room. Panels are almost invisible at rest: a hairline border and a 2.5% white veil. Colour appears in small, deliberate doses — a green kicker, a blue typed word, a coloured period on a timeline — and blooms only when the visitor touches something. Density is generous: one idea per section, wide section padding, a 1120px column.
+The energy is the 1910 World's Fair and elixir advertising: luminous, sure of itself, a little tongue-in-cheek, as a genre and never as a copy of any game, brand or transit operator. Around the posters the scaffold stays modern and quiet: a sky-white ground, navy ink, generous section spacing, a grotesk for every sentence a visitor actually needs to read. Colour and period voice live on the printed objects (posters, ad, plan, closing poster); the page itself never dresses up.
 
-The alchemy lives in words and in one structural device, the formula (raw data → elegant systems → meaningful impact), where each step gets more colour than the last. It never becomes ornament. This is explicitly not neon cyberpunk (no heavy glow, saturated neon or glitch effects), not a corporate template (no stock imagery or sales-funnel CTAs) and not fantasy alchemy kitsch (no parchment, runes, potion bottles or medieval type).
-
-A light theme exists, toggled in the nav and applied before first paint. It keeps every role and swaps the values: paper surfaces, ink text, and deeper versions of each accent so they hold contrast on white.
+Two theme names come from the cinema bill: the light **Matinée** is the default, the dark **Evening show** sits under `data-theme="dark"`. Printed objects keep their colours in both.
 
 **Key Characteristics:**
-- Two voices: mono for the machine, grotesk for the person.
-- Near-black void with a masked 46px grid and two fixed ambient glows.
-- Panels quiet at rest; lift, accent edge and soft glow only on hover or focus.
-- Elixir Green leads; Quicksilver Blue is the second voice; violet and amber tag individual items.
-- Raw → refined gets more colour at each step (dim → blue → green).
-- Hairline borders and generous radii (10–14px) everywhere; pills for small controls.
+- Printed objects on a modern ground: posters, the training-tonic ad, the network plan and the closing poster carry full-strength fields; everything else is navy (or ivory) text on a calm ground.
+- Three voices of type: Bodoni Moda italic for names, Big Shoulders Display caps for claims and labels, Schibsted Grotesk for reading.
+- Gold double rules with small Jugendstil corner curls frame every printed object.
+- Transit grammar for structure: stop dots, route strips, lettered line discs, a zone border.
+- One authored motion moment (the paste-up) plus a hover straighten and a one-time line draw on the plan.
 
 ## Colors
 
-A near-monochrome night palette lit by four soft, slightly pastel accents, each mapped to an alchemical substance.
+A sky-and-navy house with a small set of printed poster inks that never change with the theme.
 
 ### Primary
-- **Elixir Green** (`elixir-green`): the signature. Section kickers, the prompt `>`, the caret, the "result" step of the formula, list markers, the live-status dot, link hover, nav underline, text selection tint, the brand mark. If one thing on a screen is coloured, it is this.
+- **Cobalt Enamel** (cobalt): the house plate. Section titles (enamel signs), the lead poster field, the closing poster, the monogram disc, the programme route line, plan line D (Data & ML).
+- **Navy Ink** (navy-ink): Matinée text and the dark poster field; the ribbon ground in Matinée, the map detail card, stop-dot rings on the plan and route.
 
 ### Secondary
-- **Quicksilver Blue** (`quicksilver-blue`): the second voice. The typed role in the hero, the middle "elegant systems" step of the formula, side-panel titles, and the second ambient glow. Pairs with green in gradients (timeline line, primary button, portrait halo).
+- **Poster Vermilion** (vermilion): a poster field, plan line V (Visualisation), the stamp on paper and sky posters, and the Matinée link and hover colour (also the lit current stop in the nav and the focus ring).
+- **Viridian** (viridian): a poster field and plan line R (Research); thinned with paper for the woods on the plan.
 
 ### Tertiary
-- **Aether Violet** (`aether-violet`) and **Gold-Leaf Amber** (`gold-leaf-amber`): per-item accents, applied through `data-accent` on project cards, timeline entries and stats. Amber also owns the publication banner (icon, kicker, hover border). Neither is used for global UI.
-- **Cinnabar Red** (`cinnabar-red`): defined but reserved; no current surface uses it.
+- **Leaf Gold** (gold): the double rule, the monogram rings, the Evening ribbon ground, plan line T (Tools & web; it carries navy letters, never ivory).
+- **Pale Gold** (gold-light): rules and stamps on dark fields, the inner rim line of the enamel sign, the closing poster's email, hover fill of project stops on the plan.
+- **Gold Text** (gold-text / evening-gold): the masthead motto and programme dates; a darker gold for contrast on the Matinée ground, a brighter one in the Evening show, where it also becomes the link colour.
 
 ### Neutral
-- **Void** (`void`): page background in dark theme. **Void Raised** and **Void Deep** are the two tonal steps above it.
-- **Panel Veil** (`panel-veil`): the 2.5% white wash that is the fill of every card, panel, chip and button.
-- **Moonlight** (`moonlight`): primary text and headings.
-- **Ash** (`ash`): body prose, descriptions, nav links, chip text. Most running text on the page is Ash, not Moonlight.
-- **Smoke** (`smoke`): faint meta text (footer meta, card arrows at rest, formula arrows, captions). Still readable: it holds 4.5:1 on Void (light theme: `#6e6e84` on Paper).
-- **Hairline** / **Hairline Strong** (`hairline`, `hairline-strong`): 8% and 16% white borders. Hairline for panels and dividers; Strong for buttons and the repo pill.
-- **Paper / Paper Raised / Paper Deep / Ink / Ink Dim**: the light-theme counterparts of Void, Void Raised, Void Deep, Moonlight and Ash. The `-light` accent keys are the deeper accents used in the light theme; each holds at least 4.5:1 on Paper so small mono labels stay readable.
+- **Matinée Sky-White** (matinee-ground): the Matinée page ground.
+- **Ink Dim / Ink Faint** (ink-dim, ink-faint): secondary text, labels, the footer line.
+- **Hairline / Strong Hairline** (rule, rule-strong): section borders, list dividers, link underlines, the nav route line, nav button outlines.
+- **Evening Navy** (evening-ground) with **Evening Ivory** (evening-ivory), **Evening Dim** and **Evening Faint**: the Evening show ground and text tiers; its rules are ivory at the same two strengths.
+- **Poster Paper** (paper) and **Ivory** (ivory): the paper field (posters, ad, photo mounts, network plan) and the text on every dark field.
+- **Sky** (sky): a poster field and the lake and river on the plan.
 
 ### Named Rules
-**The One Elixir Rule.** Elixir Green is the only colour that appears in global UI chrome. Blue supports it; violet and amber belong to individual items, never to navigation or section structure.
+**The Printed Field Rule.** Posters, the ad, the photo mounts, the network plan and the closing poster are printed objects: their fields, inks and rules are fixed and do not swap with the theme. Only the page ground, page text, rules, ribbon and link colour change.
 
-**The Rising Colour Rule.** When something moves from raw to refined (formula, timeline line), colour rises with it: dim neutral → Quicksilver Blue → Elixir Green. Never reverse it.
+**The Six Fields Rule.** A poster is printed on exactly one of six fields: cobalt, vermilion, viridian or navy (ivory text, pale gold rule) or paper or sky (navy text, gold or navy rule, vermilion stamp). No gradients, no new field colours.
 
-**The Ash-First Rule.** Running prose is Ash. Moonlight is for names, headings and the few words that must lead.
+**The Four Lines Rule.** The plan has four lines, one per field of work, each in a poster ink and named by a letter, never a number, so it cannot read as a real tram line: D (Data & ML) cobalt, V (Visualisation) vermilion, R (Research) viridian, T (Tools & web) gold. Line discs repeat these colours wherever a stop is referenced (poster stop tags, map card).
 
 ## Typography
 
-**Display Font:** Space Grotesk (with system-ui, -apple-system, sans-serif)
-**Body Font:** Space Grotesk
-**Label/Mono Font:** JetBrains Mono (with ui-monospace, SF Mono, Menlo, monospace)
+**Display Font:** Bodoni Moda, italic only, weights 500 to 800 (with Didot, Bodoni 72, Georgia)
+**Banner Font:** Big Shoulders Display, 600 to 800, always uppercase (with Arial Narrow)
+**Body Font:** Schibsted Grotesk, 400 and 600 (with system-ui)
 
-**Character:** Space Grotesk is a slightly quirky geometric grotesk that reads as personal and contemporary; JetBrains Mono is the terminal. The grotesk carries meaning, the mono carries metadata.
+**Character:** A high-contrast Didone italic names things the way a 1910 bill would; condensed caps shout the claims; a sober modern grotesk carries every fact, so the period voice never gets in the way of reading.
 
 ### Hierarchy
-- **Display** (700, `clamp(46px, 9vw, 104px)`, 0.98): the hero name only. Tight negative tracking and a vertical Moonlight-to-grey text gradient.
-- **Headline** (700, `clamp(28px, 4.4vw, 46px)`, 1.08): section titles, always preceded by a mono kicker.
-- **Title** (600, 19–24px): card names (21px), timeline titles (19px), the current role (up to 24px).
-- **Body** (400, 16px, 1.65): prose; capped around 560–760px wide. Lead and about paragraphs run slightly larger (16.5–17.5px); card and timeline descriptions use **Body Small** (14.5px).
-- **Prompt** (mono 400, `clamp(18px, 3.4vw, 30px)`): the hero's typed role line.
-- **Numeral** (mono 600, `clamp(28px, 4vw, 40px)`): stat values, coloured by the item accent.
-- **Label** (mono 500, 13px, 0.04em): section kickers, panel titles, nav links (14px), buttons (14px).
-- **Label Small** (mono 400, 12–12.5px): chips, card roles, periods, captions, footer meta.
+- **Display** (Bodoni italic 800, clamp 52 to 92px, line-height 0.92): the name in the masthead only. The closing poster's call (800, clamp 40 to 68px) is its only sibling.
+- **Headline** (Bodoni italic 700, clamp 28 to 44px, line-height 1.08): section titles, always set inside the enamel sign.
+- **Title** (Bodoni italic 700, clamp 30 to 40px; the lead poster goes to clamp 36 to 54px): remedy names on posters.
+- **Title Small** (Bodoni italic 700, 22 to 26px, line-height 1.2): programme stops, handbill names, map stop names, the paper title. The masthead motto uses the same face at weight 500 in gold.
+- **Claim** (Big Shoulders 700, clamp 21 to 26px, uppercase, +0.02em): the poster claim. On medallion handbills the claim switches to Bodoni italic and becomes the hero.
+- **Action** (Big Shoulders 700, 18px, uppercase, +0.08em): text actions with an underline bar.
+- **Label** (Big Shoulders 600, 16px, uppercase, +0.12em): dates, organisations, captions, list headings, nav stops, the formula ribbon.
+- **Body Lead** (Schibsted 400, 20 to 24px, line-height 1.45, about 36ch): the opening paragraph of Now and Person.
+- **Body** (Schibsted 400, 18px, line-height 1.6, 34 to 62ch): all running text; 600 for station names.
+- **Body Small** (Schibsted 400, 16px, line-height 1.5): poster descriptions; 13 to 15px only inside the ad note and the map card.
 
 ### Named Rules
-**The Two Voices Rule.** If a string is data, a date, a tag, a number or a command, it is mono. If it is a sentence or a name, it is grotesk. Don't mix within one element.
+**The Readable Hairline Rule.** Bodoni Moda is set with optical sizing off and `'opsz' 14` on the body. Its display optical size has hairlines too thin to read (Huber reads as Iluber); never switch optical sizing back on.
 
-**The Kicker Rule.** Every section title has a mono kicker above it in Elixir Green. No headline appears alone.
+**The Facts In Grotesk Rule.** Every recruiting-relevant fact (role, employer, dates, degrees, results, contact) exists as plain grotesk or label text that can be read and copied. Bodoni and the poster voice decorate; they never carry the only copy of a fact.
+
+**The No Mono Rule.** No monospace face anywhere. The site is not a terminal.
 
 ## Layout
 
-A single centred column, max 1120px with a 24px gutter, stacked as full-width sections with `clamp(64px, 10vw, 120px)` vertical padding. The fixed nav is 68px tall; anchor scrolling offsets by 88px.
+A single page in one centred container (max 1240px, side padding clamp 16 to 40px). Sections are separated by a hairline and generous vertical padding (clamp 80 to 144px). The fixed nav is 64px tall and becomes a translucent ground with a hairline once the page scrolls.
 
-Inside sections the grids are simple and asymmetric where it helps: hero is text + portrait (`1fr` + `clamp(240px, 26vw, 320px)`); about is `1.35fr` prose + `1fr` sticky side column; projects are a 2-up card grid with 20px gaps; the stats strip is 4 columns divided by hairlines. Secondary projects collapse into a hairline-ruled list (name · description · tag) rather than more cards.
+The opening is a two-column grid (about 0.52 : 1): the masthead on the left stays sticky while the poster wall scrolls by on the right. The wall is a two-column dense grid: normal posters take one column, wide posters span both, small handbills are inset a little from their slot. Below 900px the masthead stacks above the wall and stops sticking; below 620px the wall becomes one column and wide layouts fall back to a stacked picture-then-text order.
 
-Responsive behaviour is breakpoint-driven, not fluid-grid: two-column layouts fall to one column at 860px (hero, about) and 720px (projects); the stats strip goes 4 → 2 at 760px; the nav switches to a burger with a blurred drop-down at 760px; the hero portrait moves above the text at 170px wide. Type scales with `clamp()` throughout.
-
-### Named Rules
-**The Hairline Grid Rule.** Structure is drawn with 1px hairlines (dividers, stat separators, list rules, the ambient grid), not with fills or heavy blocks.
+Content sections use asymmetric two-column grids (Now 0.8 : 1.4, About 1.1 : 1) collapsing to one column at 820px. The programme is a single vertical route, newest stop first, with dates right-aligned in a column left of the line (on phones the dates move above each stop). Photos sit in a three-up row that becomes a horizontal snap scroller on phones. The network plan scrolls horizontally inside its frame below about 820px, with a swipe hint.
 
 ## Elevation & Depth
 
-Flat by default, lifted by touch. At rest, depth comes only from the ambient background (masked grid at 50% opacity, two radial glows fixed to the viewport) and from the Panel Veil sitting on Void. There are no resting shadows. On hover, interactive surfaces translate up (2–5px) and pick up a soft shadow or accent-tinted glow. The sticky nav gains a translucent fill, 14px backdrop blur and a hairline bottom border once the page scrolls.
+Depth means paper on a wall. Printed objects (posters, plan, closing poster) cast a soft two-layer drop shadow and sit at a slight tilt; the page itself is flat. Hover or focus lifts a poster and straightens it. The enamel sign gets its own inset rim and a small cast shadow. There are no glows, no hard offset shadows and no blur effects.
 
 ### Shadow Vocabulary
-- **Card lift** (`box-shadow: 0 16px 44px var(--shadow)`): project cards on hover, with `translateY(-5px)`.
-- **Elixir glow** (`box-shadow: 0 8px 30px rgba(92, 240, 176, 0.12)`): buttons on hover, with `translateY(-2px)`.
-- **Accent halo** (`radial-gradient` of the item accent at 16%, 300px): fades in at a card's top-right corner on hover.
-- **Portrait halo** (green → blue gradient, 28px blur, 55% opacity): the one resting glow, behind the hero portrait.
+- **Pasted paper** (`box-shadow: 0 1px 2px var(--shadow), 0 18px 36px -12px var(--shadow)`): posters and the network plan at rest; the closing poster uses `0 22px 40px -14px`.
+- **Lifted paper** (`box-shadow: 0 1px 2px var(--shadow), 0 26px 44px -14px var(--shadow)`): poster on hover or focus, with `rotate(0) translateY(-4px)`.
+- **Enamel rim** (`box-shadow: inset 0 0 0 3px cobalt, inset 0 0 0 4.5px gold-light, 0 1px 1px rgba(20,32,57,.25), 0 10px 20px -10px var(--shadow)`): section titles; in the Evening show the 1px outer line becomes faint ivory.
+- **Notice** (`box-shadow: inset 0 0 0 1px gold, 0 14px 28px -10px rgba(20,32,57,.5)`): the map detail card.
+
+The shadow colour is navy at 18% in the Matinée and black at 50% in the Evening show.
 
 ### Named Rules
-**The Quiet Until Touched Rule.** Surfaces never glow, lift or shadow at rest (the portrait halo is the single exception). Every lift is a response to hover or focus.
-
-**The Soft Glow Rule.** Glows are diffuse and low-alpha (≤16% for accents, ≤12% for shadows). If a glow reads as neon, it is too strong.
+**The Paste-Up Tilt Rule.** Printed objects hang slightly askew (posters 0.8 to 1.5deg, wide bills -0.5deg, the ad -1.2deg, closing poster -0.6deg, photos about ±0.9deg). Interface elements (nav, buttons, text blocks) are never tilted.
 
 ## Shapes
 
-Gently rounded, hairline-bordered rectangles. Large containers (cards, panels, work block, publication banner, photo frames) use 14px; buttons and images inside frames use 10px; formula steps 8px; small controls (chips, language toggle, theme toggle, repo link, status badge) are full pills. Photos sit inside an 8px-padded framed panel, so an image always has a 10px radius inside a 14px frame. Circles appear only as markers: 6px list dots, 7px status dot, 16px ring-style timeline nodes.
+Mostly rectangular paper with a few period silhouettes. The house border is a double rule: 1.5px border plus a 1.5px outline offset 4px, with a small drawn Jugendstil curl masked into each inner corner, in gold (pale gold or navy on some fields). Poster windows have an arched top (`999px 999px 6px 6px`); bleed layouts drop the arch and run the picture to the rule; plates use a 2px corner and a second offset outline; medallion seals are full circles. Stamps are 74px circles with a double ring, rotated -12deg. The enamel sign has 12px corners. The formula ribbon is notched at both ends with a 12px clip-path chevron. Pills (999px) are reserved for nav buttons and stop tags. Stop dots are white circles with a navy ring; line discs are small solid circles with an ivory ring.
 
 ## Components
 
-### Buttons
-Quiet mono buttons that wake up on hover.
-- **Shape:** gently rounded (10px), 1px Hairline Strong border.
-- **Default:** Panel Veil fill, Moonlight text, mono 14px/500, 12px × 20px padding, 9px gap to a 16px icon.
-- **Primary:** same shape with a faint diagonal Elixir-to-Quicksilver gradient wash (16% / 12%) and a 40% Elixir border.
-- **Hover:** lifts 2px, border shifts toward Elixir (50%), Elixir glow appears. 0.22s on the house easing.
+### Remedy Poster (signature)
+A 14px coloured mount around a double-ruled inner panel. Title (Bodoni italic, with right padding for the stamp), picture window, claim in banner caps, short description, a foot with a hairline above holding the actions on the left and the kind label on the right, then an optional stop tag linking to the plan.
+- **Fields:** the six fields of the Six Fields Rule.
+- **Layouts:** *arch* (arched window, title first), *bleed* (picture runs to the rule, 4:3), *medallion* (type-led handbill: small round seal, stamp in the grid, Bodoni claim as hero), *plate* (wide bill, figure framed like a book plate beside the text).
+- **Formats:** *normal* (one column), *wide* (spans both columns, picture left half), *small* (inset handbill).
+- **Chart pictures:** figures from papers sit on an ivory window with multiply blending so their white becomes paper.
+- **Motion:** pasted up on first load (clip from the top, tilt settles from 3x, 0.7s, staggered 110ms); hover or focus straightens and lifts it. Reduced motion: posters are simply there.
 
-### Chips
-- **Style:** pill, Panel Veil fill, Hairline border, Ash mono text at 12.5px. Used for tech tags on cards, the work block and the about side panel.
-- **State:** static; no selected or filter state exists.
+### Stamp
+A round vermilion, ivory or pale-gold double-ring stamp with condensed caps (13px, 800), rotated -12deg, top-right of the poster. One per poster.
 
-### Cards / Containers
-- **Corner Style:** 14px.
-- **Background:** Panel Veil over Void, Hairline border.
-- **Shadow Strategy:** none at rest; Card lift on hover (see Elevation).
-- **Hover:** a 2px top edge in the item accent wipes in from the left (0.35s), the border tints to 45% accent, the corner halo fades in, the arrow nudges up-right.
-- **Internal Padding:** 26px for project cards, 24px for side panels, `clamp(26px, 4vw, 40px)` for the current-work block.
-- **Linking:** the title link stretches over the whole card; a secondary repo pill sits above it. Focus shows a 2px accent outline on the card.
+### Section Title (Enamel Sign)
+Every section title is a cobalt enamel plate with ivory Bodoni italic, a 3px cobalt rim, a fine pale-gold inner line and 12px corners. Sized to content, never full width.
 
-### Navigation
-- **Style:** fixed, transparent over the hero; translucent Void with 14px blur and a hairline once scrolled. Brand mark and mono wordmark (with a green period) on the left.
-- **Links:** mono 14px Ash, 30px apart; hover turns them Moonlight and draws a 1.5px Elixir underline from the left.
-- **Actions:** EN/DE pill toggle (current language in Elixir), round 32px theme toggle, GitHub icon.
-- **Mobile:** at 760px a three-line burger morphs into an X and drops a blurred full-width panel of 16px links.
+### Actions
+- **Action link:** banner caps 18px with a 2px underline bar and, for outbound links, a 14px arrow icon that nudges up-right on hover. In the page it takes the link colour; on posters it takes the poster's text colour and dims to 80% on hover.
+- **Quiet action:** same, with a 1px bar (the Code link beside a demo).
+- **Nav button:** pill outline (1.5px strong hairline), 36px tall, banner caps; turns link colour on hover. Used for the language switch and the theme switch (Matinée / Evening).
 
-### Formula (signature)
-The raw → refined device. Three mono steps in 8px-rounded veil boxes joined by Smoke arrows: the first in Ash, the second in Quicksilver with a 30% blue border, the third in Elixir with a 35% green border and a 6% green fill. It wraps on narrow screens.
+### Formula Ribbon
+The house formula (raw data → elegant systems → meaningful impact) on a notched ribbon: navy with ivory in the Matinée, gold with navy in the Evening show.
 
-### Terminal Prompt (signature)
-The hero role line: an Elixir `>` prompt, the role typed out in Quicksilver, and a 9px-wide Elixir block caret blinking on a 1s step. Above the name sits a mono "hello" line and a pill status badge with a pulsing Elixir dot.
+### Navigation (Route Strip)
+Fixed bar with the NH monogram (cobalt disc, two gold rings, ivory Bodoni initials) and the name in Bodoni italic. Links are banner caps sitting on a thin 3px line; each link has a small hollow stop dot under it, the current section's dot is filled with the link colour and scaled 1.25. On narrow screens the strip stands upright in a drawer with the dots on a vertical line.
 
-### Timeline (signature)
-A 1.5px vertical line graded Elixir → Quicksilver → Hairline, with 16px ring nodes in each entry's accent. Period in accent mono, title in grotesk 19px/600, organisation in Ash mono. On hover the node scales to 1.25 and gains an accent glow.
+### Programme Route
+A 10px cobalt line through 28px white stop dots with a 4px navy ring (ivory ring in the Evening show); the current stop is filled. Gold dates in banner caps, Bodoni titles, grotesk detail.
 
-### Stats Strip
-Full-bleed hairline-ruled band, four cells divided by hairlines. Values in the Numeral style coloured by item accent (Elixir by default), labels in Ash at 13.5px.
+### Network Plan
+Printed on paper inside the double rule. A dashed grey zone border with a round "110" badge, woods tinted viridian, the lake and river in sky, small line-drawn landmark icons, and a legend of four lettered line discs. Lines are 11px, flat colour, round joins, running at 0, 45 or 90 degrees; they draw themselves once when the plan first scrolls into view (1.2s, 160ms stagger). Stops are white dots with a navy ring (thicker at interchanges); project stops carry a Bodoni name and a caps place name and open a navy detail card on hover or focus (name, line discs and place in pale gold, kind, claim, "see poster"/"see code"). Place names stay German.
+
+### Training Tonic Ad
+A small paper advertisement (max 320px) in a double rule, tilted -1.2deg, centred: Bodoni product name, banner-caps claim, the result in vermilion Bodoni italic, a fine-print note. The only place a number is allowed to stand out.
+
+### Stop Tag
+A pill in the poster's text colour at 12% (22% on hover) with a line disc and "Stop · Place" in caps, linking a poster to its stop on the plan.
+
+### Photo Mount
+Photographs sit in a paper mount (8px) inside the double rule, slightly tilted, with a centred caps caption below.
+
+### Closing Poster
+The house's own advertisement: cobalt field, pale-gold double rule, centred Bodoni call, caps line, the email address set large in pale-gold Bodoni italic, then GitHub, LinkedIn and ORCID in caps.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** set every kicker, date, tag, number and command in JetBrains Mono, and every sentence and name in Space Grotesk.
-- **Do** keep panels at Panel Veil (2.5% white) with a Hairline border, and save lift and glow for hover and focus.
-- **Do** use Elixir Green as the single chrome accent; assign violet and amber only per item through `data-accent`.
-- **Do** let colour rise from neutral → Quicksilver → Elixir wherever something goes from raw to refined.
-- **Do** use 14px radii for containers, 10px for buttons and inner images, pills for small controls.
-- **Do** define every colour for both themes through the `:root` / `:root[data-theme='light']` custom properties.
-- **Do** respect `prefers-reduced-motion`: reveals render visible, loops stop, the typed role shows as static text.
-- **Do** keep the global keyboard focus ring (2px Elixir outline, 3px offset); components may refine it but never remove it.
-- **Do** keep every text colour, including Smoke and the light-theme accents, at 4.5:1 or better on its surface.
+- **Do** advertise every project as a remedy with a true, slightly tongue-in-cheek claim on one of the six fields, with a stamp and real demo/code actions.
+- **Do** frame every printed object in the gold double rule with its Jugendstil corners.
+- **Do** keep printed colours fixed across Matinée and Evening show; change only ground, text, rules, ribbon and link colour.
+- **Do** set every recruiting-relevant fact (role, employer, dates, degrees, results, email, GitHub, LinkedIn, ORCID) as plain, findable text.
+- **Do** keep achievements subtle: numbers live in captions, descriptions and the one small ad.
+- **Do** keep sport a marginal footnote at the end of About, after the work facts.
+- **Do** use the transit grammar (stop dots, route strips, line discs, zone border) for structure, with invented lines and the four poster inks.
+- **Do** keep copy in `src/data/content.js` with EN/DE parity, Swiss spelling and du in German.
+- **Do** honour reduced motion: posters simply appear and the plan lines are drawn from the start.
 
 ### Don't:
-- **Don't** go neon cyberpunk: no saturated neon, heavy bloom, scanlines or glitch effects.
-- **Don't** use a corporate template look: no stock photography, SaaS hero patterns or sales-funnel CTAs.
-- **Don't** illustrate the alchemy: no parchment, runes, potion bottles, sigils or medieval type. The theme lives in words and the formula.
-- **Don't** add resting shadows or glows to cards, panels or buttons.
-- **Don't** put prose in Moonlight; running text is Ash.
-- **Don't** hard-code accent hexes or `rgba()` tints in components; mix them from the custom properties (`color-mix(in srgb, var(--green) 12%, transparent)`) so the light theme follows.
+- **Don't** make it look like a newspaper: no newsprint columns, datelines, bylines or broadsheet rules.
+- **Don't** copy BioShock Infinite: no logos, characters, typography lockups, slogans or props from the game. The 1910 World's Fair mood is a genre only.
+- **Don't** use real transit branding: no VBZ or ZVV logos, real line colours or real line numbers.
+- **Don't** fake material: no paper grain, stains, torn edges, halftone noise or aged textures.
+- **Don't** add swing timing or extra electro-swing props (no gramophones, bouncing reveals, cabaret ornaments). The paste-up and the line draw are the only authored motion.
+- **Don't** put a metric hero, stats strip or achievement badges on the page.
+- **Don't** use monospace, glows, grid backgrounds, or kickers and eyebrows above headings.
+- **Don't** tilt interface elements or body text; only printed objects hang askew.
+- **Don't** turn Bodoni Moda's optical sizing back on.

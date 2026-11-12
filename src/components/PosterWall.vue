@@ -108,7 +108,6 @@ const posters = computed(() => posterMeta.map((m, i) => ({ ...m, ...t.value.post
   color: var(--link);
 }
 
-/* ---- The wall: two staggered columns of posters ---- */
 /* ---- The wall: a planned paste-up of normal, wide and small bills ---- */
 .wall {
   display: grid;
