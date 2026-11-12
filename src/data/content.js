@@ -254,7 +254,7 @@ export const content = {
       langTitle: 'Languages',
       langs: 'German (native), English (fluent), French (A2/B1)',
       photos: [
-        { src: 'img/running.jpg', alt: 'Nicolas running a trail race above a forest', caption: 'Trail race' },
+        { src: 'img/running.jpg', alt: 'Nicolas running on a trail above a forest', caption: 'Running' },
         { src: 'img/hiking.jpg', alt: 'Nicolas on a summit above Lake Lucerne', caption: 'Above Lake Lucerne' },
         { src: 'img/surfing.jpg', alt: 'Nicolas in a rash guard at a surf camp', caption: 'Surf camp' },
       ],
@@ -425,7 +425,7 @@ export const content = {
       langTitle: 'Sprachen',
       langs: 'Deutsch (Muttersprache), Englisch (fliessend), Französisch (A2/B1)',
       photos: [
-        { src: 'img/running.jpg', alt: 'Nicolas bei einem Trail-Lauf über einem Wald', caption: 'Trail-Lauf' },
+        { src: 'img/running.jpg', alt: 'Nicolas beim Laufen auf einem Weg über einem Wald', caption: 'Laufen' },
         { src: 'img/hiking.jpg', alt: 'Nicolas auf einem Gipfel über dem Vierwaldstättersee', caption: 'Über dem Vierwaldstättersee' },
         { src: 'img/surfing.jpg', alt: 'Nicolas im Lycra-Shirt in einem Surfcamp', caption: 'Surfcamp' },
       ],
