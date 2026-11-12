@@ -1,0 +1,433 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-12T00:00:00Z",
+  "title": "Design System: Nicolas Huber Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "elixir-green": {
+        "role": "primary",
+        "displayName": "Elixir Green",
+        "canonical": "#5cf0b0",
+        "tonalRamp": [
+          "oklch(15% 0.03 162)",
+          "oklch(26% 0.06 162)",
+          "oklch(37% 0.09 162)",
+          "oklch(48% 0.12 162)",
+          "oklch(59% 0.14 162)",
+          "oklch(72% 0.16 162)",
+          "oklch(87% 0.16 162)",
+          "oklch(95% 0.06 162)"
+        ]
+      },
+      "quicksilver-blue": {
+        "role": "secondary",
+        "displayName": "Quicksilver Blue",
+        "canonical": "#6eb5ff",
+        "tonalRamp": [
+          "oklch(15% 0.03 252)",
+          "oklch(26% 0.06 252)",
+          "oklch(37% 0.10 252)",
+          "oklch(48% 0.14 252)",
+          "oklch(59% 0.15 252)",
+          "oklch(68% 0.14 252)",
+          "oklch(76% 0.13 252)",
+          "oklch(95% 0.03 252)"
+        ]
+      },
+      "aether-violet": {
+        "role": "tertiary",
+        "displayName": "Aether Violet",
+        "canonical": "#c99bff",
+        "tonalRamp": [
+          "oklch(15% 0.03 300)",
+          "oklch(26% 0.07 300)",
+          "oklch(37% 0.12 300)",
+          "oklch(48% 0.16 300)",
+          "oklch(59% 0.17 300)",
+          "oklch(68% 0.16 300)",
+          "oklch(77% 0.14 300)",
+          "oklch(95% 0.03 300)"
+        ]
+      },
+      "gold-leaf-amber": {
+        "role": "tertiary",
+        "displayName": "Gold-Leaf Amber",
+        "canonical": "#ffc06e",
+        "tonalRamp": [
+          "oklch(15% 0.03 70)",
+          "oklch(26% 0.05 70)",
+          "oklch(37% 0.07 70)",
+          "oklch(48% 0.09 70)",
+          "oklch(59% 0.11 70)",
+          "oklch(72% 0.13 70)",
+          "oklch(85% 0.12 70)",
+          "oklch(95% 0.04 70)"
+        ]
+      },
+      "cinnabar-red": {
+        "role": "tertiary",
+        "displayName": "Cinnabar Red (reserved)",
+        "canonical": "#ff7a7a"
+      },
+      "void": {
+        "role": "neutral",
+        "displayName": "Void",
+        "canonical": "#08080c",
+        "tonalRamp": [
+          "#08080c",
+          "#0d0d14",
+          "#12121d",
+          "#2a2a3a",
+          "#7a7a90",
+          "#9a9aad",
+          "#eaeaf2",
+          "#f6f6f9"
+        ]
+      },
+      "void-raised": {
+        "role": "neutral",
+        "displayName": "Void Raised",
+        "canonical": "#0d0d14"
+      },
+      "void-deep": {
+        "role": "neutral",
+        "displayName": "Void Deep",
+        "canonical": "#12121d"
+      },
+      "panel-veil": {
+        "role": "neutral",
+        "displayName": "Panel Veil",
+        "canonical": "rgba(255, 255, 255, 0.025)"
+      },
+      "moonlight": {
+        "role": "neutral",
+        "displayName": "Moonlight",
+        "canonical": "#eaeaf2"
+      },
+      "ash": {
+        "role": "neutral",
+        "displayName": "Ash",
+        "canonical": "#9a9aad"
+      },
+      "smoke": {
+        "role": "neutral",
+        "displayName": "Smoke",
+        "canonical": "#7a7a90"
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(255, 255, 255, 0.08)"
+      },
+      "hairline-strong": {
+        "role": "neutral",
+        "displayName": "Hairline Strong",
+        "canonical": "rgba(255, 255, 255, 0.16)"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper (light theme)",
+        "canonical": "#f6f6f9"
+      },
+      "paper-raised": {
+        "role": "neutral",
+        "displayName": "Paper Raised (light theme)",
+        "canonical": "#ffffff"
+      },
+      "paper-deep": {
+        "role": "neutral",
+        "displayName": "Paper Deep (light theme)",
+        "canonical": "#ececf2"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink (light theme)",
+        "canonical": "#15151f"
+      },
+      "ink-dim": {
+        "role": "neutral",
+        "displayName": "Ink Dim (light theme)",
+        "canonical": "#52526a"
+      },
+      "elixir-green-light": {
+        "role": "primary",
+        "displayName": "Elixir Green (light theme)",
+        "canonical": "#077a52"
+      },
+      "quicksilver-blue-light": {
+        "role": "secondary",
+        "displayName": "Quicksilver Blue (light theme)",
+        "canonical": "#2a6ad0"
+      },
+      "aether-violet-light": {
+        "role": "tertiary",
+        "displayName": "Aether Violet (light theme)",
+        "canonical": "#7c45d0"
+      },
+      "gold-leaf-amber-light": {
+        "role": "tertiary",
+        "displayName": "Gold-Leaf Amber (light theme)",
+        "canonical": "#946000"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero name only, with a vertical text gradient."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles, always under a mono kicker."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card names, timeline titles, current role."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Prose, mostly in Ash."
+      },
+      "body-small": {
+        "displayName": "Body Small",
+        "purpose": "Card, timeline and list descriptions."
+      },
+      "prompt": {
+        "displayName": "Prompt",
+        "purpose": "The hero's typed terminal role line."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Stat values, coloured by item accent."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Kickers, panel titles, nav links, buttons."
+      },
+      "label-small": {
+        "displayName": "Label Small",
+        "purpose": "Chips, card roles, periods, captions, meta."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-lift",
+        "value": "0 16px 44px var(--shadow)",
+        "purpose": "Project cards on hover, with translateY(-5px)."
+      },
+      {
+        "name": "elixir-glow",
+        "value": "0 8px 30px rgba(92, 240, 176, 0.12)",
+        "purpose": "Buttons on hover, with translateY(-2px)."
+      },
+      {
+        "name": "timeline-node-glow",
+        "value": "0 0 0 4px var(--bg), 0 0 16px color-mix(in srgb, var(--accent) 60%, transparent)",
+        "purpose": "Timeline node on entry hover."
+      },
+      {
+        "name": "nav-blur",
+        "value": "backdrop-filter: blur(14px)",
+        "purpose": "Scrolled nav and mobile menu."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "House easing for every transition."
+      },
+      {
+        "name": "dur",
+        "value": "0.22s",
+        "purpose": "Default state transition (hover, colour, border)."
+      },
+      {
+        "name": "accent-wipe",
+        "value": "0.35s",
+        "purpose": "Card top-edge accent wiping in from the left."
+      },
+      {
+        "name": "reveal",
+        "value": "0.7s, translateY(22px) to none",
+        "purpose": "Scroll reveal; hero items stagger by 0.05-0.06s."
+      },
+      {
+        "name": "pulse",
+        "value": "2.4s infinite",
+        "purpose": "Status-badge dot ring."
+      },
+      {
+        "name": "blink",
+        "value": "1s step-end infinite",
+        "purpose": "Terminal caret."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xs",
+        "value": "480px"
+      },
+      {
+        "name": "footer-stack",
+        "value": "560px"
+      },
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "720px"
+      },
+      {
+        "name": "nav-burger",
+        "value": "760px"
+      },
+      {
+        "name": "pub-stack",
+        "value": "800px"
+      },
+      {
+        "name": "lg",
+        "value": "860px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Button",
+      "kind": "button",
+      "refersTo": "button",
+      "description": "Quiet mono button; lifts with an Elixir glow on hover.",
+      "html": "<a class=\"ds-btn\" href=\"#\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 4h16v16H4z\"/><path d=\"m22 6-10 7L2 6\"/></svg>Get in touch</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-mono); font-size: 14px; font-weight: 500; padding: 12px 20px; border-radius: var(--radius-sm); border: 1px solid var(--line-strong); background: var(--panel); color: var(--text); text-decoration: none; cursor: pointer; transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease); } .ds-btn svg { width: 16px; height: 16px; } .ds-btn:hover, .ds-btn:focus-visible { transform: translateY(-2px); border-color: rgba(92, 240, 176, 0.5); box-shadow: 0 8px 30px rgba(92, 240, 176, 0.12); outline: none; }"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Same shape with a faint Elixir-to-Quicksilver wash.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">See projects<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-mono); font-size: 14px; font-weight: 500; padding: 12px 20px; border-radius: var(--radius-sm); border: 1px solid rgba(92, 240, 176, 0.4); background: linear-gradient(120deg, rgba(92, 240, 176, 0.16), rgba(110, 181, 255, 0.12)); color: var(--text); text-decoration: none; cursor: pointer; transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease); } .ds-btn-primary svg { width: 16px; height: 16px; } .ds-btn-primary:hover, .ds-btn-primary:focus-visible { transform: translateY(-2px); border-color: rgba(92, 240, 176, 0.5); box-shadow: 0 8px 30px rgba(92, 240, 176, 0.12); outline: none; }"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Static mono tech tag.",
+      "html": "<span class=\"ds-chip\">Python</span> <span class=\"ds-chip\">dbt</span> <span class=\"ds-chip\">Google Cloud</span>",
+      "css": ".ds-chip { display: inline-flex; align-items: center; font-family: var(--font-mono); font-size: 12.5px; color: var(--text-dim); padding: 4px 11px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Quiet until touched: accent edge wipes in, border tints, card lifts.",
+      "html": "<article class=\"ds-card\" style=\"--accent: var(--violet)\"><div class=\"ds-card__top\"><span class=\"ds-card__role\">Master's thesis · UZH</span><svg class=\"ds-card__arrow\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></div><h3 class=\"ds-card__name\">SDG Tag Heroes</h3><p class=\"ds-card__desc\">AI-assisted, gamified SDG labeling system.</p><span class=\"ds-chip\">Vue</span></article>",
+      "css": ".ds-card { position: relative; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel); padding: 26px; overflow: hidden; transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease); } .ds-card::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.35s var(--ease); } .ds-card:hover { transform: translateY(-5px); border-color: color-mix(in srgb, var(--accent) 45%, transparent); box-shadow: 0 16px 44px var(--shadow); } .ds-card:hover::before { transform: scaleX(1); } .ds-card__top { display: flex; justify-content: space-between; align-items: center; } .ds-card__role { font-family: var(--font-mono); font-size: 12.5px; color: var(--accent); letter-spacing: 0.02em; } .ds-card__arrow { width: 18px; height: 18px; color: var(--text-faint); transition: color var(--dur), transform var(--dur) var(--ease); } .ds-card:hover .ds-card__arrow { color: var(--accent); transform: translate(2px, -2px); } .ds-card__name { font-size: 21px; font-weight: 600; margin: 14px 0 10px; letter-spacing: -0.01em; color: var(--text); } .ds-card__desc { color: var(--text-dim); font-size: 14.5px; margin: 0 0 20px; } .ds-chip { display: inline-flex; font-family: var(--font-mono); font-size: 12.5px; color: var(--text-dim); padding: 4px 11px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-bar",
+      "description": "Mono links with an Elixir underline that draws in on hover; EN/DE pill.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav__brand\" href=\"#\">nicolas<span>.</span>huber</a><div class=\"ds-nav__links\"><a href=\"#\">work</a><a href=\"#\">projects</a><a href=\"#\">journey</a><a href=\"#\">about</a></div><button class=\"ds-nav__lang\"><span class=\"cur\">EN</span><span class=\"sep\">/</span>DE</button></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 68px; padding: 0 24px; background: var(--nav-bg); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); } .ds-nav__brand { font-family: var(--font-mono); font-weight: 500; font-size: 15px; color: var(--text); text-decoration: none; } .ds-nav__brand span { color: var(--green); } .ds-nav__links { display: flex; gap: 30px; font-family: var(--font-mono); font-size: 14px; } .ds-nav__links a { position: relative; color: var(--text-dim); text-decoration: none; transition: color var(--dur) var(--ease); } .ds-nav__links a::after { content: ''; position: absolute; left: 0; bottom: -6px; width: 0; height: 1.5px; background: var(--green); transition: width var(--dur) var(--ease); } .ds-nav__links a:hover, .ds-nav__links a:focus-visible { color: var(--text); outline: none; } .ds-nav__links a:hover::after, .ds-nav__links a:focus-visible::after { width: 100%; } .ds-nav__lang { font-family: var(--font-mono); font-size: 13px; background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; color: var(--text-dim); cursor: pointer; transition: border-color var(--dur); } .ds-nav__lang:hover, .ds-nav__lang:focus-visible { border-color: rgba(92, 240, 176, 0.5); outline: none; } .ds-nav__lang .cur { color: var(--green); } .ds-nav__lang .sep { margin: 0 3px; color: var(--text-faint); }"
+    },
+    {
+      "name": "Formula",
+      "kind": "custom",
+      "refersTo": "formula-step",
+      "description": "Signature raw-to-refined device; colour rises with each step.",
+      "html": "<div class=\"ds-formula\"><span class=\"ds-formula__item a\">raw data</span><span class=\"ds-formula__arrow\">→</span><span class=\"ds-formula__item b\">elegant systems</span><span class=\"ds-formula__arrow\">→</span><span class=\"ds-formula__item c\">meaningful impact</span></div>",
+      "css": ".ds-formula { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; font-family: var(--font-mono); font-size: 15px; } .ds-formula__item { padding: 6px 14px; border-radius: 8px; border: 1px solid var(--line); background: var(--panel); } .ds-formula__item.a { color: var(--text-dim); } .ds-formula__item.b { color: var(--blue); border-color: rgba(110, 181, 255, 0.3); } .ds-formula__item.c { color: var(--green); border-color: rgba(92, 240, 176, 0.35); background: rgba(92, 240, 176, 0.06); } .ds-formula__arrow { color: var(--text-faint); }"
+    },
+    {
+      "name": "Terminal Prompt",
+      "kind": "custom",
+      "description": "Hero role line: Elixir prompt, Quicksilver typed text, blinking block caret.",
+      "html": "<p class=\"ds-prompt\"><span class=\"ds-prompt__sign\">&gt;</span><span class=\"ds-prompt__typed\">data engineer</span><span class=\"ds-prompt__caret\"></span></p>",
+      "css": ".ds-prompt { font-family: var(--font-mono); font-size: 26px; color: var(--text); margin: 0; } .ds-prompt__sign { color: var(--green); margin-right: 10px; } .ds-prompt__typed { color: var(--blue); } .ds-prompt__caret { display: inline-block; width: 9px; height: 1.05em; background: var(--green); margin-left: 3px; vertical-align: text-bottom; animation: ds-blink 1s step-end infinite; } @keyframes ds-blink { 50% { opacity: 0; } } @media (prefers-reduced-motion: reduce) { .ds-prompt__caret { animation: none; } }"
+    },
+    {
+      "name": "Stat",
+      "kind": "custom",
+      "description": "Mono numeral in the item accent over an Ash label.",
+      "html": "<div class=\"ds-stat\"><span class=\"ds-stat__value\">240×</span><span class=\"ds-stat__label\">fewer models in production</span></div>",
+      "css": ".ds-stat { display: flex; flex-direction: column; gap: 6px; padding: 34px 26px; border-left: 1px solid var(--line); } .ds-stat__value { font-family: var(--font-mono); font-size: 40px; font-weight: 600; color: var(--accent, var(--green)); letter-spacing: -0.02em; } .ds-stat__label { font-size: 13.5px; color: var(--text-dim); line-height: 1.4; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Alchemist's Terminal",
+    "overview": "The page is a dark workspace where the transmutation happens. Everything a terminal would say — the kicker above each section, the `>` prompt with its typed role and blinking caret, periods, tags, numbers — is set in JetBrains Mono. Everything a person would say — the name, headings, prose — is set in Space Grotesk. That split is the whole personality: a precise, technical instrument with a warm human voice running through it. Personal photos and the occasional wink (\"4 surf camps\") keep it from feeling like a dashboard.\n\nThe mood is calm, technical and warm. Surfaces are near-black with a faint grid and two soft glows that stay fixed at the top of the viewport, like a screen in a dim room. Panels are almost invisible at rest: a hairline border and a 2.5% white veil. Colour appears in small, deliberate doses — a green kicker, a blue typed word, a coloured period on a timeline — and blooms only when the visitor touches something. Density is generous: one idea per section, wide section padding, a 1120px column.\n\nThe alchemy lives in words and in one structural device, the formula (raw data → elegant systems → meaningful impact), where each step gets more colour than the last. It never becomes ornament. This is explicitly not neon cyberpunk (no heavy glow, saturated neon or glitch effects), not a corporate template (no stock imagery or sales-funnel CTAs) and not fantasy alchemy kitsch (no parchment, runes, potion bottles or medieval type).\n\nA light theme exists, toggled in the nav and applied before first paint. It keeps every role and swaps the values: paper surfaces, ink text, and deeper versions of each accent so they hold contrast on white.",
+    "keyCharacteristics": [
+      "Two voices: mono for the machine, grotesk for the person.",
+      "Near-black void with a masked 46px grid and two fixed ambient glows.",
+      "Panels quiet at rest; lift, accent edge and soft glow only on hover or focus.",
+      "Elixir Green leads; Quicksilver Blue is the second voice; violet and amber tag individual items.",
+      "Raw → refined gets more colour at each step (dim → blue → green).",
+      "Hairline borders and generous radii (10–14px) everywhere; pills for small controls."
+    ],
+    "rules": [
+      {
+        "name": "The One Elixir Rule",
+        "body": "Elixir Green is the only colour that appears in global UI chrome. Blue supports it; violet and amber belong to individual items, never to navigation or section structure.",
+        "section": "colors"
+      },
+      {
+        "name": "The Rising Colour Rule",
+        "body": "When something moves from raw to refined (formula, timeline line), colour rises with it: dim neutral → Quicksilver Blue → Elixir Green. Never reverse it.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ash-First Rule",
+        "body": "Running prose is Ash. Moonlight is for names, headings and the few words that must lead.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "If a string is data, a date, a tag, a number or a command, it is mono. If it is a sentence or a name, it is grotesk. Don't mix within one element.",
+        "section": "typography"
+      },
+      {
+        "name": "The Kicker Rule",
+        "body": "Every section title has a mono kicker above it in Elixir Green. No headline appears alone.",
+        "section": "typography"
+      },
+      {
+        "name": "The Hairline Grid Rule",
+        "body": "Structure is drawn with 1px hairlines (dividers, stat separators, list rules, the ambient grid), not with fills or heavy blocks.",
+        "section": "layout"
+      },
+      {
+        "name": "The Quiet Until Touched Rule",
+        "body": "Surfaces never glow, lift or shadow at rest (the portrait halo is the single exception). Every lift is a response to hover or focus.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Soft Glow Rule",
+        "body": "Glows are diffuse and low-alpha (≤16% for accents, ≤12% for shadows). If a glow reads as neon, it is too strong.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do set every kicker, date, tag, number and command in JetBrains Mono, and every sentence and name in Space Grotesk.",
+      "Do keep panels at Panel Veil (2.5% white) with a Hairline border, and save lift and glow for hover and focus.",
+      "Do use Elixir Green as the single chrome accent; assign violet and amber only per item through `data-accent`.",
+      "Do let colour rise from neutral → Quicksilver → Elixir wherever something goes from raw to refined.",
+      "Do use 14px radii for containers, 10px for buttons and inner images, pills for small controls.",
+      "Do define every colour for both themes through the `:root` / `:root[data-theme='light']` custom properties.",
+      "Do respect `prefers-reduced-motion`: reveals render visible, loops stop, the typed role shows as static text.",
+      "Do keep the global keyboard focus ring (2px Elixir outline, 3px offset); components may refine it but never remove it.",
+      "Do keep every text colour, including Smoke and the light-theme accents, at 4.5:1 or better on its surface."
+    ],
+    "donts": [
+      "Don't go neon cyberpunk: no saturated neon, heavy bloom, scanlines or glitch effects.",
+      "Don't use a corporate template look: no stock photography, SaaS hero patterns or sales-funnel CTAs.",
+      "Don't illustrate the alchemy: no parchment, runes, potion bottles, sigils or medieval type. The theme lives in words and the formula.",
+      "Don't add resting shadows or glows to cards, panels or buttons.",
+      "Don't put prose in Moonlight; running text is Ash.",
+      "Don't hard-code accent hexes or `rgba()` tints in components; mix them from the custom properties (`color-mix(in srgb, var(--green) 12%, transparent)`) so the light theme follows."
+    ]
+  }
+}

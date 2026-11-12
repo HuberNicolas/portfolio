@@ -5,6 +5,9 @@ import { meta } from '../data/content.js'
 
 const { t, lang } = useLang()
 const portrait = `${import.meta.env.BASE_URL}img/portrait.jpg`
+// Set at build time in vite.config.js: which CV PDFs actually exist in public/cv/.
+const cvReady = __CV_AVAILABLE__
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 /* --- typewriter for the rotating role words --- */
 const typed = ref('')
@@ -37,11 +40,19 @@ watch(lang, () => {
   roleIdx = 0
   charIdx = 0
   deleting = false
+  if (reduceMotion) {
+    typed.value = t.value.hero.roles[0]
+    return
+  }
   typed.value = ''
   timer = setTimeout(tick, 300)
 })
 
-onMounted(() => (timer = setTimeout(tick, 600)))
+onMounted(() => {
+  // With reduced motion, show the first role as static text instead of typing.
+  if (reduceMotion) typed.value = t.value.hero.roles[0]
+  else timer = setTimeout(tick, 600)
+})
 onBeforeUnmount(() => clearTimeout(timer))
 </script>
 
@@ -58,17 +69,25 @@ onBeforeUnmount(() => clearTimeout(timer))
         <h1 class="hero__name reveal">{{ t.hero.name }}</h1>
 
         <p class="hero__role reveal">
-          <span class="hero__prompt">&gt;</span>
-          <span class="hero__typed">{{ typed }}</span><span class="caret"></span>
+          <span class="sr-only">{{ t.hero.roles.join(', ') }}</span>
+          <span aria-hidden="true">
+            <span class="hero__prompt">&gt;</span>
+            <span class="hero__typed">{{ typed }}</span><span class="caret"></span>
+          </span>
         </p>
 
         <!-- transmutation formula: data → systems → impact -->
         <div class="formula reveal">
           <span class="formula__item formula__item--a">{{ t.hero.formula[0] }}</span>
-          <span class="formula__arrow">→</span>
-          <span class="formula__item formula__item--b">{{ t.hero.formula[1] }}</span>
-          <span class="formula__arrow">→</span>
-          <span class="formula__item formula__item--c">{{ t.hero.formula[2] }}</span>
+          <!-- each arrow stays with the step it points to when the line wraps -->
+          <span class="formula__step">
+            <span class="formula__arrow" aria-hidden="true">→</span>
+            <span class="formula__item formula__item--b">{{ t.hero.formula[1] }}</span>
+          </span>
+          <span class="formula__step">
+            <span class="formula__arrow" aria-hidden="true">→</span>
+            <span class="formula__item formula__item--c">{{ t.hero.formula[2] }}</span>
+          </span>
         </div>
 
         <p class="hero__lead reveal">{{ t.hero.lead }}</p>
@@ -86,7 +105,7 @@ onBeforeUnmount(() => clearTimeout(timer))
             </svg>
             {{ t.hero.ctaGithub }}
           </a>
-          <a class="btn" :href="meta.cv[lang]" target="_blank" rel="noopener">
+          <a v-if="cvReady[lang]" class="btn" :href="meta.cv[lang]" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
@@ -140,7 +159,12 @@ onBeforeUnmount(() => clearTimeout(timer))
   inset: -1px;
   z-index: -1;
   border-radius: inherit;
-  background: linear-gradient(140deg, rgba(92, 240, 176, 0.35), transparent 45%, rgba(110, 181, 255, 0.3));
+  background: linear-gradient(
+    140deg,
+    color-mix(in srgb, var(--green) 35%, transparent),
+    transparent 45%,
+    color-mix(in srgb, var(--blue) 30%, transparent)
+  );
   filter: blur(28px);
   opacity: 0.55;
 }
@@ -177,13 +201,13 @@ onBeforeUnmount(() => clearTimeout(timer))
   height: 7px;
   border-radius: 50%;
   background: var(--green);
-  box-shadow: 0 0 0 0 rgba(92, 240, 176, 0.6);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--green) 60%, transparent);
   animation: pulse 2.4s infinite;
 }
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(92, 240, 176, 0.5); }
-  70% { box-shadow: 0 0 0 8px rgba(92, 240, 176, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(92, 240, 176, 0); }
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--green) 50%, transparent); }
+  70% { box-shadow: 0 0 0 8px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
 }
 
 .hero__hello {
@@ -250,11 +274,16 @@ onBeforeUnmount(() => clearTimeout(timer))
   background: var(--panel);
 }
 .formula__item--a { color: var(--text-dim); }
-.formula__item--b { color: var(--blue); border-color: rgba(110, 181, 255, 0.3); }
+.formula__item--b { color: var(--blue); border-color: color-mix(in srgb, var(--blue) 30%, transparent); }
 .formula__item--c {
   color: var(--green);
-  border-color: rgba(92, 240, 176, 0.35);
-  background: rgba(92, 240, 176, 0.06);
+  border-color: color-mix(in srgb, var(--green) 35%, transparent);
+  background: color-mix(in srgb, var(--green) 6%, transparent);
+}
+.formula__step {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
 }
 .formula__arrow {
   color: var(--text-faint);

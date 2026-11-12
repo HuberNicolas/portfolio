@@ -45,7 +45,7 @@ const { t } = useLang()
   right: -10%;
   width: 420px;
   height: 420px;
-  background: radial-gradient(circle, rgba(92, 240, 176, 0.1), transparent 65%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--green) 10%, transparent), transparent 65%);
   pointer-events: none;
 }
 .work__head {

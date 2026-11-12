@@ -34,7 +34,7 @@ function go(id) {
         <span class="brand__name">nicolas<span class="brand__dot">.</span>huber</span>
       </a>
 
-      <nav class="nav__links" :class="{ 'is-open': open }">
+      <nav id="nav-links" class="nav__links" :class="{ 'is-open': open }">
         <a href="#work" @click.prevent="go('work')">{{ t.nav.work }}</a>
         <a href="#projects" @click.prevent="go('projects')">{{ t.nav.projects }}</a>
         <a href="#journey" @click.prevent="go('journey')">{{ t.nav.journey }}</a>
@@ -61,7 +61,14 @@ function go(id) {
             <path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.22-3.37-1.22-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.1 2.91.84.09-.66.35-1.1.63-1.36-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.35 4.8-4.58 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z" />
           </svg>
         </a>
-        <button class="burger" :class="{ 'is-open': open }" @click="open = !open" aria-label="Menu">
+        <button
+          class="burger"
+          :class="{ 'is-open': open }"
+          @click="open = !open"
+          aria-label="Menu"
+          aria-controls="nav-links"
+          :aria-expanded="open"
+        >
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -159,11 +166,12 @@ function go(id) {
   border-radius: 999px;
   padding: 5px 12px;
   color: var(--text-dim);
+  white-space: nowrap;
   cursor: pointer;
   transition: border-color var(--dur), color var(--dur);
 }
 .lang:hover {
-  border-color: rgba(92, 240, 176, 0.5);
+  border-color: color-mix(in srgb, var(--green) 50%, transparent);
 }
 .lang__cur {
   color: var(--green);
@@ -230,6 +238,16 @@ function go(id) {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* Narrow phones: the GitHub link is repeated in the hero, so the nav gives it up for room. */
+@media (max-width: 420px) {
+  .nav__actions {
+    gap: 10px;
+  }
+  .nav__gh {
+    display: none;
+  }
+}
+
 @media (max-width: 760px) {
   .burger {
     display: flex;
@@ -247,12 +265,14 @@ function go(id) {
     border-bottom: 1px solid var(--line);
     transform: translateY(-12px);
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
-    transition: opacity var(--dur), transform var(--dur);
+    transition: opacity var(--dur), transform var(--dur), visibility var(--dur);
   }
   .nav__links.is-open {
     opacity: 1;
     transform: none;
+    visibility: visible;
     pointer-events: auto;
   }
   .nav__links a {

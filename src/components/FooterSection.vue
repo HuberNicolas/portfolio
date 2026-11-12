@@ -44,7 +44,7 @@ const links = [
 .footer {
   border-top: 1px solid var(--line);
   padding: 56px 0 40px;
-  background: linear-gradient(180deg, transparent, rgba(92, 240, 176, 0.02));
+  background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--green) 2%, transparent));
 }
 .footer__inner {
   display: flex;

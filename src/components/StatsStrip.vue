@@ -24,7 +24,7 @@ const { t } = useLang()
 .stats {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.015), transparent);
+  background: linear-gradient(180deg, var(--panel), transparent);
 }
 .stats__grid {
   display: grid;

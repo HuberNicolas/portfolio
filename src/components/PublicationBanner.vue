@@ -43,11 +43,15 @@ const paperUrl = 'https://ieeexplore.ieee.org/document/10224824'
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 28px 32px;
-  background: linear-gradient(120deg, rgba(255, 192, 110, 0.05), rgba(201, 155, 255, 0.04));
+  background: linear-gradient(
+    120deg,
+    color-mix(in srgb, var(--amber) 5%, transparent),
+    color-mix(in srgb, var(--violet) 4%, transparent)
+  );
   transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
 }
 .pub:hover {
-  border-color: rgba(255, 192, 110, 0.45);
+  border-color: color-mix(in srgb, var(--amber) 45%, transparent);
   transform: translateY(-3px);
 }
 .pub__icon {
@@ -57,8 +61,8 @@ const paperUrl = 'https://ieeexplore.ieee.org/document/10224824'
   display: grid;
   place-items: center;
   color: var(--amber);
-  background: rgba(255, 192, 110, 0.1);
-  border: 1px solid rgba(255, 192, 110, 0.25);
+  background: color-mix(in srgb, var(--amber) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--amber) 25%, transparent);
 }
 .pub__icon svg {
   width: 26px;
@@ -97,6 +101,7 @@ const paperUrl = 'https://ieeexplore.ieee.org/document/10224824'
 @media (max-width: 800px) {
   .pub {
     grid-template-columns: auto 1fr;
+    align-items: start;
     gap: 18px;
   }
   .pub__cta {
