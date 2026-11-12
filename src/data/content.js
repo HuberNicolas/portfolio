@@ -242,13 +242,13 @@ export const content = {
     person: {
       title: 'The person behind the remedies',
       body:
-        'What drives me is the whole path from raw data to something people actually use: a pipeline, a model, an interactive visualisation. I like to understand the data before I build on it, and I work best with people who have a clear vision and push projects forward.',
+        'What I enjoy most is the full chain: a pipeline, a model, an interactive visualisation. I like to understand the data before I build on it, and I work best with people who have a clear vision and push projects forward.',
       focusTitle: 'Focus',
       focus: ['Data pipelines and modelling with dbt and Dagster', 'Getting ML models into production', 'Data platforms on OpenShift and Google Cloud'],
       alsoTitle: 'Also into',
       also: ['Data visualisation and visual analytics', 'Games and playful interfaces', 'IoT and cybersecurity'],
       sportTitle: 'Off the clock',
-      sport: 'Strength training and weightlifting, running just for fun (two half marathons and one marathon so far), the odd mountain and four surf camps.',
+      sport: 'Strength training and weightlifting, casual running, the odd mountain and four surf camps.',
       toolsTitle: 'Tools',
       tools: 'Python, SQL, dbt, Dagster, scikit-learn, TypeScript, Vue, React, D3, FastAPI, Docker, Kubernetes, OpenShift, Google Cloud, GitLab, PHP and Symfony, LaTeX',
       langTitle: 'Languages',
@@ -413,13 +413,13 @@ export const content = {
     person: {
       title: 'Der Mensch hinter den Mitteln',
       body:
-        'Mich reizt der ganze Weg von rohen Daten bis zu etwas, das Menschen wirklich nutzen: eine Pipeline, ein Modell, eine interaktive Visualisierung. Ich will die Daten verstehen, bevor ich darauf aufbaue, und arbeite am liebsten mit Menschen, die eine klare Vision haben und Projekte vorantreiben.',
+        'Mich reizt die ganze Kette: eine Pipeline, ein Modell, eine interaktive Visualisierung. Ich will die Daten verstehen, bevor ich darauf aufbaue, und arbeite am liebsten mit Menschen, die eine klare Vision haben und Projekte vorantreiben.',
       focusTitle: 'Fokus',
       focus: ['Datenpipelines und Modellierung mit dbt und Dagster', 'ML-Modelle in Produktion bringen', 'Datenplattformen auf OpenShift und Google Cloud'],
       alsoTitle: 'Ausserdem',
       also: ['Datenvisualisierung und Visual Analytics', 'Games und verspielte Interfaces', 'IoT und Cybersecurity'],
       sportTitle: 'Nach Feierabend',
-      sport: 'Krafttraining und Gewichtheben, Laufen zum Plausch (bisher zwei Halbmarathons und ein Marathon), ab und zu ein Berg und vier Surfcamps.',
+      sport: 'Krafttraining und Gewichtheben, Laufen zum Plausch, ab und zu ein Berg und vier Surfcamps.',
       toolsTitle: 'Werkzeuge',
       tools: 'Python, SQL, dbt, Dagster, scikit-learn, TypeScript, Vue, React, D3, FastAPI, Docker, Kubernetes, OpenShift, Google Cloud, GitLab, PHP und Symfony, LaTeX',
       langTitle: 'Sprachen',
