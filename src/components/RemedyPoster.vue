@@ -137,6 +137,7 @@ const base = import.meta.env.BASE_URL
 }
 .poster--lead .poster__title {
   font-size: clamp(36px, 3.6vw, 54px);
+  padding-right: 112px;
 }
 /* The title sits first on every layout, even where the picture comes first in the markup. */
 .layout--arch .poster__text {

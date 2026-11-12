@@ -57,7 +57,7 @@ export const networkMap = {
     { place: 'Hauptbahnhof', x: 560, y: 360, lines: ['1', '2'], poster: 'okcupid', change: true, label: { x: 546, y: 398, anchor: 'end' } },
     { place: 'Central', x: 680, y: 360, change: true, label: { x: 668, y: 342, anchor: 'end' } },
     { place: 'ETH/Universitätsspital', x: 760, y: 280, lines: ['1'], handbill: 'SDG Classifier', label: { x: 778, y: 286, anchor: 'start' } },
-    { place: 'Irchel', x: 760, y: 160, lines: ['1'], handbill: 'Infrastructure', label: { x: 778, y: 166, anchor: 'start' } },
+    { place: 'Irchel', x: 760, y: 160, label: { x: 778, y: 166, anchor: 'start' } },
     { place: 'Oerlikon', x: 760, y: 60, label: { x: 778, y: 66, anchor: 'start' } },
     { place: 'Bucheggplatz', x: 560, y: 120, label: { x: 544, y: 126, anchor: 'end' } },
     { place: 'Paradeplatz', x: 560, y: 520, lines: ['2', '3'], poster: 'sdg', change: true, label: { x: 546, y: 558, anchor: 'end' } },
@@ -66,8 +66,8 @@ export const networkMap = {
     { place: 'Triemli', x: 160, y: 680, lines: ['3'], handbill: 'Numerical Methods', label: { x: 160, y: 716, anchor: 'middle' } },
     { place: 'Albisriederplatz', x: 320, y: 520, label: { x: 306, y: 506, anchor: 'end' } },
     { place: 'Stauffacher', x: 440, y: 520, lines: ['3'], poster: 'mtd', label: { x: 440, y: 478, anchor: 'middle' } },
-    { place: 'Bellevue', x: 680, y: 520, lines: ['3', '4'], handbill: 'Abstract Scraper', change: true, label: { x: 698, y: 526, anchor: 'start' } },
-    { place: 'Kunsthaus', x: 760, y: 440, lines: ['3'], handbill: 'Network Science', label: { x: 760, y: 406, anchor: 'middle' } },
+    { place: 'Bellevue', x: 680, y: 520, lines: ['3', '4'], handbill: 'Abstract Scraper', change: true, label: { x: 706, y: 526, anchor: 'start' } },
+    { place: 'Kunsthaus', x: 760, y: 440, lines: ['3'], handbill: 'Network Science', label: { x: 774, y: 404, anchor: 'start' } },
     { place: 'Römerhof', x: 860, y: 440, label: { x: 860, y: 472, anchor: 'middle' } },
     { place: 'Klusplatz', x: 960, y: 440, label: { x: 976, y: 446, anchor: 'start' } },
     { place: 'Kreuzstrasse', x: 760, y: 600, lines: ['4'], handbill: 'Shortcut Overlay', label: { x: 786, y: 594, anchor: 'start' } },
@@ -78,7 +78,7 @@ export const networkMap = {
   river: 'M628 556 L628 380 L470 222',
   lakeLabel: { x: 700, y: 772 },
   // The fare zone of the city (110) as a dashed border, the two wooded hills and a few drawn landmarks.
-  zone: 'M96 300 C84 170 210 34 430 34 L830 26 C930 26 1068 200 1066 420 C1064 560 972 650 900 790 L520 806 C380 800 150 770 108 650 C70 530 104 410 96 300 Z',
+  zone: 'M96 300 C84 170 210 34 430 34 L830 26 C930 26 1068 200 1066 420 C1064 600 1046 700 990 806 L520 806 C380 800 150 770 108 650 C70 530 104 410 96 300 Z',
   zoneBadge: { x: 990, y: 150 },
   woods: [
     { name: 'Zürichberg', d: 'M838 214 C880 190 960 196 1000 236 C1030 270 1014 330 990 368 C962 400 900 404 872 376 C850 352 860 316 846 290 C832 266 812 232 838 214 Z', label: { x: 930, y: 250 } },
@@ -98,7 +98,7 @@ export const content = {
   en: {
     nav: {
       posters: 'Projects',
-      network: 'Network',
+      network: 'Route map',
       now: 'Now',
       programme: 'Journey',
       person: 'About',
@@ -117,13 +117,14 @@ export const content = {
       // The "transmutation formula", the house slogan.
       formula: ['raw data', 'elegant systems', 'meaningful impact'],
       lead:
-        'I build data pipelines and machine-learning systems, from raw data to something people actually use. MSc in Informatics from UZH, now an IT trainee at Migros.',
+        'I build data pipelines and machine-learning systems. MSc in Informatics from UZH, now an IT trainee at Migros, rotating through its data teams.',
       wallLabel: 'Projects, advertised',
       demo: 'Open the demo',
       play: 'Play it',
       code: 'Code',
       paper: 'Paper',
       cv: 'CV (PDF)',
+      email: 'Email',
     },
     posters: {
       items: [
@@ -178,7 +179,7 @@ export const content = {
       ],
     },
     now: {
-      title: 'At present',
+      title: 'Now',
       role: 'IT trainee, data engineering & ML',
       org: 'Migros-Genossenschafts-Bund · since June 2025',
       body:
@@ -186,13 +187,13 @@ export const content = {
       stations: [
         {
           where: 'Migros Bank, Product & Marketing Analytics',
-          when: 'Jan — Jun 2026',
+          when: 'Jan–Jun 2026',
           what:
             'Technical contact for modernising the data infrastructure of a team of about ten analysts: a dbt and Dagster pipeline on a new OpenShift platform, a campaign tool, an ML model prepared for an A/B test, and internal workshops on dbt, data products and Git.',
         },
         {
           where: 'MGB, Data & Analytics',
-          when: 'Jun — Dec 2025',
+          when: 'Jun–Dec 2025',
           what:
             'An aggregation layer for the training of a promotion optimisation tool, built as a dbt pipeline on Google Cloud. It cut the number of models from 2.4 million to 10,000 and one training run from three hours to fifteen minutes.',
         },
@@ -205,7 +206,7 @@ export const content = {
       },
     },
     box: {
-      title: 'Network of lines',
+      title: 'Route map',
       intro: 'All projects on one plan: each line is a field of work, each stop a project. The plan follows the trams of Zürich, much simplified.',
       planLabel: 'Network plan of my projects, drawn on a simplified tram network of Zürich',
       swipe: 'Swipe to see the whole plan',
@@ -231,18 +232,18 @@ export const content = {
     programme: {
       title: 'The journey so far',
       items: [
-        { when: '2025 —', what: 'IT trainee, data engineering & ML', where: 'Migros-Genossenschafts-Bund, Zürich' },
-        { when: '2023 — 2025', what: 'MSc in Informatics', where: 'University of Zurich · Software Systems and Data Science · thesis on SDG Tag Heroes' },
+        { when: 'Since 2025', what: 'IT trainee, data engineering & ML', where: 'Migros-Genossenschafts-Bund, Zürich' },
+        { when: '2023–2025', what: 'MSc in Informatics', where: 'University of Zurich · Software Systems and Data Science · thesis on SDG Tag Heroes' },
         { when: '2024', what: 'Exchange semester', where: 'University of Technology Sydney · UNIX systems, data science, cyber security' },
-        { when: '2023 — 2024', what: 'Research assistant', where: 'Interactive Visual Data Analysis Group, UZH · human-centred AI, visual analytics' },
-        { when: '2021 — 2024', what: 'Junior web developer', where: 'novu (formerly jkweb AG) · Symfony and PHP web apps, an internal ERP, app-development courses' },
-        { when: '2019 — 2023', what: 'BSc in Informatics', where: 'University of Zurich · thesis on the MTD strategy selection agent (IEEE paper)' },
+        { when: '2023–2024', what: 'Research assistant', where: 'Interactive Visual Data Analysis Group, UZH · human-centred AI, visual analytics' },
+        { when: '2021–2024', what: 'Junior web developer', where: 'novu (formerly jkweb AG) · Symfony and PHP web apps, an internal ERP, app-development courses' },
+        { when: '2019–2023', what: 'BSc in Informatics', where: 'University of Zurich · thesis on the MTD strategy selection agent (IEEE paper)' },
       ],
     },
     person: {
       title: 'The person behind the remedies',
       body:
-        'What I enjoy most is the full chain: a pipeline, a model, an interactive visualisation. I like to understand the data before I build on it, and I work best with people who have a clear vision and push projects forward.',
+        'What I enjoy most is the full chain: a pipeline, a model, an interactive visualisation. I like to understand the data before I build on it.',
       focusTitle: 'Focus',
       focus: ['Data pipelines and modelling with dbt and Dagster', 'Getting ML models into production', 'Data platforms on OpenShift and Google Cloud'],
       alsoTitle: 'Also into',
@@ -254,9 +255,9 @@ export const content = {
       langTitle: 'Languages',
       langs: 'German (native), English (fluent), French (A2/B1)',
       photos: [
-        { src: 'img/running.jpg', alt: 'Nicolas running on a trail above a forest', caption: 'Running' },
-        { src: 'img/hiking.jpg', alt: 'Nicolas on a summit above Lake Lucerne', caption: 'Above Lake Lucerne' },
         { src: 'img/surfing.jpg', alt: 'Nicolas in a rash guard at a surf camp', caption: 'Surf camp' },
+        { src: 'img/hiking.jpg', alt: 'Nicolas on a summit above Lake Lucerne', caption: 'Above Lake Lucerne' },
+        { src: 'img/running.jpg', alt: 'Nicolas running on a trail above a forest', caption: 'Running' },
       ],
     },
     closing: {
@@ -271,7 +272,7 @@ export const content = {
     nav: {
       posters: 'Projekte',
       network: 'Liniennetz',
-      now: 'Gegenwart',
+      now: 'Aktuell',
       programme: 'Werdegang',
       person: 'Über mich',
       contact: 'Kontakt',
@@ -288,21 +289,22 @@ export const content = {
       role: 'Data Engineering & Machine Learning · Zürich',
       formula: ['rohe Daten', 'elegante Systeme', 'echte Wirkung'],
       lead:
-        'Ich baue Datenpipelines und Machine-Learning-Systeme, von rohen Daten bis zu etwas, das Menschen wirklich nutzen. MSc Informatik der UZH, aktuell IT-Trainee bei der Migros.',
+        'Ich baue Datenpipelines und Machine-Learning-Systeme. MSc Informatik der UZH, aktuell IT-Trainee bei der Migros, wo ich durch die Datenteams rotiere.',
       wallLabel: 'Projekte, angepriesen',
       demo: 'Demo öffnen',
       play: 'Spielen',
       code: 'Code',
       paper: 'Paper',
       cv: 'CV (PDF)',
+      email: 'E-Mail',
     },
     posters: {
       items: [
         {
           title: 'OkCupid Explorer',
           kind: 'Visual Data Analysis · UZH',
-          claim: 'Finden Sie heraus, wie viele von 842 Fremden Ihnen gleichen',
-          desc: 'Fragebogen ausfüllen und sehen, wo man landet: Kosinus-Ähnlichkeit, PCA und k-Means, alles direkt im Browser.',
+          claim: 'Finde heraus, wie viele von 842 Fremden dir gleichen',
+          desc: 'Füll den Fragebogen aus und sieh, wo du landest: Kosinus-Ähnlichkeit, PCA und k-Means, alles direkt im Browser.',
           stamp: 'Live-Demo',
           alt: 'Streudiagramm von 842 Profilen in vier farbigen Clustern, die eigene Position markiert',
         },
@@ -310,7 +312,7 @@ export const content = {
           title: 'SDG Tag Heroes',
           kind: 'Masterarbeit · UZH',
           claim: 'Ordnet die UN-Ziele zu, mit etwas Hilfe von LLMs',
-          desc: 'Ein interaktives, gamifiziertes System zum KI-gestützten Labeling der Nachhaltigkeitsziele in der Forschung, mit dem Menschen in der Schleife.',
+          desc: 'Ein interaktives, gamifiziertes System zum KI-gestützten Labeling der Nachhaltigkeitsziele in der Forschung, mit Human-in-the-Loop.',
           stamp: 'Masterarbeit',
           alt: 'Illustrierte Fantasiewelt aus dem Spiel SDG Tag Heroes: eine Burgstadt am Fluss in der Dämmerung',
         },
@@ -349,7 +351,7 @@ export const content = {
       ],
     },
     now: {
-      title: 'Gegenwärtig',
+      title: 'Aktuell',
       role: 'IT-Trainee, Data Engineering & ML',
       org: 'Migros-Genossenschafts-Bund · seit Juni 2025',
       body:
@@ -357,13 +359,13 @@ export const content = {
       stations: [
         {
           where: 'Migros Bank, Product & Marketing Analytics',
-          when: 'Jan. — Juni 2026',
+          when: 'Jan.–Juni 2026',
           what:
             'Technische Ansprechperson für die Modernisierung der Dateninfrastruktur eines Teams von rund zehn Analysten: eine Pipeline mit dbt und Dagster auf einer neuen OpenShift-Plattform, ein Kampagnentool, ein ML-Modell für einen A/B-Test und interne Workshops zu dbt, Datenprodukten und Git.',
         },
         {
           where: 'MGB, Data & Analytics',
-          when: 'Juni — Dez. 2025',
+          when: 'Juni–Dez. 2025',
           what:
             'Ein Aggregations-Layer für das Modelltraining eines Promotionsoptimierungstools, umgesetzt als dbt-Pipeline auf Google Cloud. Er senkte die Zahl der Modelle von 2,4 Millionen auf 10’000 und einen Trainingslauf von drei Stunden auf fünfzehn Minuten.',
         },
@@ -402,18 +404,18 @@ export const content = {
     programme: {
       title: 'Der bisherige Weg',
       items: [
-        { when: '2025 —', what: 'IT-Trainee, Data Engineering & ML', where: 'Migros-Genossenschafts-Bund, Zürich' },
-        { when: '2023 — 2025', what: 'MSc Informatik', where: 'Universität Zürich · Software Systems und Data Science · Masterarbeit zu SDG Tag Heroes' },
+        { when: 'Seit 2025', what: 'IT-Trainee, Data Engineering & ML', where: 'Migros-Genossenschafts-Bund, Zürich' },
+        { when: '2023–2025', what: 'MSc Informatik', where: 'Universität Zürich · Software Systems und Data Science · Masterarbeit zu SDG Tag Heroes' },
         { when: '2024', what: 'Austauschsemester', where: 'University of Technology Sydney · UNIX-Systeme, Data Science, Cyber Security' },
-        { when: '2023 — 2024', what: 'Hilfsassistent', where: 'Interactive Visual Data Analysis Group, UZH · Human-centred AI, Visual Analytics' },
-        { when: '2021 — 2024', what: 'Junior-Webentwickler', where: 'novu (ehem. jkweb AG) · Symfony- und PHP-Webapps, internes ERP, Kurse für App-Entwicklung' },
-        { when: '2019 — 2023', what: 'BSc Informatik', where: 'Universität Zürich · Bachelorarbeit zum MTD-Strategieauswahl-Agenten (IEEE-Paper)' },
+        { when: '2023–2024', what: 'Hilfsassistent', where: 'Interactive Visual Data Analysis Group, UZH · Human-centred AI, Visual Analytics' },
+        { when: '2021–2024', what: 'Junior-Webentwickler', where: 'novu (ehem. jkweb AG) · Symfony- und PHP-Webapps, internes ERP, Kurse für App-Entwicklung' },
+        { when: '2019–2023', what: 'BSc Informatik', where: 'Universität Zürich · Bachelorarbeit zum MTD-Strategieauswahl-Agenten (IEEE-Paper)' },
       ],
     },
     person: {
       title: 'Der Mensch hinter den Mitteln',
       body:
-        'Mich reizt die ganze Kette: eine Pipeline, ein Modell, eine interaktive Visualisierung. Ich will die Daten verstehen, bevor ich darauf aufbaue, und arbeite am liebsten mit Menschen, die eine klare Vision haben und Projekte vorantreiben.',
+        'Mich reizt die ganze Kette: eine Pipeline, ein Modell, eine interaktive Visualisierung. Ich will die Daten verstehen, bevor ich darauf aufbaue.',
       focusTitle: 'Fokus',
       focus: ['Datenpipelines und Modellierung mit dbt und Dagster', 'ML-Modelle in Produktion bringen', 'Datenplattformen auf OpenShift und Google Cloud'],
       alsoTitle: 'Ausserdem',
@@ -425,9 +427,9 @@ export const content = {
       langTitle: 'Sprachen',
       langs: 'Deutsch (Muttersprache), Englisch (fliessend), Französisch (A2/B1)',
       photos: [
-        { src: 'img/running.jpg', alt: 'Nicolas beim Laufen auf einem Weg über einem Wald', caption: 'Laufen' },
-        { src: 'img/hiking.jpg', alt: 'Nicolas auf einem Gipfel über dem Vierwaldstättersee', caption: 'Über dem Vierwaldstättersee' },
         { src: 'img/surfing.jpg', alt: 'Nicolas im Lycra-Shirt in einem Surfcamp', caption: 'Surfcamp' },
+        { src: 'img/hiking.jpg', alt: 'Nicolas auf einem Gipfel über dem Vierwaldstättersee', caption: 'Über dem Vierwaldstättersee' },
+        { src: 'img/running.jpg', alt: 'Nicolas beim Laufen auf einem Weg über einem Wald', caption: 'Laufen' },
       ],
     },
     closing: {

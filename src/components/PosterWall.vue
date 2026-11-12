@@ -28,6 +28,8 @@ const posters = computed(() => posterMeta.map((m, i) => ({ ...m, ...t.value.post
         <p class="masthead__lead">{{ t.house.lead }}</p>
         <p class="masthead__links">
           <a class="action" :href="meta.github" target="_blank" rel="noopener">GitHub</a>
+          <a class="action" :href="meta.linkedin" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="action" :href="`mailto:${meta.email}`">{{ t.house.email }}</a>
           <a v-if="cvReady[lang]" class="action" :href="meta.cv[lang]" target="_blank" rel="noopener">{{ t.house.cv }}</a>
         </p>
       </header>
@@ -100,7 +102,8 @@ const posters = computed(() => posterMeta.map((m, i) => ({ ...m, ...t.value.post
 }
 .masthead__links {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 8px 24px;
   margin: 26px 0 0;
   color: var(--link);
 }

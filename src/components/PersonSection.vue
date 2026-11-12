@@ -21,10 +21,6 @@ const base = import.meta.env.BASE_URL
       <div class="about">
         <div>
           <p class="about__body">{{ t.person.body }}</p>
-          <p class="about__sport">
-            <span class="banner">{{ t.person.sportTitle }}</span>
-            {{ t.person.sport }}
-          </p>
         </div>
         <div class="about__facts">
           <div>
@@ -48,6 +44,11 @@ const base = import.meta.env.BASE_URL
             <p>{{ t.person.langs }}</p>
           </div>
         </div>
+        <!-- Sport stays a footnote, after the work facts. -->
+        <p class="about__sport">
+          <span class="banner">{{ t.person.sportTitle }}</span>
+          {{ t.person.sport }}
+        </p>
       </div>
     </div>
   </section>
@@ -91,7 +92,8 @@ const base = import.meta.env.BASE_URL
   margin: 0;
 }
 .about__sport {
-  margin: 28px 0 0;
+  grid-column: 1 / -1;
+  margin: 0;
   padding-top: 20px;
   border-top: 1px solid var(--rule);
   color: var(--text-dim);
