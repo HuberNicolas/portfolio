@@ -90,7 +90,7 @@ onBeforeUnmount(() => observer?.disconnect())
         <g class="legend" transform="translate(28 14)" aria-hidden="true">
           <g v-for="(id, i) in order" :key="id" :transform="`translate(${[0, 160, 350, 500][i]} 0)`">
             <circle cx="13" cy="13" r="13" :class="`fill--${colourOf[id]}`" />
-            <text x="13" y="18" text-anchor="middle" class="legend__num" :class="{ 'legend__num--dark': id === 'T' }">
+            <text x="13" y="18" text-anchor="middle" class="legend__num">
               {{ id }}
             </text>
             <text x="38" y="19" class="legend__name">{{ t.box.lines[id] }}</text>
@@ -240,9 +240,6 @@ onBeforeUnmount(() => observer?.disconnect())
   font-size: 16px;
   fill: var(--ivory);
 }
-.legend__num--dark {
-  fill: var(--navy);
-}
 .legend__name {
   font-family: var(--font-banner);
   font-weight: 700;
@@ -252,14 +249,14 @@ onBeforeUnmount(() => observer?.disconnect())
   fill: var(--plan-ink);
 }
 
-.fill--cobalt { fill: var(--cobalt); }
-.fill--vermilion { fill: var(--vermilion); }
-.fill--viridian { fill: var(--viridian); }
-.fill--gold { fill: var(--gold); }
-.stroke--cobalt { stroke: var(--cobalt); }
-.stroke--vermilion { stroke: var(--vermilion); }
-.stroke--viridian { stroke: var(--viridian); }
-.stroke--gold { stroke: var(--gold); }
+.fill--magenta { fill: var(--tram-magenta); }
+.fill--black { fill: var(--tram-black); }
+.fill--green { fill: var(--tram-green); }
+.fill--blue { fill: var(--tram-blue); }
+.stroke--magenta { stroke: var(--tram-magenta); }
+.stroke--black { stroke: var(--tram-black); }
+.stroke--green { stroke: var(--tram-green); }
+.stroke--blue { stroke: var(--tram-blue); }
 
 /* Network-plan lines: thick, flat colour, round joins, white stop dots on top. */
 .line {
@@ -368,10 +365,10 @@ onBeforeUnmount(() => observer?.disconnect())
   color: var(--ivory);
   box-shadow: 0 0 0 1.5px var(--ivory);
 }
-.fill-bg--cobalt { background: var(--cobalt); }
-.fill-bg--vermilion { background: var(--vermilion); }
-.fill-bg--viridian { background: var(--viridian); }
-.fill-bg--gold { background: var(--gold); color: var(--navy); }
+.fill-bg--magenta { background: var(--tram-magenta); }
+.fill-bg--black { background: var(--tram-black); }
+.fill-bg--green { background: var(--tram-green); }
+.fill-bg--blue { background: var(--tram-blue); }
 .card__kind {
   margin-top: 8px;
   font-size: 14px;

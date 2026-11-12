@@ -535,7 +535,7 @@
       },
       {
         "name": "The Four Lines Rule",
-        "body": "The plan has four lines, one per field of work, each in a poster ink and named by a letter, never a number, so it cannot read as a real tram line: D (Data & ML) cobalt, V (Visualisation) vermilion, R (Research) viridian, T (Tools & web) gold. Line discs repeat these colours wherever a stop is referenced (poster stop tags, map card).",
+        "body": "The plan has four lines, one per field of work, named by a letter, never a number, and drawn in the colour of the Zürich tram that runs its corridor: D (Data & ML) magenta like tram 10, V (Visualisation) black like tram 7, R (Research) green like tram 3, T (Tools & web) blue like tram 4 (tokens --tram-magenta, --tram-black, --tram-green, --tram-blue; the only colours outside the poster palette). Line discs repeat these colours wherever a stop is referenced (poster stop tags, map card).",
         "section": "colors"
       },
       {
@@ -573,7 +573,7 @@
     "donts": [
       "Don't make it look like a newspaper: no newsprint columns, datelines, bylines or broadsheet rules.",
       "Don't copy BioShock Infinite: no logos, characters, typography lockups, slogans or props from the game. The 1910 World's Fair mood is a genre only.",
-      "Don't use real transit branding: no VBZ or ZVV logos, real line colours or real line numbers.",
+      "Don't use real transit branding: no VBZ or ZVV logos and no real line numbers. The route map borrows only the Zürich tram line colours (owner's decision).",
       "Don't fake material: no paper grain, stains, torn edges, halftone noise or aged textures.",
       "Don't add swing timing or extra electro-swing props (no gramophones, bouncing reveals, cabaret ornaments). The paste-up and the line draw are the only authored motion.",
       "Don't put a metric hero, stats strip or achievement badges on the page.",

@@ -7,10 +7,10 @@ export const meta = {
   email: 'nicolas.huber.dev@gmail.com',
   website: 'https://nicolas-huber.dev',
   github: 'https://github.com/HuberNicolas',
-  linkedin: 'https://www.linkedin.com/in/nicolas-huber-dev/',
+  linkedin: 'https://www.linkedin.com/in/huber-nicolas/',
   orcid: 'https://orcid.org/0009-0001-3266-2338',
   paper: 'https://ieeexplore.ieee.org/document/10224824',
-  // Drop a real CV file into /public and update these paths.
+  // Built in the private repo HuberNicolas/minimalistic-cv (artifact cv-web).
   cv: {
     en: '/cv/nicolas-huber-cv-en.pdf',
     de: '/cv/nicolas-huber-cv-de.pdf',
@@ -42,14 +42,14 @@ export const posterMeta = [
 
 // The network plan of the projects: the tram network of the city of Zürich (zone 110), simplified to a
 // 1100 × 820 plan. Lines run at 0°, 45° or 90°. Lines are fields of work, stops are projects.
-// Lines carry letters, not numbers, so they never read as real tram lines.
+// Lines carry letters, not numbers; their colours are those of the Zürich trams on each corridor.
 // A stop carries either a poster id (`poster`) or the name of a handbill (`handbill`); place names stay German.
 export const networkMap = {
   lines: [
-    { id: 'D', colour: 'cobalt', d: 'M120 360 L280 200 L400 200 L560 360 L680 360 L760 280 L760 60' },
-    { id: 'V', colour: 'vermilion', d: 'M560 120 L560 760' },
-    { id: 'R', colour: 'viridian', d: 'M160 680 L320 520 L680 520 L760 440 L960 440' },
-    { id: 'T', colour: 'gold', d: 'M680 360 L680 520 L860 700' },
+    { id: 'D', colour: 'magenta', d: 'M120 360 L280 200 L400 200 L560 360 L680 360 L760 280 L760 60' },
+    { id: 'V', colour: 'black', d: 'M560 120 L560 760' },
+    { id: 'R', colour: 'green', d: 'M160 680 L320 520 L680 520 L760 440 L960 440' },
+    { id: 'T', colour: 'blue', d: 'M680 360 L680 520 L860 700' },
   ],
   stops: [
     { place: 'Altstetten', x: 120, y: 360, label: { x: 104, y: 366, anchor: 'end' } },
@@ -184,7 +184,7 @@ export const content = {
       role: 'IT trainee, data engineering & ML',
       org: 'Migros-Genossenschafts-Bund · since June 2025',
       body:
-        'I rotate through data teams across the Migros group. Right now I’m in the Product Development team at Digitec Galaxus, migrating ML models.',
+        'I rotate through data teams across the Migros group. Right now I’m in the data team at Digitec Galaxus, moving ML classifiers to a new Airflow platform.',
       stations: [
         {
           where: 'Migros Bank, Product & Marketing Analytics',
@@ -234,11 +234,11 @@ export const content = {
       title: 'The journey so far',
       items: [
         { when: 'Since 2025', what: 'IT trainee, data engineering & ML', where: 'Migros-Genossenschafts-Bund, Zürich' },
-        { when: '2023–2025', what: 'MSc in Informatics', where: 'University of Zurich · Software Systems and Data Science · thesis on SDG Tag Heroes' },
+        { when: '2022–2025', what: 'MSc in Informatics', where: 'University of Zurich · Software Systems and Data Science · thesis on SDG Tag Heroes' },
         { when: '2024', what: 'Exchange semester', where: 'University of Technology Sydney · UNIX systems, data science, cyber security' },
         { when: '2023–2024', what: 'Research assistant', where: 'Interactive Visual Data Analysis Group, UZH · human-centred AI, visual analytics' },
         { when: '2021–2024', what: 'Junior web developer', where: 'novu (formerly jkweb AG) · Symfony and PHP web apps, an internal ERP, app-development courses' },
-        { when: '2019–2023', what: 'BSc in Informatics', where: 'University of Zurich · thesis on the MTD strategy selection agent (IEEE paper)' },
+        { when: '2019–2022', what: 'BSc in Informatics', where: 'University of Zurich · thesis on the MTD strategy selection agent (IEEE paper)' },
       ],
     },
     person: {
@@ -356,7 +356,7 @@ export const content = {
       role: 'IT-Trainee, Data Engineering & ML',
       org: 'Migros-Genossenschafts-Bund · seit Juni 2025',
       body:
-        'Ich rotiere durch Datenteams der Migros-Gruppe. Aktuell bin ich im Product-Development-Team bei Digitec Galaxus und migriere ML-Modelle.',
+        'Ich rotiere durch Datenteams der Migros-Gruppe. Aktuell bin ich im Data Team bei Digitec Galaxus und migriere ML-Klassifizierer auf eine neue Airflow-Plattform.',
       stations: [
         {
           where: 'Migros Bank, Product & Marketing Analytics',
@@ -406,11 +406,11 @@ export const content = {
       title: 'Der bisherige Weg',
       items: [
         { when: 'Seit 2025', what: 'IT-Trainee, Data Engineering & ML', where: 'Migros-Genossenschafts-Bund, Zürich' },
-        { when: '2023–2025', what: 'MSc Informatik', where: 'Universität Zürich · Software Systems und Data Science · Masterarbeit zu SDG Tag Heroes' },
+        { when: '2022–2025', what: 'MSc Informatik', where: 'Universität Zürich · Software Systems und Data Science · Masterarbeit zu SDG Tag Heroes' },
         { when: '2024', what: 'Austauschsemester', where: 'University of Technology Sydney · UNIX-Systeme, Data Science, Cyber Security' },
         { when: '2023–2024', what: 'Hilfsassistent', where: 'Interactive Visual Data Analysis Group, UZH · Human-centred AI, Visual Analytics' },
         { when: '2021–2024', what: 'Junior-Webentwickler', where: 'novu (ehem. jkweb AG) · Symfony- und PHP-Webapps, internes ERP, Kurse für App-Entwicklung' },
-        { when: '2019–2023', what: 'BSc Informatik', where: 'Universität Zürich · Bachelorarbeit zum MTD-Strategieauswahl-Agenten (IEEE-Paper)' },
+        { when: '2019–2022', what: 'BSc Informatik', where: 'Universität Zürich · Bachelorarbeit zum MTD-Strategieauswahl-Agenten (IEEE-Paper)' },
       ],
     },
     person: {

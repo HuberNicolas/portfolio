@@ -27,6 +27,14 @@
   --gold: #c9962e;
   --gold-light: #e8c06a;
 
+  /* Zürich tram line colours for the route map, after the lines that run each corridor:
+     10 magenta (HB, Central, ETH, Irchel, Oerlikon), 7 black (Bahnhofstrasse, Enge, Wollishofen),
+     3 green (to Klusplatz), 4 blue (Bellevue to Tiefenbrunnen). */
+  --tram-magenta: #e4007d;
+  --tram-black: #141414;
+  --tram-green: #00973a;
+  --tram-blue: #2e3192;
+
   --ribbon-bg: var(--navy);
   --ribbon-text: var(--ivory);
   --nav-bg: rgba(238, 243, 246, 0.9);

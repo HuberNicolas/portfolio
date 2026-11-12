@@ -343,10 +343,10 @@ const base = import.meta.env.BASE_URL
   color: var(--ivory);
   box-shadow: 0 0 0 1.5px var(--ivory);
 }
-.line--D { background: var(--cobalt); }
-.line--V { background: var(--vermilion); }
-.line--R { background: var(--viridian); }
-.line--T { background: var(--gold); color: var(--navy); }
+.line--D { background: var(--tram-magenta); }
+.line--V { background: var(--tram-black); }
+.line--R { background: var(--tram-green); }
+.line--T { background: var(--tram-blue); }
 
 @media (max-width: 620px) {
   .layout--plate .poster__inner,

@@ -180,15 +180,15 @@ Two theme names come from the cinema bill: the light **Matinée** is the default
 A sky-and-navy house with a small set of printed poster inks that never change with the theme.
 
 ### Primary
-- **Cobalt Enamel** (cobalt): the house plate. Section titles (enamel signs), the lead poster field, the closing poster, the monogram disc, the programme route line, plan line D (Data & ML).
+- **Cobalt Enamel** (cobalt): the house plate. Section titles (enamel signs), the lead poster field, the closing poster, the monogram disc, the programme route line.
 - **Navy Ink** (navy-ink): Matinée text and the dark poster field; the ribbon ground in Matinée, the map detail card, stop-dot rings on the plan and route.
 
 ### Secondary
-- **Poster Vermilion** (vermilion): a poster field, plan line V (Visualisation), the stamp on paper and sky posters, and the Matinée link and hover colour (also the lit current stop in the nav and the focus ring).
-- **Viridian** (viridian): a poster field and plan line R (Research); thinned with paper for the woods on the plan.
+- **Poster Vermilion** (vermilion): a poster field, the stamp on paper and sky posters, and the Matinée link and hover colour (also the lit current stop in the nav and the focus ring).
+- **Viridian** (viridian): a poster field; thinned with paper for the woods on the plan.
 
 ### Tertiary
-- **Leaf Gold** (gold): the double rule, the monogram rings, the Evening ribbon ground, plan line T (Tools & web; it carries navy letters, never ivory).
+- **Leaf Gold** (gold): the double rule, the monogram rings, the Evening ribbon ground.
 - **Pale Gold** (gold-light): rules and stamps on dark fields, the inner rim line of the enamel sign, the closing poster's email, hover fill of project stops on the plan.
 - **Gold Text** (gold-text / evening-gold): the masthead motto and programme dates; a darker gold for contrast on the Matinée ground, a brighter one in the Evening show, where it also becomes the link colour.
 
@@ -205,7 +205,7 @@ A sky-and-navy house with a small set of printed poster inks that never change w
 
 **The Six Fields Rule.** A poster is printed on exactly one of six fields: cobalt, vermilion, viridian or navy (ivory text, pale gold rule) or paper or sky (navy text, gold or navy rule, vermilion stamp). No gradients, no new field colours.
 
-**The Four Lines Rule.** The plan has four lines, one per field of work, each in a poster ink and named by a letter, never a number, so it cannot read as a real tram line: D (Data & ML) cobalt, V (Visualisation) vermilion, R (Research) viridian, T (Tools & web) gold. Line discs repeat these colours wherever a stop is referenced (poster stop tags, map card).
+**The Four Lines Rule.** The plan has four lines, one per field of work, named by a letter, never a number, and drawn in the colour of the Zürich tram that runs its corridor: D (Data & ML) magenta like tram 10, V (Visualisation) black like tram 7, R (Research) green like tram 3, T (Tools & web) blue like tram 4 (tokens --tram-magenta, --tram-black, --tram-green, --tram-blue; the only colours outside the poster palette). Line discs repeat these colours wherever a stop is referenced (poster stop tags, map card).
 
 ## Typography
 
@@ -322,7 +322,7 @@ The house's own advertisement: cobalt field, pale-gold double rule, centred Bodo
 ### Don't:
 - **Don't** make it look like a newspaper: no newsprint columns, datelines, bylines or broadsheet rules.
 - **Don't** copy BioShock Infinite: no logos, characters, typography lockups, slogans or props from the game. The 1910 World's Fair mood is a genre only.
-- **Don't** use real transit branding: no VBZ or ZVV logos, real line colours or real line numbers.
+- **Don't** use real transit branding: no VBZ or ZVV logos and no real line numbers. The route map borrows only the Zürich tram line colours (owner's decision).
 - **Don't** fake material: no paper grain, stains, torn edges, halftone noise or aged textures.
 - **Don't** add swing timing or extra electro-swing props (no gramophones, bouncing reveals, cabaret ornaments). The paste-up and the line draw are the only authored motion.
 - **Don't** put a metric hero, stats strip or achievement badges on the page.
