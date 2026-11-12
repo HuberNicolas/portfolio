@@ -1,84 +1,68 @@
 /* =========================================================================
-   Design system — dark, techy, a touch of alchemy. Clean above all.
+   Wundermittel-Reklame: the aspiring code alchemist advertises his remedies.
+   A modern, quiet scaffold; the colour and the period voice live on the posters.
+   Matinée (light) by default; the evening show (dark) under data-theme="dark".
    ========================================================================= */
 
 :root {
-  /* Backgrounds */
-  --bg: #08080c;
-  --bg-1: #0d0d14;
-  --bg-2: #12121d;
-  --panel: rgba(255, 255, 255, 0.025);
+  /* The house: sky-white ground, navy ink */
+  --ground: #eef3f6;
+  --ground-raised: #e2eaef;
+  --text: #142039;
+  --text-dim: #3d4a63;
+  --text-faint: #5a6680;
+  --rule: rgba(20, 32, 57, 0.14);
+  --rule-strong: rgba(20, 32, 57, 0.32);
+  --gold-text: #85600f;
+  --link: #b43a26;
 
-  /* Text */
-  --text: #eaeaf2;
-  --text-dim: #9a9aad;
-  --text-faint: #7a7a90;
+  /* Printed fields: posters keep these in both themes */
+  --navy: #142039;
+  --cobalt: #1f3c88;
+  --vermilion: #b43a26;
+  --viridian: #2f6e5a;
+  --sky: #bfdcec;
+  --paper: #f4efe2;
+  --ivory: #f6f0e1;
+  --gold: #c9962e;
+  --gold-light: #e8c06a;
 
-  /* Accents */
-  --green: #5cf0b0;
-  --blue: #6eb5ff;
-  --violet: #c99bff;
-  --amber: #ffc06e;
-  --red: #ff7a7a;
+  --ribbon-bg: var(--navy);
+  --ribbon-text: var(--ivory);
+  --nav-bg: rgba(238, 243, 246, 0.9);
+  --shadow: rgba(20, 32, 57, 0.18);
 
-  /* Lines & radius */
-  --line: rgba(255, 255, 255, 0.08);
-  --line-strong: rgba(255, 255, 255, 0.16);
-  --radius: 14px;
-  --radius-sm: 10px;
+  --font-remedy: 'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif;
+  --font-banner: 'Big Shoulders Display', 'Arial Narrow', sans-serif;
+  --font-body: 'Schibsted Grotesk', system-ui, -apple-system, sans-serif;
 
-  /* Motion */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --dur: 0.22s;
+  --dur: 0.24s;
 
-  /* Layout */
-  --maxw: 1120px;
-  --nav-h: 68px;
-
-  /* Surfaces that differ per theme */
-  --nav-bg: rgba(8, 8, 12, 0.72);
-  --menu-bg: rgba(10, 10, 16, 0.96);
-  --shadow: rgba(0, 0, 0, 0.4);
-  --title-from: #fff;
-  --title-to: #b8b8cf;
-  --glow-green: rgba(92, 240, 176, 0.09);
-  --glow-blue: rgba(110, 181, 255, 0.08);
-
-  --font-sans: 'Space Grotesk', system-ui, -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
-
-  color-scheme: dark;
-}
-
-/* Light theme — set on <html> by the inline script in index.html and the toggle in the nav. */
-:root[data-theme='light'] {
-  --bg: #f6f6f9;
-  --bg-1: #ffffff;
-  --bg-2: #ececf2;
-  --panel: rgba(20, 20, 40, 0.03);
-
-  --text: #15151f;
-  --text-dim: #52526a;
-  --text-faint: #6e6e84;
-
-  --green: #077a52;
-  --blue: #2a6ad0;
-  --violet: #7c45d0;
-  --amber: #946000;
-  --red: #c93c3c;
-
-  --line: rgba(20, 20, 40, 0.1);
-  --line-strong: rgba(20, 20, 40, 0.2);
-
-  --nav-bg: rgba(246, 246, 249, 0.8);
-  --menu-bg: rgba(246, 246, 249, 0.97);
-  --shadow: rgba(20, 20, 40, 0.12);
-  --title-from: #15151f;
-  --title-to: #4a4a62;
-  --glow-green: rgba(10, 143, 96, 0.08);
-  --glow-blue: rgba(42, 106, 208, 0.07);
+  --maxw: 1240px;
+  --nav-h: 64px;
 
   color-scheme: light;
+}
+
+/* The evening show — set on <html> by the inline script in index.html and the toggle in the nav. */
+:root[data-theme='dark'] {
+  --ground: #0d1426;
+  --ground-raised: #16203a;
+  --text: #f1ead8;
+  --text-dim: #c2bba8;
+  --text-faint: #9b947f;
+  --rule: rgba(241, 234, 216, 0.14);
+  --rule-strong: rgba(241, 234, 216, 0.32);
+  --gold-text: #e2b553;
+  --link: #e2b553;
+
+  --ribbon-bg: var(--gold);
+  --ribbon-text: var(--navy);
+  --nav-bg: rgba(13, 20, 38, 0.9);
+  --shadow: rgba(0, 0, 0, 0.5);
+
+  color-scheme: dark;
 }
 
 *,
@@ -89,48 +73,38 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--nav-h) + 20px);
-  scrollbar-color: var(--line-strong) var(--bg);
+  scroll-padding-top: var(--nav-h);
+  scrollbar-color: var(--rule-strong) var(--ground);
 }
 
 body {
   margin: 0;
-  background: var(--bg);
+  background: var(--ground);
   color: var(--text);
-  font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.65;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.6;
+  /* Bodoni Moda's display optical size has hairlines too thin to read ("Huber" turns into "Iluber");
+     a text-ish optical size keeps the contrast but makes every stroke visible. */
+  font-optical-sizing: none;
+  font-variation-settings: 'opsz' 14;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
-}
-
-/* Ambient background: subtle grid + two soft glows that never scroll away. */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  background-image: linear-gradient(var(--line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: 46px 46px;
-  -webkit-mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, #000 30%, transparent 80%);
-  mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, #000 30%, transparent 80%);
-  opacity: 0.5;
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -3;
-  background: radial-gradient(650px circle at 12% -5%, var(--glow-green), transparent 55%),
-    radial-gradient(700px circle at 92% 8%, var(--glow-blue), transparent 55%);
+  transition: background-color 0.5s var(--ease), color 0.5s var(--ease);
 }
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration-color: var(--rule-strong);
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+  transition: color var(--dur) var(--ease), text-decoration-color var(--dur) var(--ease);
+}
+
+a:hover {
+  color: var(--link);
+  text-decoration-color: currentColor;
 }
 
 img {
@@ -139,14 +113,13 @@ img {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--green) 25%, transparent);
+  background: color-mix(in srgb, var(--gold) 40%, transparent);
   color: var(--text);
 }
 
-/* Keyboard focus: one Elixir ring everywhere; components may refine it. */
 :focus-visible {
-  outline: 2px solid var(--green);
-  outline-offset: 3px;
+  outline: 2px solid var(--link);
+  outline-offset: 4px;
 }
 
 .sr-only {
@@ -161,124 +134,114 @@ img {
   border: 0;
 }
 
-/* ---- Layout helpers ---- */
+/* ---- Layout ---- */
 .container {
   width: 100%;
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 clamp(16px, 4vw, 40px);
 }
 
 .section {
-  padding: clamp(64px, 10vw, 120px) 0;
+  padding: clamp(80px, 11vw, 144px) 0;
+  border-top: 1px solid var(--rule);
 }
 
-.kicker {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: var(--green);
-  margin: 0 0 14px;
-}
-
+/* Section titles are enamel stop signs: a cobalt plate with a raised rim and a fine gold line. */
 .section-title {
-  font-size: clamp(28px, 4.4vw, 46px);
+  display: table;
+  font-family: var(--font-remedy);
+  font-style: italic;
   font-weight: 700;
+  font-size: clamp(28px, 3.4vw, 44px);
   line-height: 1.08;
-  letter-spacing: -0.02em;
-  margin: 0 0 clamp(32px, 5vw, 56px);
+  letter-spacing: -0.01em;
+  margin: 0 0 clamp(28px, 4vw, 48px);
+  padding: 0.28em 0.8em 0.34em;
+  max-width: 100%;
+  text-wrap: balance;
+  color: var(--ivory);
+  background: var(--cobalt);
+  border-radius: 12px;
+  box-shadow:
+    inset 0 0 0 3px var(--cobalt),
+    inset 0 0 0 4.5px var(--gold-light),
+    0 1px 1px rgba(20, 32, 57, 0.25),
+    0 10px 20px -10px var(--shadow);
+}
+:root[data-theme='dark'] .section-title {
+  box-shadow:
+    inset 0 0 0 3px var(--cobalt),
+    inset 0 0 0 4.5px var(--gold-light),
+    0 0 0 1px rgba(241, 234, 216, 0.12),
+    0 10px 20px -10px var(--shadow);
 }
 
-/* ---- Accent utility (via data-accent) ---- */
-[data-accent='green'] {
-  --accent: var(--green);
-}
-[data-accent='blue'] {
-  --accent: var(--blue);
-}
-[data-accent='violet'] {
-  --accent: var(--violet);
-}
-[data-accent='amber'] {
-  --accent: var(--amber);
-}
-
-/* ---- Chips ---- */
-.chip {
-  display: inline-flex;
-  align-items: center;
-  font-family: var(--font-mono);
-  font-size: 12.5px;
-  font-weight: 400;
+/* Condensed banner caps for labels, dates and claims. */
+.banner {
+  font-family: var(--font-banner);
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--text-dim);
-  padding: 4px 11px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--panel);
-  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
 
-/* ---- Buttons ---- */
-.btn {
+/* A text link that reads as an action. */
+.action {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  font-family: var(--font-mono);
-  font-size: 14px;
-  font-weight: 500;
-  padding: 12px 20px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--line-strong);
-  background: var(--panel);
-  color: var(--text);
-  cursor: pointer;
-  transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease),
-    box-shadow var(--dur) var(--ease), background var(--dur) var(--ease);
+  gap: 8px;
+  font-family: var(--font-banner);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 4px 0;
+  border-bottom: 2px solid currentColor;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
-  border-color: color-mix(in srgb, var(--green) 50%, transparent);
-  box-shadow: 0 8px 30px color-mix(in srgb, var(--green) 12%, transparent);
+.action svg {
+  width: 14px;
+  height: 14px;
+  transition: transform var(--dur) var(--ease);
 }
 
-.btn--primary {
-  background: linear-gradient(
-    120deg,
-    color-mix(in srgb, var(--green) 16%, transparent),
-    color-mix(in srgb, var(--blue) 12%, transparent)
-  );
-  border-color: color-mix(in srgb, var(--green) 40%, transparent);
-  color: var(--text);
+.action:hover svg {
+  transform: translate(2px, -2px);
 }
 
-.btn svg {
-  width: 16px;
-  height: 16px;
+/* A double gold rule, the house border for posters, ads and photographs. */
+.double-rule {
+  position: relative;
+  border: 1.5px solid var(--gold);
+  outline: 1.5px solid var(--gold);
+  outline-offset: 4px;
 }
-
-/* ---- Reveal-on-scroll ---- */
-.reveal {
-  opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
-  will-change: opacity, transform;
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: none;
+/* Jugendstil corners: a small drawn curl inside each corner of the house border. */
+.double-rule::after {
+  --c-tl: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round'%3E%3Cg transform='translate(0 0)'%3E%3Cpath d='M3 23V13C3 7.5 7.5 3 13 3h10'/%3E%3Cpath d='M8 23v-6c0-5 4-9 9-9h6'/%3E%3Ccircle cx='15' cy='15' r='1.8' fill='%23000' stroke='none'/%3E%3C/g%3E%3C/svg%3E");
+  --c-tr: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round'%3E%3Cg transform='matrix(-1 0 0 1 26 0)'%3E%3Cpath d='M3 23V13C3 7.5 7.5 3 13 3h10'/%3E%3Cpath d='M8 23v-6c0-5 4-9 9-9h6'/%3E%3Ccircle cx='15' cy='15' r='1.8' fill='%23000' stroke='none'/%3E%3C/g%3E%3C/svg%3E");
+  --c-bl: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round'%3E%3Cg transform='matrix(1 0 0 -1 0 26)'%3E%3Cpath d='M3 23V13C3 7.5 7.5 3 13 3h10'/%3E%3Cpath d='M8 23v-6c0-5 4-9 9-9h6'/%3E%3Ccircle cx='15' cy='15' r='1.8' fill='%23000' stroke='none'/%3E%3C/g%3E%3C/svg%3E");
+  --c-br: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26' fill='none' stroke='%23000' stroke-width='1.6' stroke-linecap='round'%3E%3Cg transform='matrix(-1 0 0 -1 26 26)'%3E%3Cpath d='M3 23V13C3 7.5 7.5 3 13 3h10'/%3E%3Cpath d='M8 23v-6c0-5 4-9 9-9h6'/%3E%3Ccircle cx='15' cy='15' r='1.8' fill='%23000' stroke='none'/%3E%3C/g%3E%3C/svg%3E");
+  content: '';
+  position: absolute;
+  inset: 5px;
+  pointer-events: none;
+  background: var(--rule-c, var(--gold));
+  -webkit-mask: var(--c-tl) top left / 22px no-repeat, var(--c-tr) top right / 22px no-repeat,
+    var(--c-bl) bottom left / 22px no-repeat, var(--c-br) bottom right / 22px no-repeat;
+  mask: var(--c-tl) top left / 22px no-repeat, var(--c-tr) top right / 22px no-repeat,
+    var(--c-bl) bottom left / 22px no-repeat, var(--c-br) bottom right / 22px no-repeat;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  * {
+  *,
+  *::before,
+  *::after {
     animation: none !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
-  }
-  .reveal {
-    opacity: 1;
-    transform: none;
   }
 }

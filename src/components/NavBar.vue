@@ -8,11 +8,25 @@ const { t, lang, toggle } = useLang()
 const { theme, toggle: toggleTheme } = useTheme()
 const scrolled = ref(false)
 const open = ref(false)
+const links = ['posters', 'network', 'now', 'programme', 'person', 'contact']
+// The stop the reader is at: the last section whose top has passed the upper third of the window.
+const current = ref('posters')
 
 function onScroll() {
   scrolled.value = window.scrollY > 12
+  const mark = window.innerHeight * 0.35
+  let at = links[0]
+  for (const id of links) {
+    const el = document.getElementById(id)
+    if (el && el.getBoundingClientRect().top <= mark) at = id
+  }
+  if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) at = links[links.length - 1]
+  current.value = at
 }
-onMounted(() => window.addEventListener('scroll', onScroll, { passive: true }))
+onMounted(() => {
+  window.addEventListener('scroll', onScroll, { passive: true })
+  onScroll()
+})
 onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
 
 function go(id) {
@@ -24,52 +38,45 @@ function go(id) {
 <template>
   <header class="nav" :class="{ 'nav--scrolled': scrolled }">
     <div class="nav__inner container">
-      <a class="brand" href="#top" @click.prevent="go('top')">
-        <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M12 4 L19 18 H5 Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
-            <line x1="8" y1="14.5" x2="16" y2="14.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-          </svg>
-        </span>
-        <span class="brand__name">nicolas<span class="brand__dot">.</span>huber</span>
+      <a class="brand" href="#posters" @click.prevent="go('posters')">
+        <svg class="brand__mono" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="18.5" />
+          <circle cx="20" cy="20" r="15.5" />
+          <text x="20" y="25.5" text-anchor="middle">NH</text>
+        </svg>
+        <span>{{ meta.name }}</span>
       </a>
 
+      <!-- The navigation is a route strip: every section is a stop, the current one is lit. -->
       <nav id="nav-links" class="nav__links" :class="{ 'is-open': open }">
-        <a href="#work" @click.prevent="go('work')">{{ t.nav.work }}</a>
-        <a href="#projects" @click.prevent="go('projects')">{{ t.nav.projects }}</a>
-        <a href="#journey" @click.prevent="go('journey')">{{ t.nav.journey }}</a>
-        <a href="#about" @click.prevent="go('about')">{{ t.nav.about }}</a>
+        <a
+          v-for="id in links"
+          :key="id"
+          :href="`#${id}`"
+          :class="{ 'is-current': current === id }"
+          :aria-current="current === id ? 'location' : null"
+          @click.prevent="go(id)"
+        >
+          {{ t.nav[id] }}
+        </a>
       </nav>
 
       <div class="nav__actions">
-        <button class="lang" @click="toggle" :aria-label="'Switch language to ' + t.nav.langLabel">
-          <span class="lang__cur">{{ lang.toUpperCase() }}</span>
-          <span class="lang__sep">/</span>
-          <span class="lang__alt">{{ t.nav.langLabel }}</span>
+        <button class="nav__btn" @click="toggle" :aria-label="t.nav.langSwitch" :lang="lang === 'en' ? 'de' : 'en'">
+          {{ t.nav.langLabel }}
         </button>
-        <button class="theme" @click="toggleTheme" :aria-label="t.nav.themeLabel" :title="t.nav.themeLabel">
-          <svg v-if="theme === 'dark'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <circle cx="12" cy="12" r="4" />
-            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke-linecap="round" />
-          </svg>
-          <svg v-else viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" stroke-linejoin="round" />
-          </svg>
+        <button class="nav__btn" @click="toggleTheme" :aria-label="t.nav.themeLabel" :title="t.nav.themeLabel">
+          {{ theme === 'dark' ? t.nav.matinee : t.nav.evening }}
         </button>
-        <a class="nav__gh" :href="meta.github" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.22-3.37-1.22-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.1 2.91.84.09-.66.35-1.1.63-1.36-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.32 9.32 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.35 4.8-4.58 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z" />
-          </svg>
-        </a>
         <button
           class="burger"
           :class="{ 'is-open': open }"
           @click="open = !open"
-          aria-label="Menu"
+          :aria-label="t.nav.menu"
           aria-controls="nav-links"
           :aria-expanded="open"
         >
-          <span></span><span></span><span></span>
+          <span></span><span></span>
         </button>
       </div>
     </div>
@@ -79,176 +86,159 @@ function go(id) {
 <style scoped>
 .nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  inset: 0 0 auto 0;
   z-index: 100;
   height: var(--nav-h);
   display: flex;
   align-items: center;
-  transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease), backdrop-filter var(--dur);
   border-bottom: 1px solid transparent;
+  transition: background-color var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
 .nav--scrolled {
   background: var(--nav-bg);
-  backdrop-filter: blur(14px);
-  border-bottom-color: var(--line);
+  border-bottom-color: var(--rule);
 }
 .nav__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  gap: 24px;
 }
-
 .brand {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: var(--font-mono);
-  font-weight: 500;
+  font-family: var(--font-remedy);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 22px;
+  text-decoration: none;
+}
+/* The house monogram: two gold rings around the initials, like a maker's seal. */
+.brand__mono {
+  width: 38px;
+  height: 38px;
+  flex: none;
+}
+.brand__mono circle {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.4;
+}
+.brand__mono circle:first-child {
+  fill: var(--cobalt);
+}
+.brand__mono text {
+  font-family: var(--font-remedy);
+  font-style: italic;
+  font-weight: 700;
   font-size: 15px;
-  letter-spacing: -0.01em;
-}
-.brand__mark {
-  color: var(--green);
-  width: 26px;
-  height: 26px;
-  display: grid;
-  place-items: center;
-}
-.brand__mark svg {
-  width: 24px;
-  height: 24px;
-}
-.brand__dot {
-  color: var(--green);
+  fill: var(--ivory);
 }
 
+/* A thin line runs under all stops; each stop is a small white dot on it. */
 .nav__links {
+  position: relative;
   display: flex;
-  gap: 30px;
-  font-family: var(--font-mono);
-  font-size: 14px;
+  gap: clamp(14px, 2vw, 28px);
+  padding-bottom: 14px;
+  margin-top: 14px;
+}
+.nav__links::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--rule-strong);
 }
 .nav__links a {
-  color: var(--text-dim);
   position: relative;
-  transition: color var(--dur) var(--ease);
+  font-family: var(--font-banner);
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-dim);
+  white-space: nowrap;
 }
 .nav__links a::after {
   content: '';
   position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0;
-  height: 1.5px;
-  background: var(--green);
-  transition: width var(--dur) var(--ease);
+  left: 50%;
+  bottom: -15px;
+  width: 11px;
+  height: 11px;
+  margin-left: -5.5px;
+  border-radius: 50%;
+  background: var(--ground);
+  border: 2px solid var(--text-dim);
+  transition: background-color var(--dur) var(--ease), border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
 }
 .nav__links a:hover {
+  color: var(--link);
+}
+.nav__links a.is-current {
   color: var(--text);
 }
-.nav__links a:hover::after {
-  width: 100%;
+.nav__links a.is-current::after {
+  background: var(--link);
+  border-color: var(--link);
+  transform: scale(1.25);
 }
-
 .nav__actions {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 8px;
 }
-.lang {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 5px 12px;
-  color: var(--text-dim);
-  white-space: nowrap;
-  cursor: pointer;
-  transition: border-color var(--dur), color var(--dur);
-}
-.lang:hover {
-  border-color: color-mix(in srgb, var(--green) 50%, transparent);
-}
-.lang__cur {
-  color: var(--green);
-}
-.lang__sep {
-  margin: 0 3px;
-  color: var(--text-faint);
-}
-.theme {
-  display: grid;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--text-dim);
-  cursor: pointer;
-  transition: border-color var(--dur), color var(--dur);
-}
-.theme:hover {
-  border-color: color-mix(in srgb, var(--green) 50%, transparent);
+.nav__btn {
+  min-height: 36px;
+  padding: 0 12px;
+  font-family: var(--font-banner);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--text);
+  background: none;
+  border: 1.5px solid var(--rule-strong);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
-.theme svg {
-  width: 16px;
-  height: 16px;
-}
-.nav__gh {
-  color: var(--text-dim);
-  display: grid;
-  place-items: center;
-  transition: color var(--dur), transform var(--dur);
-}
-.nav__gh:hover {
-  color: var(--text);
-  transform: translateY(-1px);
+.nav__btn:hover {
+  color: var(--link);
+  border-color: var(--link);
 }
 
 .burger {
   display: none;
   flex-direction: column;
-  gap: 5px;
+  justify-content: center;
+  gap: 7px;
+  width: 40px;
+  height: 36px;
+  padding: 0 9px;
   background: none;
   border: 0;
   cursor: pointer;
-  padding: 4px;
 }
 .burger span {
-  width: 22px;
   height: 2px;
   background: var(--text);
-  border-radius: 2px;
-  transition: transform var(--dur), opacity var(--dur);
+  transition: transform var(--dur) var(--ease);
 }
 .burger.is-open span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+  transform: translateY(4.5px) rotate(45deg);
 }
 .burger.is-open span:nth-child(2) {
-  opacity: 0;
-}
-.burger.is-open span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-4.5px) rotate(-45deg);
 }
 
-/* Narrow phones: the GitHub link is repeated in the hero, so the nav gives it up for room. */
-@media (max-width: 420px) {
-  .nav__actions {
-    gap: 10px;
-  }
-  .nav__gh {
-    display: none;
-  }
-}
-
-@media (max-width: 760px) {
+@media (max-width: 820px) {
   .burger {
     display: flex;
   }
@@ -258,26 +248,52 @@ function go(id) {
     left: 0;
     right: 0;
     flex-direction: column;
-    gap: 4px;
-    padding: 18px 24px 26px;
-    background: var(--menu-bg);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--line);
-    transform: translateY(-12px);
+    gap: 0;
+    padding: 8px clamp(16px, 4vw, 40px) 20px;
+    background: var(--ground);
+    border-bottom: 1px solid var(--rule);
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
+    transform: translateY(-8px);
     transition: opacity var(--dur), transform var(--dur), visibility var(--dur);
   }
   .nav__links.is-open {
     opacity: 1;
-    transform: none;
     visibility: visible;
-    pointer-events: auto;
+    transform: none;
+  }
+  /* In the drawer the strip stands upright, like the route plan beside a tram door. */
+  .nav__links {
+    margin-top: 0;
+    padding-left: calc(clamp(16px, 4vw, 40px) + 26px);
+  }
+  .nav__links::before {
+    left: calc(clamp(16px, 4vw, 40px) + 4px);
+    right: auto;
+    top: 30px;
+    bottom: 36px;
+    width: 3px;
+    height: auto;
   }
   .nav__links a {
-    font-size: 16px;
-    padding: 10px 0;
+    font-size: 18px;
+    padding: 14px 0;
+  }
+  .nav__links a::after {
+    left: -22px;
+    bottom: auto;
+    top: 50%;
+    margin: -5.5px 0 0;
+  }
+}
+@media (max-width: 520px) {
+  .brand span {
+    display: none;
+  }
+}
+@media (max-width: 1060px) and (min-width: 821px) {
+  .brand span {
+    display: none;
   }
 }
 </style>
