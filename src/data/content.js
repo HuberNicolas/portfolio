@@ -7,9 +7,9 @@ export const meta = {
   email: 'nicolas.huber.dev@gmail.com',
   website: 'https://nicolas-huber.dev',
   github: 'https://github.com/HuberNicolas',
-  linkedin: 'https://www.linkedin.com/in/nicolas-huber-dev/',
+  linkedin: 'https://www.linkedin.com/in/huber-nicolas/',
   orcid: 'https://orcid.org/0009-0001-3266-2338',
-  // Drop a real CV file into /public and update these paths.
+  // Built in the private repo HuberNicolas/minimalistic-cv (artifact cv-web).
   cv: {
     en: '/cv/nicolas-huber-cv-en.pdf',
     de: '/cv/nicolas-huber-cv-de.pdf',
