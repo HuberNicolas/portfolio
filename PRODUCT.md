@@ -40,7 +40,7 @@ Success: a visitor leaves with an accurate sense of who Nicolas is and what Nico
 ## Brand Commitments
 
 - **The alchemy is retired to a footnote (owner's decision, 13 Nov 2026).** "Aspiring code alchemist" read as unprofessional as a headline. The subtitle is now "makes messy data behave" / "bringt unordentliche Daten in Form", the ribbon reads "raw data → pipeline → model". The old tagline survives only as a small nod in the footer ("Formerly known as the aspiring code alchemist"). The owner still likes the theme: keep that one nod, do not bring alchemy back into headings or copy without asking. The remedy-poster design stays.
-- **Playful touches are welcome but rare.** Example: the "4 surf camps — not just surfing the web" stat.
+- **Playful touches are welcome but rare.** Example: the running photo captioned "Running away from Teams messages".
 - **German copy uses Swiss conventions:** `ss` instead of `ß`, `’` as the thousands separator (10’000), Swiss vocabulary (e.g. "Spitäler").
 - Name: Nicolas Huber. Location: Zürich, Switzerland.
 

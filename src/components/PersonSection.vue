@@ -12,7 +12,7 @@ const base = import.meta.env.BASE_URL
       <div class="photos">
         <figure v-for="p in t.person.photos" :key="p.src" class="photo">
           <div class="photo__frame double-rule">
-            <img :src="base + p.src" :alt="p.alt" loading="lazy" width="600" height="750" />
+            <img :src="base + p.src" :alt="p.alt" loading="lazy" width="600" height="750" :style="p.focus && { objectPosition: p.focus }" />
           </div>
           <figcaption class="banner">{{ p.caption }}</figcaption>
         </figure>
@@ -135,6 +135,10 @@ const base = import.meta.env.BASE_URL
   }
   .photo {
     scroll-snap-align: start;
+  }
+  /* The last photo cannot reach the start edge; snapping it to the end keeps it whole instead of snapping back. */
+  .photo:last-child {
+    scroll-snap-align: end;
   }
   .about__facts {
     grid-template-columns: minmax(0, 1fr);

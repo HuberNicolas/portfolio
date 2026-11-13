@@ -392,4 +392,8 @@ const base = import.meta.env.BASE_URL
   box-shadow: inset 0 0 0 3px var(--field), inset 0 0 0 4px var(--stamp);
   transform: rotate(-12deg);
 }
+/* Over a picture the stamp is printed on a disc of the poster field, so it reads on light screenshots too. */
+.layout--bleed .stamp {
+  background: var(--field);
+}
 </style>

@@ -27,7 +27,8 @@ export const posterMeta = [
     demo: 'https://hubernicolas.github.io/okcupid-explorer/',
     repo: 'https://github.com/HuberNicolas/okcupid-explorer',
   },
-  { id: 'sdg', layout: 'bleed', format: 'normal', stop: { line: 'V', place: 'Paradeplatz' }, image: 'img/projects/sdg-tag-heroes.jpg', field: 'viridian', repo: 'https://github.com/HuberNicolas/sdg-tag-heroes' },
+  // sdg-tag-heroes-labeling.jpg: labeling step from the master's thesis (sdg-tag-heroes-thesis, figures/09_system/c_labeling/l9_2.pdf), rendered and cropped to 4:3.
+  { id: 'sdg', layout: 'bleed', format: 'normal', stop: { line: 'V', place: 'Paradeplatz' }, image: 'img/projects/sdg-tag-heroes-labeling.jpg', field: 'viridian', repo: 'https://github.com/HuberNicolas/sdg-tag-heroes' },
   { id: 'mtd', layout: 'plate', format: 'wide', stop: { line: 'R', place: 'Stauffacher' }, image: 'img/projects/mtd-ransomware.jpg', field: 'paper', chart: true, repo: 'https://github.com/HuberNicolas/MTDStrategySelectionAgent', paper: true },
   { id: 'heart', layout: 'medallion', format: 'small', stop: { line: 'D', place: 'Hardbrücke' }, image: 'img/projects/heart-disease-autoencoder.jpg', field: 'sky', chart: true, repo: 'https://github.com/HuberNicolas/heart-disease-risk-factors-uzh' },
   { id: 'gaia', layout: 'medallion', format: 'small', stop: { line: 'D', place: 'Escher-Wyss-Platz' }, image: 'img/projects/gaia-umap.jpg', field: 'navy', chart: true, repo: 'https://github.com/HuberNicolas/gaia-classifier' },
@@ -143,7 +144,7 @@ export const content = {
           claim: 'Labels the UN goals, with a little help from LLMs',
           desc: 'A game in which researchers label papers by SDG: an LLM suggests, a human decides.',
           stamp: 'Thesis',
-          alt: 'Illustrated fantasy world from the SDG Tag Heroes game: a castle city on a river at dusk',
+          alt: 'Labeling screen of SDG Tag Heroes: the seventeen goals as a honeycomb of hexagons, one selected, beside the publication to label',
         },
         {
           title: 'MTD Strategy Selection',
@@ -220,7 +221,7 @@ export const content = {
       more: [
         { name: 'SDG Classifier', desc: 'Multi-label classification of research abstracts by SDG with DistilBERT', link: 'https://github.com/HuberNicolas/sdg-classifier' },
         { name: 'Shortcut Overlay', desc: 'A desktop HUD that shows the shortcuts of the focused app, for Linux, macOS and Windows', link: 'https://github.com/HuberNicolas/shortcut-overlay' },
-        { name: 'Infrastructure', desc: 'Hosting for my projects: one Hetzner server, Coolify and images built in GitHub Actions', link: 'https://github.com/HuberNicolas/infrastructure' },
+        { name: 'Infrastructure', desc: 'Hosting for my projects: one Contabo server, Coolify and images built in GitHub Actions', link: 'https://github.com/HuberNicolas/infrastructure' },
         { name: 'Network Science', desc: 'Centralities, community detection, null models and epidemics on networks · UZH 2023', link: 'https://github.com/HuberNicolas/network-science-uzh' },
         { name: 'Numerical Methods', desc: 'Classic numerical methods written from scratch, from root finding to integration · UZH 2020', link: 'https://github.com/HuberNicolas/numerical-methods-uzh' },
         { name: 'Abstract Scraper', desc: 'Adds abstracts to a CSV of DOIs via the OpenAlex API, with parallel requests', link: 'https://github.com/HuberNicolas/abstract-scraper' },
@@ -250,7 +251,7 @@ export const content = {
       alsoTitle: 'Also into',
       also: ['Data visualisation and visual analytics', 'Games and playful interfaces', 'IoT and cybersecurity'],
       sportTitle: 'Off the clock',
-      sport: 'Strength training and weightlifting, casual running, the odd mountain and four surf camps.',
+      sport: 'Strength training and weightlifting, casual running, the odd mountain, and surfing, which I’m still getting better at.',
       toolsTitle: 'Tools',
       tools: 'Python, SQL, dbt, Dagster, scikit-learn, TypeScript, Vue, React, D3, FastAPI, Docker, Kubernetes, OpenShift, Google Cloud, GitLab, PHP and Symfony, LaTeX',
       langTitle: 'Languages',
@@ -258,7 +259,7 @@ export const content = {
       photos: [
         { src: 'img/surfing.jpg', alt: 'Nicolas in a rash guard at a surf camp', caption: 'Surf camp' },
         { src: 'img/hiking.jpg', alt: 'Nicolas on a summit above Lake Lucerne', caption: 'Above Lake Lucerne' },
-        { src: 'img/running.jpg', alt: 'Nicolas with start number 42 running a leg of the Winti Stafette relay on a field path above a forest', caption: 'Winti Stafette 2026' },
+        { src: 'img/running.jpg', alt: 'Nicolas with start number 42 running a leg of the Winti Stafette relay on a field path above a forest', caption: 'Running away from Teams messages', focus: '57% 30%' },
       ],
     },
     closing: {
@@ -316,7 +317,7 @@ export const content = {
           claim: 'Ordnet die UN-Ziele zu, mit etwas Hilfe von LLMs',
           desc: 'Ein Spiel, in dem Forschende Paper nach SDG labeln: Ein LLM schlägt vor, ein Mensch entscheidet.',
           stamp: 'Masterarbeit',
-          alt: 'Illustrierte Fantasiewelt aus dem Spiel SDG Tag Heroes: eine Burgstadt am Fluss in der Dämmerung',
+          alt: 'Labeling-Ansicht von SDG Tag Heroes: die siebzehn Ziele als Wabenfeld, eines ausgewählt, neben der Publikation, die gelabelt wird',
         },
         {
           title: 'MTD-Strategieauswahl',
@@ -393,7 +394,7 @@ export const content = {
       more: [
         { name: 'SDG Classifier', desc: 'Multi-Label-Klassifikation von Forschungsabstracts nach SDG mit DistilBERT', link: 'https://github.com/HuberNicolas/sdg-classifier' },
         { name: 'Shortcut Overlay', desc: 'Desktop-HUD mit den Tastenkürzeln des aktiven Programms, für Linux, macOS und Windows', link: 'https://github.com/HuberNicolas/shortcut-overlay' },
-        { name: 'Infrastructure', desc: 'Hosting meiner Projekte: ein Hetzner-Server, Coolify und Images aus GitHub Actions', link: 'https://github.com/HuberNicolas/infrastructure' },
+        { name: 'Infrastructure', desc: 'Hosting meiner Projekte: ein Contabo-Server, Coolify und Images aus GitHub Actions', link: 'https://github.com/HuberNicolas/infrastructure' },
         { name: 'Network Science', desc: 'Zentralitäten, Community Detection, Nullmodelle und Epidemien auf Netzwerken · UZH 2023', link: 'https://github.com/HuberNicolas/network-science-uzh' },
         { name: 'Numerical Methods', desc: 'Klassische numerische Verfahren von Grund auf, von Nullstellensuche bis Integration · UZH 2020', link: 'https://github.com/HuberNicolas/numerical-methods-uzh' },
         { name: 'Abstract Scraper', desc: 'Ergänzt eine CSV mit DOIs um Abstracts über die OpenAlex-API, mit parallelen Requests', link: 'https://github.com/HuberNicolas/abstract-scraper' },
@@ -423,7 +424,7 @@ export const content = {
       alsoTitle: 'Ausserdem',
       also: ['Datenvisualisierung und Visual Analytics', 'Games und verspielte Interfaces', 'IoT und Cybersecurity'],
       sportTitle: 'Nach Feierabend',
-      sport: 'Krafttraining und Gewichtheben, Laufen zum Plausch, ab und zu ein Berg und vier Surfcamps.',
+      sport: 'Krafttraining und Gewichtheben, Laufen zum Plausch, ab und zu ein Berg und Surfen, wo ich noch besser werden will.',
       toolsTitle: 'Werkzeuge',
       tools: 'Python, SQL, dbt, Dagster, scikit-learn, TypeScript, Vue, React, D3, FastAPI, Docker, Kubernetes, OpenShift, Google Cloud, GitLab, PHP und Symfony, LaTeX',
       langTitle: 'Sprachen',
@@ -431,7 +432,7 @@ export const content = {
       photos: [
         { src: 'img/surfing.jpg', alt: 'Nicolas im Lycra-Shirt in einem Surfcamp', caption: 'Surfcamp' },
         { src: 'img/hiking.jpg', alt: 'Nicolas auf einem Gipfel über dem Vierwaldstättersee', caption: 'Über dem Vierwaldstättersee' },
-        { src: 'img/running.jpg', alt: 'Nicolas mit Startnummer 42 auf einer Etappe der Winti Stafette, auf einem Feldweg über einem Wald', caption: 'Winti Stafette 2026' },
+        { src: 'img/running.jpg', alt: 'Nicolas mit Startnummer 42 auf einer Etappe der Winti Stafette, auf einem Feldweg über einem Wald', caption: 'Auf der Flucht vor Teams-Nachrichten', focus: '57% 30%' },
       ],
     },
     closing: {
