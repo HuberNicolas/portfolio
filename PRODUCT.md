@@ -34,7 +34,7 @@ Success: a visitor leaves with an accurate sense of who Nicolas is and what Nico
 - Stack: Vue 3 (`<script setup>` SFCs) + Vite, hand-rolled vanilla CSS design system in `src/styles/main.css`, no CSS framework. Deployed to GitHub Pages via GitHub Actions on push to `main`; custom domain via `public/CNAME`.
 - All copy lives in `src/data/content.js` (`en` and `de` objects with identical shapes, plus shared `meta`). Components do not hold copy.
 - **EN/DE parity is required:** every piece of copy must exist in both languages before it ships.
-- **CV PDFs are pending:** `meta.cv` points to `/cv/nicolas-huber-cv-en.pdf` and `/cv/nicolas-huber-cv-de.pdf`, which are not in `public/cv/` yet. Future work must handle this gracefully and never ship a placeholder or fake CV.
+- **CV PDFs:** `meta.cv` points to `/cv/nicolas-huber-cv-en.pdf` and `/cv/nicolas-huber-cv-de.pdf` in `public/cv/`. They are built in the private repo `HuberNicolas/minimalistic-cv` (artifact `cv-web`); update them there and copy them in, never edit or fake them here.
 - License: GPL-3.0-or-later.
 
 ## Brand Commitments
@@ -51,7 +51,8 @@ Success: a visitor leaves with an accurate sense of who Nicolas is and what Nico
 - Real projects with repos, two with live demos (see `projects.items` and `projects.more` in `src/data/content.js`).
 - Publication: IEEE, Aug 2023, MTD strategy selection against malware in resource-constrained devices.
 - Quantified work results at Migros (MGB Data & Analytics; Migros Bank Product & Marketing Analytics).
-- Absent and must not be fabricated: CV files, testimonials, client logos, employer endorsements, metrics beyond those already in the content.
+- CV PDFs in English and German: `public/cv/`.
+- Absent and must not be fabricated: testimonials, client logos, employer endorsements, metrics beyond those already in the content.
 
 ## Product Principles
 
