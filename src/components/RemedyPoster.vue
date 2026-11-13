@@ -382,8 +382,10 @@ const base = import.meta.env.BASE_URL
   font-weight: 800;
   font-size: 13px;
   line-height: 1.05;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
+  /* Long German words (Überarbeitet, Masterarbeit) break inside the ring instead of running over it. */
+  hyphens: auto;
   color: var(--stamp);
   border: 2px solid var(--stamp);
   box-shadow: inset 0 0 0 3px var(--field), inset 0 0 0 4px var(--stamp);

@@ -126,7 +126,7 @@ const posters = computed(() => posterMeta.map((m, i) => ({ ...m, ...t.value.post
 
 @media (max-width: 900px) {
   .wall-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .masthead {
     position: static;
@@ -137,7 +137,7 @@ const posters = computed(() => posterMeta.map((m, i) => ({ ...m, ...t.value.post
 }
 @media (max-width: 620px) {
   .wall {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .wall__slot--wide {
     grid-column: auto;

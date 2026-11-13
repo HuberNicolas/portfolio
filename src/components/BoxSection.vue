@@ -101,7 +101,7 @@ const { t } = useLang()
 }
 @media (max-width: 720px) {
   .box__list {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 </style>

@@ -59,13 +59,17 @@ function go(id) {
         >
           {{ t.nav[id] }}
         </a>
+        <!-- On phones the theme switch moves into the drawer, so the bar never runs wider than the screen. -->
+        <button class="nav__btn nav__btn--drawer" @click="toggleTheme" :aria-label="t.nav.themeLabel">
+          {{ theme === 'dark' ? t.nav.matinee : t.nav.evening }}
+        </button>
       </nav>
 
       <div class="nav__actions">
         <button class="nav__btn" @click="toggle" :aria-label="t.nav.langSwitch" :lang="lang === 'en' ? 'de' : 'en'">
           {{ t.nav.langLabel }}
         </button>
-        <button class="nav__btn" @click="toggleTheme" :aria-label="t.nav.themeLabel" :title="t.nav.themeLabel">
+        <button class="nav__btn nav__btn--bar" @click="toggleTheme" :aria-label="t.nav.themeLabel" :title="t.nav.themeLabel">
           {{ theme === 'dark' ? t.nav.matinee : t.nav.evening }}
         </button>
         <button
@@ -227,6 +231,8 @@ function go(id) {
   cursor: pointer;
 }
 .burger span {
+  display: block;
+  width: 100%;
   height: 2px;
   background: var(--text);
   transition: transform var(--dur) var(--ease);
@@ -284,6 +290,24 @@ function go(id) {
     bottom: auto;
     top: 50%;
     margin: -5.5px 0 0;
+  }
+}
+.nav__btn--drawer {
+  display: none;
+}
+@media (max-width: 560px) {
+  .nav__btn--bar {
+    display: none;
+  }
+  .nav__btn--drawer {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    margin-top: 16px;
+  }
+  /* The route line ends at the last stop, above the theme switch. */
+  .nav__links::before {
+    bottom: 88px;
   }
 }
 @media (max-width: 520px) {

@@ -123,7 +123,7 @@ const base = import.meta.env.BASE_URL
 }
 @media (max-width: 820px) {
   .about {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 @media (max-width: 560px) {
@@ -137,7 +137,7 @@ const base = import.meta.env.BASE_URL
     scroll-snap-align: start;
   }
   .about__facts {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 </style>

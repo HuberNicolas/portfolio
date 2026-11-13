@@ -118,7 +118,7 @@ const { t } = useLang()
 
 @media (max-width: 820px) {
   .now {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 </style>
