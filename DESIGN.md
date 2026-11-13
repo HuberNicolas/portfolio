@@ -1,6 +1,6 @@
 ---
 name: Nicolas Huber Portfolio
-description: Aspiring code alchemist. Every project is advertised as a 1910 wonder remedy, pasted onto a wall inside a quiet, modern page.
+description: Makes messy data behave. Every project is advertised as a 1910 wonder remedy, pasted onto a wall inside a quiet, modern page.
 colors:
   matinee-ground: "#eef3f6"
   navy-ink: "#142039"
@@ -162,7 +162,7 @@ components:
 
 **Creative North Star: "The Wonder-Remedy Wall"**
 
-The aspiring code alchemist advertises his remedies. Each project is a 1910 elixir poster: a real image in an Art Nouveau window, a true claim in confident poster voice, a round stamp and two plain actions. The posters are pasted onto a wall beside a sticky house masthead, and the rest of the page keeps the same printed vocabulary: section titles are enamel stop signs, the journey and the navigation are tram route strips, and the project map is a network plan of four invented lines laid over a simplified Zürich zone-110 tram network.
+The house advertises its remedies. Each project is a 1910 elixir poster: a real image in an Art Nouveau window, a true claim in confident poster voice, a round stamp and two plain actions. The posters are pasted onto a wall beside a sticky house masthead, and the rest of the page keeps the same printed vocabulary: section titles are enamel stop signs, the journey and the navigation are tram route strips, and the project map is a network plan of four invented lines laid over a simplified Zürich zone-110 tram network.
 
 The energy is the 1910 World's Fair and elixir advertising: luminous, sure of itself, a little tongue-in-cheek, as a genre and never as a copy of any game, brand or transit operator. Around the posters the scaffold stays modern and quiet: a sky-white ground, navy ink, generous section spacing, a grotesk for every sentence a visitor actually needs to read. Colour and period voice live on the printed objects (posters, ad, plan, closing poster); the page itself never dresses up.
 
@@ -283,7 +283,7 @@ Every section title is a cobalt enamel plate with ivory Bodoni italic, a 3px cob
 - **Nav button:** pill outline (1.5px strong hairline), 36px tall, banner caps; turns link colour on hover. Used for the language switch and the theme switch (Matinée / Evening).
 
 ### Formula Ribbon
-The house formula (raw data → elegant systems → meaningful impact) on a notched ribbon: navy with ivory in the Matinée, gold with navy in the Evening show.
+The house formula (raw data → pipeline → model) on a notched ribbon: navy with ivory in the Matinée, gold with navy in the Evening show.
 
 ### Navigation (Route Strip)
 Fixed bar with the NH monogram (cobalt disc, two gold rings, ivory Bodoni initials) and the name in Bodoni italic. Links are banner caps sitting on a thin 3px line; each link has a small hollow stop dot under it, the current section's dot is filled with the link colour and scaled 1.25. On narrow screens the strip stands upright in a drawer with the dots on a vertical line.

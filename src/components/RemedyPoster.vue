@@ -136,7 +136,8 @@ const base = import.meta.env.BASE_URL
   text-wrap: balance;
 }
 .poster--lead .poster__title {
-  font-size: clamp(36px, 3.6vw, 54px);
+  /* Capped so a single word (OkCupid) never runs under the stamp in the narrow wall column. */
+  font-size: clamp(32px, 3vw, 44px);
   padding-right: 112px;
 }
 /* The title sits first on every layout, even where the picture comes first in the markup. */

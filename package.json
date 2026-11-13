@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "Personal portfolio of Nicolas Huber — aspiring code alchemist.",
+  "description": "Personal portfolio of Nicolas Huber: data engineering and machine learning in Zürich.",
   "type": "module",
   "author": "Nicolas Huber <nicolas.huber.dev@gmail.com>",
   "license": "GPL-3.0-or-later",

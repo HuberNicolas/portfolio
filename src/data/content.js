@@ -112,11 +112,11 @@ export const content = {
       menu: 'Menu',
     },
     house: {
-      motto: 'aspiring code alchemist',
+      motto: 'makes messy data behave',
       name: 'Nicolas Huber',
       role: 'Data engineering & machine learning · Zürich',
-      // The "transmutation formula", the house slogan.
-      formula: ['raw data', 'elegant systems', 'meaningful impact'],
+      // The house formula on the ribbon.
+      formula: ['raw data', 'pipeline', 'model'],
       lead:
         'I build data pipelines and machine-learning systems. MSc in Informatics from UZH, now an IT trainee at Migros, rotating through its data teams.',
       wallLabel: 'Projects, advertised',
@@ -141,7 +141,7 @@ export const content = {
           title: 'SDG Tag Heroes',
           kind: 'Master’s thesis · UZH',
           claim: 'Labels the UN goals, with a little help from LLMs',
-          desc: 'An interactive, gamified system for AI-assisted labeling of the Sustainable Development Goals in scientific research, with a human in the loop.',
+          desc: 'A game in which researchers label papers by SDG: an LLM suggests, a human decides.',
           stamp: 'Thesis',
           alt: 'Illustrated fantasy world from the SDG Tag Heroes game: a castle city on a river at dusk',
         },
@@ -258,14 +258,15 @@ export const content = {
       photos: [
         { src: 'img/surfing.jpg', alt: 'Nicolas in a rash guard at a surf camp', caption: 'Surf camp' },
         { src: 'img/hiking.jpg', alt: 'Nicolas on a summit above Lake Lucerne', caption: 'Above Lake Lucerne' },
-        { src: 'img/running.jpg', alt: 'Nicolas running on a trail above a forest', caption: 'Running' },
+        { src: 'img/running.jpg', alt: 'Nicolas with start number 42 running a leg of the Winti Stafette relay on a field path above a forest', caption: 'Winti Stafette 2026' },
       ],
     },
     closing: {
       title: 'Inquire within',
       body: 'For work, questions or a coffee in Zürich, write to me.',
       elsewhere: 'Elsewhere',
-      built: 'Built with Vue and a bit of alchemy.',
+      // A small nod to the old tagline, kept on purpose (see PRODUCT.md).
+      built: 'Built with Vue. Formerly known as the aspiring code alchemist.',
     },
   },
 
@@ -285,10 +286,10 @@ export const content = {
       menu: 'Menü',
     },
     house: {
-      motto: 'aspiring code alchemist',
+      motto: 'bringt unordentliche Daten in Form',
       name: 'Nicolas Huber',
       role: 'Data Engineering & Machine Learning · Zürich',
-      formula: ['rohe Daten', 'elegante Systeme', 'echte Wirkung'],
+      formula: ['rohe Daten', 'Pipeline', 'Modell'],
       lead:
         'Ich baue Datenpipelines und Machine-Learning-Systeme. MSc Informatik der UZH, aktuell IT-Trainee bei der Migros, wo ich durch die Datenteams rotiere.',
       wallLabel: 'Projekte, angepriesen',
@@ -313,7 +314,7 @@ export const content = {
           title: 'SDG Tag Heroes',
           kind: 'Masterarbeit · UZH',
           claim: 'Ordnet die UN-Ziele zu, mit etwas Hilfe von LLMs',
-          desc: 'Ein interaktives, gamifiziertes System zum KI-gestützten Labeling der Nachhaltigkeitsziele in der Forschung, mit Human-in-the-Loop.',
+          desc: 'Ein Spiel, in dem Forschende Paper nach SDG labeln: Ein LLM schlägt vor, ein Mensch entscheidet.',
           stamp: 'Masterarbeit',
           alt: 'Illustrierte Fantasiewelt aus dem Spiel SDG Tag Heroes: eine Burgstadt am Fluss in der Dämmerung',
         },
@@ -430,14 +431,14 @@ export const content = {
       photos: [
         { src: 'img/surfing.jpg', alt: 'Nicolas im Lycra-Shirt in einem Surfcamp', caption: 'Surfcamp' },
         { src: 'img/hiking.jpg', alt: 'Nicolas auf einem Gipfel über dem Vierwaldstättersee', caption: 'Über dem Vierwaldstättersee' },
-        { src: 'img/running.jpg', alt: 'Nicolas beim Laufen auf einem Weg über einem Wald', caption: 'Laufen' },
+        { src: 'img/running.jpg', alt: 'Nicolas mit Startnummer 42 auf einer Etappe der Winti Stafette, auf einem Feldweg über einem Wald', caption: 'Winti Stafette 2026' },
       ],
     },
     closing: {
       title: 'Anfragen willkommen',
       body: 'Für Arbeit, Fragen oder einen Kaffee in Zürich: schreib mir.',
       elsewhere: 'Anderswo',
-      built: 'Gebaut mit Vue und etwas Alchemie.',
+      built: 'Gebaut mit Vue. Früher bekannt als aspiring code alchemist.',
     },
   },
 }

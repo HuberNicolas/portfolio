@@ -20,7 +20,7 @@ Success: a visitor leaves with an accurate sense of who Nicolas is and what Nico
 
 ## Positioning
 
-"Aspiring code alchemist": turning raw, messy data into clean pipelines, sharp models and elegant systems. The claim is backed by specifics that no one else's portfolio can copy: a measured production result at Migros (2.4 M models down to 10,000, 240×; training from 3 h to 15 min, 12×), a peer-reviewed IEEE paper (MTD strategy selection, Aug 2023), a master's thesis on AI-assisted, gamified SDG labeling, and playable or explorable live demos (OkCupid Explorer, Towers vs. Monsters: Remastered).
+"Makes messy data behave": turning raw, messy data into clean pipelines and working models. The claim is backed by specifics that no one else's portfolio can copy: a measured production result at Migros (2.4 M models down to 10,000, 240×; training from 3 h to 15 min, 12×), a peer-reviewed IEEE paper (MTD strategy selection, Aug 2023), a master's thesis on AI-assisted, gamified SDG labeling, and playable or explorable live demos (OkCupid Explorer, Towers vs. Monsters: Remastered).
 
 ## Operating Context
 
@@ -39,7 +39,7 @@ Success: a visitor leaves with an accurate sense of who Nicolas is and what Nico
 
 ## Brand Commitments
 
-- **"Aspiring code alchemist" is binding.** That includes the alchemy theme: the tagline, the "transmutation formula" (raw data → elegant systems → meaningful impact) and the footer's "a bit of alchemy".
+- **The alchemy is retired to a footnote (owner's decision, 13 Nov 2026).** "Aspiring code alchemist" read as unprofessional as a headline. The subtitle is now "makes messy data behave" / "bringt unordentliche Daten in Form", the ribbon reads "raw data → pipeline → model". The old tagline survives only as a small nod in the footer ("Formerly known as the aspiring code alchemist"). The owner still likes the theme: keep that one nod, do not bring alchemy back into headings or copy without asking. The remedy-poster design stays.
 - **Playful touches are welcome but rare.** Example: the "4 surf camps — not just surfing the web" stat.
 - **German copy uses Swiss conventions:** `ss` instead of `ß`, `’` as the thousands separator (10’000), Swiss vocabulary (e.g. "Spitäler").
 - Name: Nicolas Huber. Location: Zürich, Switzerland.
@@ -59,4 +59,4 @@ Success: a visitor leaves with an accurate sense of who Nicolas is and what Nico
 2. **Personal, not corporate.** It's a person's page. Warmth and the occasional wink belong; sales funnels don't.
 3. **One source of truth, two languages.** Content changes go through `content.js` and land in EN and DE together.
 4. **Everything reachable.** Every project, paper and profile mentioned links to something real a visitor can open.
-5. **Keep the alchemy coherent.** The theme is a through-line, used deliberately rather than sprinkled everywhere.
+5. **Keep the period voice on the printed objects.** The remedy posters carry the wink; headings and facts stay plain.
